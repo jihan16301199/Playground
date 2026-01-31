@@ -1,0 +1,79 @@
+@use "sass:map";
+
+$breakpoints: (
+  xs: 340px,
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  2xl: 1600px,
+  3xl: 1920px,
+);
+
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// --- Mobile-first breakpoints  ---
+$mf-breakpoints: (
+  xs: 0,
+  // Extra small devices (portrait phones)
+  sm: 600px,
+  // Small devices (landscape phones)
+  md: 768px,
+  // Medium devices (tablets)
+  lg: 1024px,
+  // Large devices (desktops)
+  xl: 1280px,
+  // Extra large devices (large desktops)
+  xxl: 1536px // 2XL devices (very large screens),,
+);
+
+// Mobile-first up (min-width)
+@mixin mf-up($breakpoint) {
+  $min: map-get($mf-breakpoints, $breakpoint);
+  @if $min != null {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+}
+
+// Mobile-first down (max-width)
+@mixin mf-down($breakpoint) {
+  $max: map.get($mf-breakpoints, $breakpoint);
+  @if $max != null and $max != 0 {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+// Mobile-first between (min-width and max-width)
+@mixin mf-between($breakpoint-min, $breakpoint-max) {
+  $min: map-get($mf-breakpoints, $breakpoint-min);
+  $max: map-get($mf-breakpoints, $breakpoint-max);
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  }
+}

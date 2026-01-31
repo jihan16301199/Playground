@@ -1,0 +1,227 @@
+@use "typography" as *;
+
+/* Global font override for this entire component */
+:host {
+  font-family: $font-primary !important;
+}
+
+/* Force TT Hoves Pro on absolutely everything in this component, except Material Icons and Symbols */
+:host *:not(.material-icons):not(.material-icons-outlined):not(.material-icons-round):not(.material-icons-sharp):not(.material-icons-two-tone):not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not([class*="material-icons"]):not([class*="material-symbols"]):not(.fa):not(.fas):not(.far):not(.fal):not(.fab):not(.fad):not([class*="fa-"]):not(.glyphicon):not([class*="glyphicon"]):not(.icomoon):not([class*="icomoon"]):not([data-icon]),
+:host *::before:not(.material-icons):not(.material-icons-outlined):not(.material-icons-round):not(.material-icons-sharp):not(.material-icons-two-tone):not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp),
+:host *::after:not(.material-icons):not(.material-icons-outlined):not(.material-icons-round):not(.material-icons-sharp):not(.material-icons-two-tone):not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp),
+:host input:not(.material-icons):not(.material-symbols-outlined),
+:host button:not(.material-icons):not([class*="material-icons"]):not(.material-symbols-outlined):not([class*="material-symbols"]),
+:host label:not(.material-icons):not(.material-symbols-outlined),
+:host span:not(.material-icons):not(.material-icons-outlined):not(.material-icons-round):not(.material-icons-sharp):not(.material-icons-two-tone):not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not([class*="material-icons"]):not([class*="material-symbols"]),
+:host p:not(.material-icons):not(.material-symbols-outlined),
+:host div:not(.material-icons):not([class*="material-icons"]):not(.material-symbols-outlined):not([class*="material-symbols"]),
+:host h1:not(.material-icons):not(.material-symbols-outlined),
+:host h2:not(.material-icons):not(.material-symbols-outlined),
+:host h3:not(.material-icons):not(.material-symbols-outlined),
+:host h4:not(.material-icons):not(.material-symbols-outlined),
+:host h5:not(.material-icons):not(.material-symbols-outlined),
+:host h6:not(.material-icons):not(.material-symbols-outlined),
+:host i:not(.material-icons):not(.material-symbols-outlined):not([class*="material-icons"]):not([class*="material-symbols"]):not(.fa):not(.fas):not(.far):not(.fal):not(.fab):not(.fad):not([class*="fa-"]):not(.glyphicon):not([class*="glyphicon"]):not(.icomoon):not([class*="icomoon"]):not([class*="icon"]) {
+  font-family: $font-primary !important;
+}
+
+/* Force placeholders specifically */
+:host input::placeholder,
+:host input::-webkit-input-placeholder,
+:host input::-moz-placeholder,
+:host input:-ms-input-placeholder {
+  font-family: $font-primary !important;
+}
+
+/* Override any potential CSS variables or inherited styles */
+:host {
+  --font-family: #{$font-primary} !important;
+  --primary-font: #{$font-primary} !important;
+}
+
+/* Additional global override using Angular's component encapsulation, excluding Material Icons and Symbols */
+:host-context(*) {
+  font-family: $font-primary !important;
+  
+  *:not(.material-icons):not(.material-icons-outlined):not(.material-icons-round):not(.material-icons-sharp):not(.material-icons-two-tone):not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not([class*="material-icons"]):not([class*="material-symbols"]):not(.fa):not(.fas):not(.far):not(.fal):not(.fab):not(.fad):not([class*="fa-"]):not(.glyphicon):not([class*="glyphicon"]):not(.icomoon):not([class*="icomoon"]):not([data-icon]) {
+    font-family: $font-primary !important;
+  }
+  
+  i:not(.material-icons):not(.material-symbols-outlined):not([class*="material-icons"]):not([class*="material-symbols"]):not(.fa):not(.fas):not(.far):not(.fal):not(.fab):not(.fad):not([class*="fa-"]):not(.glyphicon):not([class*="glyphicon"]):not(.icomoon):not([class*="icomoon"]):not([class*="icon"]) {
+    font-family: $font-primary !important;
+  }
+}
+
+
+/* Ultimate override - force on every possible selector, excluding Material Icons and Symbols */
+:host:not(.material-icons):not(.material-symbols-outlined),
+:host *:not(.material-icons):not(.material-icons-outlined):not(.material-icons-round):not(.material-icons-sharp):not(.material-icons-two-tone):not(.material-symbols-outlined):not(.material-symbols-rounded):not(.material-symbols-sharp):not([class*="material-icons"]):not([class*="material-symbols"]):not(.fa):not(.fas):not(.far):not(.fal):not(.fab):not(.fad):not([class*="fa-"]):not(.glyphicon):not([class*="glyphicon"]):not(.icomoon):not([class*="icomoon"]):not([data-icon]),
+:host input:not(.material-icons):not(.material-symbols-outlined),
+:host button:not(.material-icons):not([class*="material-icons"]):not(.material-symbols-outlined):not([class*="material-symbols"]),
+:host label:not(.material-icons):not(.material-symbols-outlined),
+:host textarea:not(.material-icons):not(.material-symbols-outlined),
+:host select:not(.material-icons):not(.material-symbols-outlined),
+:host option:not(.material-icons):not(.material-symbols-outlined),
+:host i:not(.material-icons):not(.material-symbols-outlined):not([class*="material-icons"]):not([class*="material-symbols"]):not(.fa):not(.fas):not(.far):not(.fal):not(.fab):not(.fad):not([class*="fa-"]):not(.glyphicon):not([class*="glyphicon"]):not(.icomoon):not([class*="icomoon"]):not([class*="icon"]) {
+  font-family: $font-primary !important;
+}
+
+/* Preserve Material Icons font families */
+.material-icons,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp,
+.material-icons-two-tone,
+[class*="material-icons"],
+i.material-icons,
+i.material-icons-outlined,
+i.material-icons-round,
+i.material-icons-sharp,
+i.material-icons-two-tone,
+i[class*="material-icons"],
+span.material-icons,
+span.material-icons-outlined,
+span.material-icons-round,
+span.material-icons-sharp,
+span.material-icons-two-tone,
+span[class*="material-icons"],
+:host .material-icons,
+:host .material-icons-outlined,
+:host .material-icons-round,
+:host .material-icons-sharp,
+:host .material-icons-two-tone,
+:host [class*="material-icons"],
+:host i.material-icons,
+:host i.material-icons-outlined,
+:host i.material-icons-round,
+:host i.material-icons-sharp,
+:host i.material-icons-two-tone,
+:host i[class*="material-icons"],
+:host span.material-icons,
+:host span.material-icons-outlined,
+:host span.material-icons-round,
+:host span.material-icons-sharp,
+:host span.material-icons-two-tone,
+:host span[class*="material-icons"] {
+  font-family: 'Material Icons' !important;
+}
+
+/* Handle Material Icons with additional classes like 'icon' */
+.material-icons.icon,
+span.material-icons.icon,
+i.material-icons.icon,
+:host .material-icons.icon,
+:host span.material-icons.icon,
+:host i.material-icons.icon {
+  font-family: 'Material Icons' !important;
+}
+
+/* Preserve Material Symbols font families */
+.material-symbols-outlined,
+.material-symbols-rounded, 
+.material-symbols-sharp,
+[class*="material-symbols"],
+i.material-symbols-outlined,
+i.material-symbols-rounded,
+i.material-symbols-sharp,
+i[class*="material-symbols"],
+span.material-symbols-outlined,
+span.material-symbols-rounded,
+span.material-symbols-sharp,
+span[class*="material-symbols"],
+:host .material-symbols-outlined,
+:host .material-symbols-rounded,
+:host .material-symbols-sharp,
+:host [class*="material-symbols"],
+:host i.material-symbols-outlined,
+:host i.material-symbols-rounded,
+:host i.material-symbols-sharp,
+:host i[class*="material-symbols"],
+:host span.material-symbols-outlined,
+:host span.material-symbols-rounded,
+:host span.material-symbols-sharp,
+:host span[class*="material-symbols"] {
+  font-family: 'Material Symbols Outlined' !important;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Handle mixed Material Icons + Material Symbols classes - prioritize Material Symbols */
+.material-icons.material-symbols-outlined,
+.material-icons[class*="material-symbols"],
+i.material-icons.material-symbols-outlined,
+i.material-icons[class*="material-symbols"],
+:host .material-icons.material-symbols-outlined,
+:host .material-icons[class*="material-symbols"],
+:host i.material-icons.material-symbols-outlined,
+:host i.material-icons[class*="material-symbols"] {
+  font-family: 'Material Symbols Outlined' !important;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Preserve other icon fonts */
+// .fa,
+// [class*="fa-"],
+// .fas,
+// .far,
+// .fal,
+// .fab,
+// .fad,
+// .icon,
+// [data-icon],
+// [class*="icon-"],
+// .glyphicon,
+// [class*="glyphicon"],
+// .icomoon,
+// [class*="icomoon"],
+// i[class*="icon"],
+// i.fa,
+// i[class*="fa-"],
+// i.fas,
+// i.far,
+// i.fal,
+// i.fab,
+// i.fad,
+// i.glyphicon,
+// i[class*="glyphicon"],
+// i.icomoon,
+// i[class*="icomoon"],
+// :host .fa,
+// :host [class*="fa-"],
+// :host .fas,
+// :host .far,
+// :host .fal,
+// :host .fab,
+// :host .fad,
+// :host .icon,
+// :host [data-icon],
+// :host [class*="icon-"],
+// :host .glyphicon,
+// :host [class*="glyphicon"],
+// :host .icomoon,
+// :host [class*="icomoon"],
+// :host i[class*="icon"],
+// :host i.fa,
+// :host i[class*="fa-"],
+// :host i.fas,
+// :host i.far,
+// :host i.fal,
+// :host i.fab,
+// :host i.fad,
+// :host i.glyphicon,
+// :host i[class*="glyphicon"],
+// :host i.icomoon,
+// :host i[class*="icomoon"] {
+//   font-family: inherit !important;
+// }
+
+/* Ensure placeholders across all browsers */
+:host input::placeholder,
+:host input::-webkit-input-placeholder,
+:host input::-moz-placeholder,
+:host input:-ms-input-placeholder,
+:host textarea::placeholder,
+:host textarea::-webkit-input-placeholder,
+:host textarea::-moz-placeholder,
+:host textarea:-ms-input-placeholder {
+  font-family: $font-primary !important;
+}

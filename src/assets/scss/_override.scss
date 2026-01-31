@@ -1,0 +1,37 @@
+@use "mixins" as *;
+@use "breakpoints" as *;
+
+.filter {
+  &-sidebar {
+    max-height: 100vh !important;
+    overflow-y: auto !important;
+    width: 20.75rem;
+    padding: var(--padding-padding-6xl) var(--padding-padding-4xl);
+    background: var(--background-bg-primary);
+    box-shadow: -2px 4px 20.1px 0px rgba(0, 0, 0, 0.1);
+
+    @include media-down(md) {
+      padding: 0;
+      width: 100%;
+      top: 0;
+      height: auto;
+      background: transparent;
+      box-shadow: none;
+      position: absolute;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+::ng-deep {
+  .select2-dropdown.select2-dropdown--below {
+    width: 240px !important;
+  }
+
+  .select2-container--open .select2-dropdown {
+    left: -40px !important;
+    @include media-down(md) {
+      left: 0px !important;
+    }
+  }
+}
