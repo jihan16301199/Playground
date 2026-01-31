@@ -1,10 +1,11 @@
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Navbar } from './navbar/navbar';
 
 @Component({
   selector: 'app-layout',
-  imports: [CommonModule],
+  imports: [CommonModule, Navbar],
   templateUrl: './layout.html',
   styleUrl: './layout.scss'
 })
