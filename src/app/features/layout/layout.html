@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" #header>
     <div class="header__container">
         <div class="header__container--nav">
             <div class="navbar">
@@ -47,12 +47,13 @@
 
 </div>
 
-<div class="content" [ngClass]="isMobile ? 'footer-active' : 'sidebar-active'">
+<div class="content" [style.marginTop]="contentMarginTop" [style.marginBottom]="contentMarginBottom"
+    [ngClass]="isMobile ? 'footer-active' : 'sidebar-active'">
     <div class="content__page">
         <div class="route">
             <p style="margin: 0;">
-                <button (click)="toggle()"> click</button>
-                <button (click)="measure()"> click</button>
+                <button (click)="toggle()">click</button>
+                <button (click)="measure()">click</button>
                 The standard Lorem Ipsum passage, used since the 1500s
 
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -94,8 +95,6 @@
                 necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
                 rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
                 perferendis doloribus asperiores repellat."
-
-                
             </p>
 
             <div class="swipe" [class.open]="isOpen" [style.transform]="transform" [style.bottom]="swipeBottom"
@@ -127,8 +126,10 @@
                     </div>
                 </div>
             </div>
-            <div class="action" #action [style.bottom]="actionBottom" >
-                <div style="height: 80px;" *ngIf="flag"></div>
+            <div class="action" #action [style.bottom]="actionBottom">
+                <div class="action__container">
+                    <button class="button-blue button-block">Click</button>
+                </div>
             </div>
         </div>
     </div>

@@ -4,22 +4,21 @@
 @use "../../../assets/scss/mixins" as *;
 
 .header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
 
     &__container {
         &--nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
             // z-index: 99;
             // height: var(--header-height);
             box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid red;
+            border: 1px solid purple;
 
             .navbar {
                 display: flex;
@@ -94,7 +93,7 @@
 
 .content {
     position: relative;
-    padding-top: var(--header-height);
+    // padding-top: var(--header-height);
     // border: 1px solid red;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -117,7 +116,7 @@
 }
 
 .content.footer-active {
-    padding-bottom: var(--footer-height);
+    // padding-bottom: var(--footer-height);
 }
 
 .swipe {
@@ -172,8 +171,12 @@
     // bottom: 0;
     left: 0;
     right: 0;
-    z-index: 99;
-    background-color: gray;
+    z-index: 100;
+
+    &__container {
+        padding: var(--padding-padding-lg);
+        background: #fff;
+    }
 }
 
 .footer {

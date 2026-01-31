@@ -1,5 +1,6 @@
 @use "spacing" as *;
 @use "mixins" as *;
+
 .button {
   // transition: all 0.2s ease-in-out;
   // border-radius: var(--border-radius-radius-md);
@@ -44,6 +45,10 @@
       background: var(--buttons-solid-button-solid-disabled);
       box-shadow: none;
     }
+  }
+
+  &-block {
+    width: 100%;
   }
 
   &-solid {
@@ -96,7 +101,7 @@
       }
     }
   }
-  
+
   &-solidLight {
     @include large-btn;
     @include title-3-medium;

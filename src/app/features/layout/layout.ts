@@ -20,6 +20,11 @@ export class Layout implements OnInit, AfterViewInit, OnDestroy {
   startY = 0;
   currentY = 0;
 
+  headerHeight = 0;
+
+  contentMarginTop = '';
+  contentMarginBottom = '';
+
   swipeBottom = '';
 
   handleHeight = 0;
@@ -28,20 +33,22 @@ export class Layout implements OnInit, AfterViewInit, OnDestroy {
   restHeight = 0;
   restMarginBottom = '';
 
-  actionHeight = 20;
+  actionHeight = 0;
   actionBottom = '';
 
-  footerHeight = 72;
+  footerHeight = 0;
 
   transform = '';
   isDragging = false;
   isScrollDisable = false;
 
+  @ViewChild('header') header!: ElementRef<HTMLDivElement>;
+  @ViewChild('footer') footer!: ElementRef<HTMLDivElement>;
+
   @ViewChild('handle') handle!: ElementRef<HTMLDivElement>;
   @ViewChild('partial') partial!: ElementRef<HTMLDivElement>;
   @ViewChild('rest') rest!: ElementRef<HTMLDivElement>;
   @ViewChild('action') action!: ElementRef<HTMLDivElement>;
-  @ViewChild('footer') footer!: ElementRef<HTMLDivElement>;
 
   private resizeObserver!: ResizeObserver;
 
@@ -72,17 +79,22 @@ export class Layout implements OnInit, AfterViewInit, OnDestroy {
     this.resizeObserver?.disconnect();
   }
 
-  toggle(){
-    this.flag = !this.flag;3
+  toggle() {
+    this.flag = !this.flag; 3
     console.log(this.flag);
   }
 
   measure() {
+    this.headerHeight = this.header.nativeElement.offsetHeight;
+    this.footerHeight = this.footer.nativeElement.offsetHeight;
+
     this.handleHeight = this.handle.nativeElement.offsetHeight;
     this.partialHeight = this.partial.nativeElement.offsetHeight;
     this.restHeight = this.rest.nativeElement.offsetHeight;
     this.actionHeight = this.action.nativeElement.offsetHeight;
-    this.footerHeight = this.footer.nativeElement.offsetHeight;
+
+    this.contentMarginTop = `${this.headerHeight}px`
+    this.contentMarginBottom = `${this.handleHeight + this.partialHeight + this.actionHeight + this.footerHeight}px`
 
     this.swipeBottom = `${this.actionHeight + this.footerHeight}px`;
     this.actionBottom = `${this.footerHeight}px`;
