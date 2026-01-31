@@ -1,0 +1,263 @@
+.button {
+  transition: all 0.2s ease-in-out;
+  border-radius: var(--border-radius-radius-md);
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:disabled {
+    border: 1px solid var(--buttons-primary-tint-button-primary-tint-disabled);
+    background: var(--buttons-primary-tint-button-primary-tint-disabled);
+    cursor: no-drop;
+
+    &.disabled {
+      border: 1px solid var(--buttons-primary-tint-button-primary-tint-disabled);
+      background: var(--buttons-primary-tint-button-primary-tint-disabled);
+    }
+  }
+
+  &-solid {
+    @include large-btn;
+    border: 1px solid var(--buttons-solid-button-solid-outline);
+    background: var(--buttons-solid-button-solid-hover);
+    color: var(--text-primary-text-primary-dark);
+
+    &:not(:disabled):hover {
+      border: 1px solid $neutral-300;
+      background: rgba(20, 20, 20, 0.05);
+    }
+    
+    &__small {
+      @include small-btn;
+      border: 1px solid var(--buttons-solid-button-solid-outline);
+      background: rgba(20, 20, 20, 0.02);
+
+      &:not(:disabled):hover {
+        border: 1px solid $neutral-300;
+        background: rgba(20, 20, 20, 0.05);
+      }
+    }
+
+    &__xsmall {
+      @include xsmall-btn;
+      border: 1px solid var(--buttons-solid-button-solid-outline);
+      background: rgba(20, 20, 20, 0.02);
+
+      &:not(:disabled):hover {
+        border: 1px solid $neutral-300;
+        background: rgba(20, 20, 20, 0.05);
+      }
+    }
+  }
+
+  &-solidLight {
+    border: 1px solid var(--stroke-inverse-stroke-inverse-10);
+    background: var(--buttons-solid-button-solid-default);
+    color: var(--text-primary-text-primary-light);
+    text-align: center;
+    @include large-btn;
+    @include title-3-medium;
+
+    &:not(:disabled):hover {
+      // Add your hover styles here
+      border: 1px solid var(--stroke-primary-stroke-primary-light);
+      background: var(--buttons-solid-button-solid-hover);
+    }
+
+    &__xsmall {
+      border: 1px solid var(--stroke-inverse-stroke-inverse-10);
+      background: var(--buttons-solid-button-solid-default);
+      color: var(--text-primary-text-primary-light);
+      @include xsmall-btn;
+
+      &:not(:disabled):hover {
+        // Add your hover styles here
+      }
+    }
+  }
+
+  &-inverse {
+    @include large-btn;
+    @include title-3-demibold;
+    background: var(--buttons-inverse-button-inversed-default);
+    color: var(--text-inverse-text-inverse);
+    text-align: center;
+    border: 1px solid var(--buttons-inverse-button-inversed-default);
+
+    &:not(:disabled):hover {
+      border-radius: var(--border-radius-radius-md);
+      background: var(--buttons-inverse-button-inversed-hover);
+    }
+
+    &__small {
+      border: 1px solid transparent;
+      background: var(--buttons-inverse-button-inversed-default);
+      color: var(--text-inverse-text-inverse);
+      text-align: center;
+      @include small-btn;
+
+      &:not(:disabled):hover {
+        border-radius: var(--border-radius-radius-lg);
+        background: var(--buttons-inverse-button-inversed-hover);
+      }
+    }
+
+    &__xsmall {
+      border: 1px solid transparent;
+      background: var(--buttons-inverse-button-inversed-default);
+      color: var(--text-inverse-text-inverse);
+      text-align: center;
+      @include xsmall-btn;
+
+      &:not(:disabled):hover {
+        border-radius: var(--border-radius-radius-md);
+        background: var(--buttons-inverse-button-inversed-hover);
+      }
+    }
+  }
+
+  &-action {
+    background-color: transparent;
+    padding: 0;
+    gap: 0;
+
+    span {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      color: #212121;
+    }
+
+    &:not(:disabled):hover {
+      // Add your hover styles here
+    }
+  }
+
+  &-redTint {
+    @include large-btn;
+    background: var(--buttons-red-tint-button-solid-default);
+    color: var(--text-label-text-on-label-error);
+    text-align: center;
+    border: 1px solid var(--buttons-red-tint-button-solid-default);
+
+    &:not(:disabled):hover {
+      border-radius: var(--border-radius-radius-md);
+      border: 1px solid var(--buttons-red-tint-button-solid-outline);
+      background: var(--buttons-red-tint-button-solid-hover);
+    }
+
+    &:focus {
+      border: 1px solid var(--buttons-red-tint-button-solid-outline);
+      background: var(--buttons-red-tint-button-solid-default);
+    }
+
+    &__xsmall {
+      background: var(--buttons-red-tint-button-solid-default);
+      color: var(--text-label-text-on-label-error);
+      border: 1px solid var(--buttons-red-tint-button-solid-default);
+
+      text-align: center;
+      @include xsmall-btn;
+
+      &:not(:disabled):hover {
+        border-radius: var(--border-radius-radius-md);
+        border: 1px solid var(--buttons-red-tint-button-solid-outline);
+        background: var(--buttons-red-tint-button-solid-hover);
+      }
+
+      &:focus {
+        border: 1px solid var(--buttons-red-tint-button-solid-outline);
+        background: var(--buttons-red-tint-button-solid-default);
+      }
+    }
+  }
+
+  &-blue {
+    @include large-btn;
+    color: var(--text-button-text-on-btn-primary);
+    border: 1px solid var(--buttons-primary-button-primary-outline);
+    background: var(--buttons-primary-button-primary-default);
+    box-shadow: none;
+
+    &:not(:disabled):hover {
+      // Add your hover styles here
+    }
+
+    &__small {
+      @include small-btn;
+      background: var(--buttons-primary-button-primary-default);
+      color: var(--text-button-text-on-btn-primary);
+      border: 1px solid transparent;
+      &:not(:disabled):hover {
+        background: var(--buttons-primary-button-primary-hover);
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid var(--buttons-primary-button-primary-outline-hover);
+        background: var(--buttons-primary-button-primary-pressed);
+      }
+    }
+
+    &__xsmall {
+      background: var(--buttons-primary-button-primary-default);
+      color: var(--text-button-text-on-btn-primary);
+      @include xsmall-btn;
+      border: 1px solid transparent;
+      &:not(:disabled):hover {
+        background: var(--buttons-primary-button-primary-hover);
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid var(--buttons-primary-button-primary-outline-hover);
+        background: var(--buttons-primary-button-primary-pressed);
+      }
+    }
+  }
+
+  &-blueTint {
+    @include large-btn;
+    border-radius: var(--border-radius-radius-md);
+    // border: 1px solid var(--buttons-primary-button-primary-outline);
+    border: 1px solid transparent;
+    background: var(--buttons-primary-tint-button-primary-tint-default);
+    color: var(--text-secondary-text-accent-secondary);
+
+    &:not(:disabled):hover {
+      border-radius: var(--border-radius-radius-md);
+      border: 1px solid var(--buttons-primary-button-primary-outline);
+      background: var(--buttons-primary-tint-button-primary-tint-hover);
+    }
+  }
+  &-white {
+    @include large-btn;
+    color: var(--text-button-text-on-btn-primary);
+    border: 1px solid transparent;
+    background: var(--surface-primary-surface-primary-light);
+    box-shadow: none;
+    color: var(--text-primary-text-primary-80);
+
+    &:not(:disabled):hover {
+    }
+    &__xsmall {
+      color: var(--text-button-text-on-btn-primary);
+      border: 1px solid transparent;
+      background: var(--surface-primary-surface-primary-light);
+      box-shadow: none;
+      color: var(--text-primary-text-primary-80);
+      @include xsmall-btn;
+      border: 1px solid transparent;
+      &:not(:disabled):hover {
+        background: var(--buttons-primary-button-primary-hover);
+      }
+
+      &:focus {
+        outline: none;
+        // border: 1px solid var(--buttons-primary-button-primary-outline-hover);
+        // background: var(--buttons-primary-button-primary-pressed);
+      }
+    }
+  }
+}
