@@ -15,6 +15,7 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  white-space: nowrap;
   color: var(--text-primary-text-primary);
   border: 1px solid var(--stroke-primary-stroke-primary-lighter);
   background: var(--buttons-solid-button-solid-default);
@@ -49,6 +50,57 @@
 
   &-block {
     width: 100%;
+  }
+
+  &-transparent {
+    @include large-btn;
+    color: var(--text-button-text-on-btn-primary);
+    border: 1px solid var(--stroke-primary-stroke-primary-50);
+    background: var(--buttons-solid-button-solid-default);
+
+    &:not(:disabled):hover {
+      border: 1px solid var(--stroke-primary-stroke-primary-50);
+      background: var(--buttons-solid-button-solid-hover);
+    }
+
+    &:not(:disabled):active {
+      border: 2px solid var(--stroke-primary-stroke-primary-50);
+      background: var(--buttons-solid-button-solid-pressed);
+    }
+
+    &__small {
+      @include small-btn;
+      color: var(--text-button-text-on-btn-primary);
+      border: 1px solid var(--stroke-primary-stroke-primary-50);
+      background: var(--buttons-solid-button-solid-default);
+
+      &:not(:disabled):hover {
+        border: 1px solid var(--stroke-primary-stroke-primary-50);
+        background: var(--buttons-solid-button-solid-hover);
+      }
+
+      &:not(:disabled):active {
+        border: 2px solid var(--stroke-primary-stroke-primary-50);
+        background: var(--buttons-solid-button-solid-pressed);
+      }
+    }
+
+    &__xsmall {
+      @include xsmall-btn;
+      color: var(--text-button-text-on-btn-primary);
+      border: 1px solid var(--stroke-primary-stroke-primary-50);
+      background: var(--buttons-solid-button-solid-default);
+
+      &:not(:disabled):hover {
+        border: 1px solid var(--stroke-primary-stroke-primary-50);
+        background: var(--buttons-solid-button-solid-hover);
+      }
+
+      &:not(:disabled):active {
+        border: 2px solid var(--stroke-primary-stroke-primary-50);
+        background: var(--buttons-solid-button-solid-pressed);
+      }
+    }
   }
 
   &-solid {

@@ -1,0 +1,79 @@
+<div class="container-fluid">
+    <div class="container-xxl">
+        <div class="stepper" [ngClass]="getBackgroundClass(current)">
+            <div class="stepper__steps">
+                <div class="step" [ngClass]="getStepClass(0)">
+                    <div class="step__banner">
+                        <img class="step__banner--image" src="/assets/image/login/banner.png" alt="banner">
+                    </div>
+                    <div class="step__moto">
+                        <span class="step__moto--text">Our food delivery app<br />brings your favourite<br />dish
+                            to
+                            you.</span>
+                        <div class="step__moto--subtitle">
+                            <div class="step__moto--divider"></div>
+                            <span class="step__moto--subtext">With our user-friendly food delivery app,<br />you
+                                will
+                                enjoy the ultimate convenience</span>
+                        </div>
+                    </div>
+                    <div class="step__action">
+                        <div class="step__action--buttons">
+                            <button class="button button-transparent button-block">Login</button>
+                            <button class="button button-inverse button-block">Sign up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" [ngClass]="getStepClass(1)">
+                    <div class="step__banner">
+                        <img class="step__banner--image" src="/assets/image/login/banner.png" alt="banner">
+                    </div>
+                    <div class="step__moto">
+                        <span class="step__moto--text">Our food delivery app<br />brings your favourite<br />dish
+                            to
+                            you.</span>
+                        <div class="step__moto--subtitle">
+                            <div class="step__moto--divider"></div>
+                            <span class="step__moto--subtext">With our user-friendly food delivery app,<br />you
+                                will
+                                enjoy the ultimate convenience</span>
+                        </div>
+                    </div>
+                    <div class="step__action">
+                        <div class="step__action--buttons">
+                            <button class="button button-transparent button-block">Login</button>
+                            <button class="button button-inverse button-block">Sign up</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="step" [ngClass]="getStepClass(2)">
+                    <div class="step__banner">
+                        <!-- <img class="step__banner--image" src="/assets/image/login/banner.png" alt="banner"> -->
+                    </div>
+                    <div class="step__moto">
+                        <span class="step__moto--text">Our food delivery app<br />brings your favourite<br />dish
+                            to
+                            you.</span>
+                        <div class="step__moto--subtitle">
+                            <div class="step__moto--divider"></div>
+                            <span class="step__moto--subtext">With our user-friendly food delivery app,<br />you
+                                will
+                                enjoy the ultimate convenience</span>
+                        </div>
+                    </div>
+                    <div class="step__action">
+                        <div class="step__action--buttons">
+                            <button class="button button-transparent button-block">Login</button>
+                            <button class="button button-inverse button-block">Sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stepper__dots">
+                <div class="stepper__dots--dot" [ngClass]="getDotClass(0)" (click)="toStep(0)"></div>
+                <div class="stepper__dots--dot" [ngClass]="getDotClass(1)" (click)="toStep(1)"></div>
+                <div class="stepper__dots--dot" [ngClass]="getDotClass(2)" (click)="toStep(2)"></div>
+            </div>
+        </div>
+    </div>
+</div>
