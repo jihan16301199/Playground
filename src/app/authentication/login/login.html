@@ -1,5 +1,201 @@
 <div class="container-fluid">
     <div class="container-xxl">
+        <div class="section">
+            <!-- <div class="section__dashs">
+                <div class="section__dashs--dash" [ngClass]="getDashClass(0)" (click)="toStep(0)"></div>
+                <div class="section__dashs--dash" [ngClass]="getDashClass(1)" (click)="toStep(1)"></div>
+                <div class="section__dashs--dash" [ngClass]="getDashClass(2)" (click)="toStep(2)"></div>
+            </div> -->
+            <div class="section__services">
+                <div class="service" [ngClass]="getServiceClass(0)">
+                    <!-- <div class="service__logo">
+                        <div class="service__logo--image">
+                            <img src="/assets/image/login/logo.png" alt="">
+                        </div>
+                        <span class="service__logo--text">foodbiiz</span>
+                    </div> -->
+                    <div class="service__headline">
+                        <span class="service__headline--label">Rajshahi's Premium Service</span>
+                        <div class="service__headline--tag">
+                            <span class="service__headline--tag--text">Service.</span>
+                            <span class="service__headline--tag--lighter-italic">Concern.</span>
+                            <span class="service__headline--tag--highlight">Tradition.</span>
+                        </div>
+                    </div>
+                    <div class="service__title">
+                        <span class="service__title--text">Hygienic, premium
+                            <span class="service__title--text--dark">authentic</span>
+                            meals delivered fresh every day —
+                            <span class="service__title--text--lightest"> so you can focus on what truly matters.</span>
+                        </span>
+                    </div>
+                    <div class="service__buttons">
+                        <button class="service__buttons--primary" (click)="toStep(1)">Get Started</button>
+                        <button class="service__buttons--blank">View Meal Plans</button>
+                    </div>
+                    <div class="service__qualities">
+                        <span class="service__qualities--text">Fresh Daily</span>
+                        <div class="service__qualities--divider"></div>
+                        <span class="service__qualities--text">Authentic Taste</span>
+                        <div class="service__qualities--divider"></div>
+                        <span class="service__qualities--text">No Preservatives</span>
+                    </div>
+                </div>
+                <div class="service" [ngClass]="getServiceClass(1)">
+                    <div class="service__headline">
+                        <span class="service__headline--highlight">Value Proposition</span>
+                        <div class="service__headline--meta">
+                            <span class="service__headline--meta--text">Start your <span
+                                    class="service__headline--meta--highlight-italic">healthy</span>
+                            </span>
+                            <span class="service__headline--meta--lighter">journey today.</span>
+                        </div>
+                    </div>
+                    <div class="service__subtitle">
+                        <span class="service__subtitle--text">Make daily meals effortless, hygienic, and<br />affordable
+                            <span class="service__subtitle--text--lightest">
+                                through reliable, authentic food service.
+                            </span>
+                        </span>
+                    </div>
+                    <div class="service__options">
+                        <div class="option">
+                            <div class="option__title">
+                                <div class="option__title--icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
+                                        <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
+                                    </svg>
+                                </div>
+                                <span class="option__title--text">Fresh & Hygienic</span>
+                            </div>
+                            <span class="option__text">Every meal is carefully prepared with premium ingredients and
+                                strict hygiene standards.</span>
+                        </div>
+                        <div class="option">
+                            <div class="option__title">
+                                <div class="option__title--icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 6v6l4 2" />
+                                        <circle cx="12" cy="12" r="10" />
+                                    </svg>
+                                </div>
+                                <span class="option__title--text">Reliable Delivery</span>
+                            </div>
+                            <span class="option__text">Lunch and dinner delivered consistently twice a day, designed
+                                around your schedule.</span>
+                        </div>
+                        <div class="option">
+                            <div class="option__title">
+                                <div class="option__title--icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1" />
+                                        <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4" />
+                                    </svg>
+                                </div>
+                                <span class="option__title--text">Affordable Plans</span>
+                            </div>
+                            <span class="option__text">Premium authentic meals at monthly subscription rates that fit
+                                student and bachelor budgets.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service" [ngClass]="getServiceClass(2)">
+                    <div class="service__headline">
+                        <span class="service__headline--label">Rajshahi's Premium Service</span>
+                        <div class="service__headline--meta center">
+                            <span class="service__headline--meta--text">Your meals.</span>
+                            <span class="service__headline--meta--lighter">Your time.</span>
+                            <span class="service__headline--meta--text">Your lifestyle.</span>
+                        </div>
+                    </div>
+                    <div class="service__subtitle center">
+                        <span class="service__subtitle--subtext">Managing daily meals shouldn't be stressful.
+                            <span class="service__subtitle--text--lightest">
+                                We remove the burden so you can focus on your goals.
+                            </span>
+                        </span>
+                    </div>
+                    <div class="service__phases">
+                        <div class="phase">
+                            <div class="phase__title">
+                                <span class="phase__title--text">01</span>
+                                <div class="phase__title--icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" aria-hidden="true"
+                                        data-replit-metadata="client/src/components/MoreContent.tsx:274:18"
+                                        data-component-name="step.icon">
+                                        <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"></path>
+                                        <path
+                                            d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7">
+                                        </path>
+                                        <path d="m2.1 21.8 6.4-6.3"></path>
+                                        <path d="m19 5-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="phase__info">
+                                <span class="phase__info--text">Pick Your Plan</span>
+                                <span class="phase__info--subtext">Choose a subscription that fits your appetite and
+                                    schedule.</span>
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase__title">
+                                <span class="phase__title--text">02</span>
+                                <div class="phase__title--icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M2 12h20" />
+                                        <path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" />
+                                        <path d="m4 8 16-4" />
+                                        <path
+                                            d="m8.86 6.78-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="phase__info">
+                                <span class="phase__info--text">We Cook & Prep</span>
+                                <span class="phase__info--subtext">Our chefs prepare fresh meals with premium
+                                    ingredients.</span>
+                            </div>
+                        </div>
+                        <div class="phase">
+                            <div class="phase__title">
+                                <span class="phase__title--text">03</span>
+                                <div class="phase__title--icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                                        <path d="M15 18H9" />
+                                        <path
+                                            d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                                        <circle cx="17" cy="18" r="2" />
+                                        <circle cx="7" cy="18" r="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="phase__info">
+                                <span class="phase__info--text">Daily Delivery</span>
+                                <span class="phase__info--subtext">Receive your hot meals on time daily, right at your
+                                    doorstep.</span> <!--Receive your hot meals twice daily-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="stepper" [ngClass]="getBackgroundClass(current)">
             <div class="stepper__steps">
                 <div class="step" [ngClass]="getStepClass(0)">
@@ -7,20 +203,19 @@
                         <img class="step__banner--image" src="/assets/image/login/banner.png" alt="banner">
                     </div>
                     <div class="step__moto">
-                        <span class="step__moto--text">Our food delivery app<br />brings your favourite<br />dish
+                        <span class="step__moto--text">Our food delivery service<br />brings your favourite<br />dish
                             to
                             you.</span>
                         <div class="step__moto--subtitle">
                             <div class="step__moto--divider"></div>
-                            <span class="step__moto--subtext">With our user-friendly food delivery app,<br />you
-                                will
-                                enjoy the ultimate convenience</span>
+                            <span class="step__moto--subtext">Serving our customers with dedication every day,
+                                <br />so you can enjoy the ultimate convenience</span>
                         </div>
                     </div>
                     <div class="step__action">
                         <div class="step__action--buttons">
-                            <button class="button button-transparent button-block">Login</button>
-                            <button class="button button-inverse button-block">Sign up</button>
+                            <button class="button button-transparent button-block" (click)="toStep(2)">Login</button>
+                            <button class="button button-inverse button-block" (click)="toStep(1)">Sign up</button>
                         </div>
                     </div>
                 </div>
@@ -29,14 +224,12 @@
                         <img class="step__banner--image" src="/assets/image/login/banner.png" alt="banner">
                     </div>
                     <div class="step__moto">
-                        <span class="step__moto--text">Our food delivery app<br />brings your favourite<br />dish
-                            to
-                            you.</span>
+                        <span class="step__moto--text">Your health is our priority, delivered with every single
+                            meal.</span>
                         <div class="step__moto--subtitle">
                             <div class="step__moto--divider"></div>
-                            <span class="step__moto--subtext">With our user-friendly food delivery app,<br />you
-                                will
-                                enjoy the ultimate convenience</span>
+                            <span class="step__moto--subtext">Prioritizing your health, comfort, and convenience,
+                                <br />ensuring peace of mind with every bite.</span>
                         </div>
                     </div>
                     <div class="step__action">
@@ -51,14 +244,12 @@
                         <!-- <img class="step__banner--image" src="/assets/image/login/banner.png" alt="banner"> -->
                     </div>
                     <div class="step__moto">
-                        <span class="step__moto--text">Our food delivery app<br />brings your favourite<br />dish
-                            to
-                            you.</span>
+                        <span class="step__moto--text">Bringing the taste of home right to your doorstep, every
+                            time.</span>
                         <div class="step__moto--subtitle">
                             <div class="step__moto--divider"></div>
-                            <span class="step__moto--subtext">With our user-friendly food delivery app,<br />you
-                                will
-                                enjoy the ultimate convenience</span>
+                            <span class="step__moto--subtext">Blending authentic cooking with modern service,
+                                <br />bringing you the taste of home wherever you are.</span>
                         </div>
                     </div>
                     <div class="step__action">

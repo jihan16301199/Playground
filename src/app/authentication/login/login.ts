@@ -32,4 +32,18 @@ export class Login {
     else if (index == 2) return 'stepper__background--image'
     return '';
   }
+
+  getDashClass(index: number): string {
+    if (index === this.current) return 'section__dashs--dash__current'
+    else if (index < this.current) return 'section__dashs--dash__previous'
+    else if (index > this.current) return 'section__dashs--dash__next'
+    return '';
+  }
+
+  getServiceClass(index: number): string {
+    if (index === this.current) return 'service__current'
+    else if (index < this.current) return 'service__previous'
+    else if (index > this.current) return 'service__next'
+    return '';
+  }
 }
