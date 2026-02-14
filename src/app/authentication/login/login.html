@@ -30,6 +30,7 @@
                         </span>
                     </div>
                     <div class="service__buttons">
+                        <br />
                         <button class="service__buttons--primary" (click)="toStep(1)">Get Started</button>
                         <button class="service__buttons--blank">View Meal Plans</button>
                     </div>
@@ -239,7 +240,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="step" [ngClass]="getStepClass(2)">
+                <div class="step login" [ngClass]="getStepClass(2)">
                     <div class="step__banner">
                         <!-- <img class="step__banner--image" src="/assets/image/login/banner.png" alt="banner"> -->
                     </div>
@@ -253,9 +254,90 @@
                         </div>
                     </div>
                     <div class="step__action">
+                        <div class="step__action--form">
+                            <form class="reactive-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+                                <div class="reactive-form__control">
+                                    <div class="reactive-form__control--title">
+                                        <label class="reactive-form__control--title--label" for="email">User ID</label>
+                                    </div>
+                                    <input class="reactive-form__control--input" id="email" type="email"
+                                        placeholder="Email address or phone number" formControlName="email"
+                                        aria-describedby="email-error" />
+                                    <div class="reactive-form__control--subtitle">
+                                        <div class="reactive-form__control--subtitle--validations">
+                                            <div class="validation" id="email-error"
+                                                *ngIf="f.email.touched && f.email.invalid" [@slideDown]>
+                                                <div class="validation__container">
+                                                    <div class="validation__container--icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <circle cx="12" cy="12" r="10" />
+                                                            <line x1="12" x2="12" y1="8" y2="12" />
+                                                            <line x1="12" x2="12.01" y1="16" y2="16" />
+                                                        </svg>
+                                                    </div>
+                                                    <span class="validation__container--text"
+                                                        *ngIf="f.email.errors?.['required']">
+                                                        Email is required.
+                                                    </span>
+                                                    <span class="validation__container--text"
+                                                        *ngIf="f.email.errors?.['email']">
+                                                        Invalid email format.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reactive-form__control">
+                                    <div class="reactive-form__control--title">
+                                        <label class="reactive-form__control--title--label"
+                                            for="password">Password</label>
+                                    </div>
+                                    <input class="reactive-form__control--input" id="password" type="password"
+                                        placeholder="Password" formControlName="password"
+                                        aria-describedby="password-error" />
+                                    <div class="reactive-form__control--subtitle">
+                                        <div class="reactive-form__control--subtitle--validations">
+                                            <div class="validation" id="password-error"
+                                                *ngIf="f.password.touched && f.password.invalid" [@slideDown]>
+                                                <div class="validation__container">
+                                                    <div class="validation__container--icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                            stroke-width="2" stroke-linecap="round"
+                                                            stroke-linejoin="round">
+                                                            <circle cx="12" cy="12" r="10" />
+                                                            <line x1="12" x2="12" y1="8" y2="12" />
+                                                            <line x1="12" x2="12.01" y1="16" y2="16" />
+                                                        </svg>
+                                                    </div>
+                                                    <span class="validation__container--text"
+                                                        *ngIf="f.password.errors?.['required']">
+                                                        Password is required.
+                                                    </span>
+                                                    <span class="validation__container--text"
+                                                        *ngIf="f.password.errors?.['minlength']">
+                                                        Minimum 6 characters required.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span class="reactive-form__control--subtitle--link">
+                                            Forgot Password?
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- <button type="submit" [disabled]="loginForm.invalid">
+                                    Login
+                                </button> -->
+                            </form>
+                        </div>
                         <div class="step__action--buttons">
-                            <button class="button button-transparent button-block">Login</button>
-                            <button class="button button-inverse button-block">Sign up</button>
+                            <button class="button button-inverse button-block">Login</button>
+                            <!-- <button class="button button-inverse button-block">Sign up</button> -->
                         </div>
                     </div>
                 </div>

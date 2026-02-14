@@ -139,7 +139,7 @@
             }
         }
 
-        &--text{
+        &--text {
             @include display-3-demibold;
         }
     }
@@ -265,6 +265,12 @@
             border-style: none;
             background-color: #5daa80;
             transition: all 0.15s ease-in-out;
+
+            animation-duration: 1750ms;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-name: button-shadow-throb;
+            animation-timing-function: linear;
 
             &:hover {
                 background-color: #3d966d;
@@ -488,6 +494,10 @@
     height: 0;
     transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
 
+    &.login {
+        justify-content: space-around;
+    }
+
     &__banner {
         display: flex;
         flex-direction: column;
@@ -525,7 +535,8 @@
         }
 
         &--subtext {
-            color: var(--text-inverse-text-inverse-50);
+            // color: var(--text-inverse-text-inverse-50);
+            color: var(--text-inverse-text-inverse-70);
             @include body-3-regular;
         }
     }
@@ -533,6 +544,104 @@
     &__action {
         display: flex;
         flex-direction: column;
+        gap: var(--gap-gap-4xl);
+
+        &--form {
+            display: flex;
+
+            .reactive-form {
+                display: flex;
+                flex-direction: column;
+                flex: 1 0 0;
+                align-items: center;
+                gap: var(--gap-gap-lg);
+
+                &__control {
+                    display: flex;
+                    flex-direction: column;
+                    align-self: stretch;
+                    gap: var(--gap-gap-xs);
+
+                    &--title {
+                        display: flex;
+                        justify-content: space-between;
+
+                        &--label {
+                            color: var(--text-inverse-text-inverse-light);
+                            padding-inline: var(--padding-padding-md);
+                            @include title-2-medium;
+                        }
+                    }
+
+                    &--input {
+                        color: var(--text-inverse-text-inverse-light);
+                        @include title-3-medium;
+                        height: 50px;
+                        padding: var(--padding-padding-sm) var(--padding-padding-2xl);
+
+                        background-color: var(--surface-primary-surface-primary-10);
+                        border-radius: var(--border-radius-radius-md);
+                        backdrop-filter: blur(var(--backdrop-filter-blur-xs));
+                        border: 1px solid transparent;
+                        outline: none;
+                        transition: all 0.15s ease-in;
+
+                        &::placeholder {
+                            color: var(--text-inverse-text-inverse-30);
+                        }
+
+                        &.ng-touched.ng-invalid {
+                            border: 1px solid var(--surface-error-surface-error-light);
+                        }
+                    }
+
+                    &--subtitle {
+                        display: flex;
+                        justify-content: space-between;
+
+                        &--validations {
+                            flex: 1 0 0;
+                            padding-left: var(--padding-padding-md);
+
+                            .validation {
+                                color: var(--surface-error-surface-error-light);
+
+                                &__container {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: var(--gap-gap-sm);
+
+                                    &--icon {
+                                        display: flex;
+                                        height: 16px;
+                                        width: 16px;
+                                        justify-content: center;
+                                        align-items: center;
+                                        aspect-ratio: 1/1;
+                                    }
+
+                                    &--text {
+                                        @include body-3-regular;
+                                    }
+                                }
+                            }
+                        }
+
+                        &--link {
+                            color: #5daa80;
+                            // color: var(--text-inverse-text-inverse-80);
+                            padding-right: var(--padding-padding-md);
+                            @include body-3-regular;
+                            cursor: pointer;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         &--buttons {
             display: flex;
@@ -555,5 +664,76 @@
 
     &__next {
         transform: translate3d(100%, 0, 0);
+    }
+}
+
+@keyframes button-shadow-throb {
+    0% {
+        box-shadow:
+            0px 0px 0px 0px #5daa8050,
+            /* Ring three - hidden. */
+            0px 0px 0px 0px #5daa8050,
+            /* Ring two - hidden. */
+            0px 0px 0px 0px #5daa8050
+            /* Ring one - hidden. */
+        ;
+    }
+
+    15% {
+        box-shadow:
+            0px 0px 0px 0px #5daa8050,
+            0px 0px 0px 0px #5daa8050,
+            0px 0px 0px 5px #5daa8050
+            /* Ring one - enter. */
+        ;
+    }
+
+    30% {
+        box-shadow:
+            0px 0px 0px 0px #5daa8050,
+            0px 0px 0px 5px #5daa8050,
+            /* Ring two - enter. */
+            0px 0px 0px 10px #5daa8040;
+    }
+
+    45% {
+        box-shadow:
+            0px 0px 0px 5px #5daa8050,
+            /* Ring three - enter. */
+            0px 0px 0px 10px #5daa8040,
+            0px 0px 0px 15px #5daa8020;
+    }
+
+    /**
+			* Once each ring reaches its outer spread-radius, it's going to fade out using
+			* the alpha-channel on the RGB(A) hex color definition. Notice that the alpha-
+			* channels go from "80" to "00" over the next couple of keyframes.
+			*/
+    60% {
+        box-shadow:
+            0px 0px 0px 10px #5daa8040,
+            0px 0px 0px 15px #5daa8020,
+            0px 0px 15px 15px #5daa8000;
+    }
+
+    75% {
+        box-shadow:
+            0px 0px 0px 15px #5daa8020,
+            0px 0px 15px 15px #5daa8000,
+            0px 0px 15px 15px #5daa8000;
+    }
+
+    90% {
+        box-shadow:
+            0px 0px 15px 15px #5daa8000,
+            0px 0px 15px 15px #5daa8000,
+            0px 0px 15px 15px #5daa8000;
+    }
+
+    100% {
+        box-shadow:
+            0px 0px 15px 15px #5daa8000,
+            0px 0px 15px 15px #5daa8000,
+            0px 0px 15px 15px #5daa8000;
     }
 }
