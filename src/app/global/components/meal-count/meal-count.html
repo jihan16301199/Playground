@@ -1,0 +1,26 @@
+<div class="meal-count">
+    <div class="meal-count__total">
+        <span class="meal-count__total--label">Total Meals</span>
+        <span class="meal-count__total--text">{{ mealCount.totalMeal }}</span>
+    </div>
+    <div class="meal-count__breakdown">
+        <div class="breakdowns">
+            <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.totalLunch)">
+                <span class="breakdowns__breakdown--label">Lunch</span>
+                <span class="breakdowns__breakdown--text">{{ mealCount.totalLunch }}</span>
+            </div>
+            <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.totalDinner)">
+                <span class="breakdowns__breakdown--label">Dinner</span>
+                <span class="breakdowns__breakdown--text">{{ mealCount.totalDinner }}</span>
+            </div>
+            <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.cancelled)">
+                <span class="breakdowns__breakdown--label">Cancelled</span>
+                <span class="breakdowns__breakdown--text">{{ mealCount.cancelled }}</span>
+            </div>
+            <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.delivered)">
+                <span class="breakdowns__breakdown--label">Delivered</span>
+                <span class="breakdowns__breakdown--text">{{ mealCount.delivered }}</span>
+            </div>
+        </div>
+    </div>
+</div>
