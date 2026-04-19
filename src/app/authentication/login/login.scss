@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     // background-color: #dddce1;
-    background-color: #f4f4f4;
+    background-color: var(--surface-primary-surface-primary);
 }
 
 .container-xxl {
@@ -258,7 +258,7 @@
         gap: var(--gap-gap-lg);
 
         &--primary {
-            color: var(--text-inverse-text-inverse-light);
+            color: var(--text-inverse-text-inverse);
             padding: var(--padding-padding-xl) var(--padding-padding-6xl);
             @include title-2-bold;
             border-radius: var(--border-radius-radius-md);

@@ -40,7 +40,7 @@
                         align-items: center;
                         gap: var(--gap-gap-sm);
                         border-radius: var(--border-radius-radius-md);
-                        background: rgba(255, 238, 218, 0.30);
+                        background: var(--surface-warning-surface-warning-10);
 
                         &--text {
                             color: var(--text-warning-text-warning);

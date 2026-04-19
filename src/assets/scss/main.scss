@@ -11,6 +11,18 @@
 @use "override" as *;
 @use "TTHovesProOverride" as *;
 
+html,
+body{
+  background: var(--surface-primary-surface-primary);
+}
+
+/* Theme Transition - Smooth color changes when switching modes */
+html,
+body,
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
 .otp {
   &-label {
     color: $neutral-800;
