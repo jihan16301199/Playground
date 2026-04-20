@@ -1,0 +1,64 @@
+<div class="container-fluid" [style.marginBottom]="contentMarginBottom">
+    <div class="container-xxl">
+        <div class="header">
+            <div class="header__motd">
+                <!-- <div class="header__motd--profile">
+
+                </div> -->
+                <div class="header__motd--greetings">
+                    <div class="greetings">
+                        <div class="greetings__message">Greetings,
+                            <span class="greetings__message--text">Jihan
+                                <span class="greetings__message--text-underline"></span>
+                            </span>
+                        </div>
+                        <div class="greetings__information">
+                            <span class="greetings__information--text">Your personalized healthy journey is ready
+                                <span class="greetings__information--text-italic">- Select your plan</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__motd--alert">
+
+                </div>
+            </div>
+            <div class="header__subscription"></div>
+        </div>
+    </div>
+</div>
+
+<div class="swipe" [class.open]="isOpen" [style.transform]="transform" [style.bottom]="swipeBottom"
+    (touchstart)="onStart($event)" (touchmove)="onMove($event)" (touchend)="onEnd()" (mousedown)="onMouseStart($event)"
+    (mousemove)="onMouseMove($event)" (mouseup)="onMouseEnd()" (mouseleave)="onMouseEnd()">
+    <div class="swipe__handle" #handle>
+        <div class="swipe__handle--bar"></div>
+        <span class="swipe__handle--label">Swipe up to see details</span>
+        <!-- <span class="swipe__handle--label">Swipe up to see details</span> -->
+    </div>
+    <div class="swipe__partial" #partial>
+        <div style="display: flex; flex-direction: column; padding: 16px;">
+            <span>swipe</span>
+            <span>content</span>
+            <span>partial</span>
+        </div>
+    </div>
+    <div class="swipe__restre" #rest>
+        <div style="display: flex; flex-direction: column; padding: 16px;">
+            <span>swipe</span>
+            <span>content</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+        </div>
+    </div>
+</div>
+<div class="action" #action [style.bottom]="actionBottom">
+    <div class="action__container">
+        <button class="button-blue button-block">Click</button>
+    </div>
+</div>

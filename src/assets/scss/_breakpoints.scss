@@ -50,7 +50,7 @@ $mf-breakpoints: (
 
 // Mobile-first up (min-width)
 @mixin mf-up($breakpoint) {
-  $min: map-get($mf-breakpoints, $breakpoint);
+  $min: map.get($mf-breakpoints, $breakpoint);
   @if $min != null {
     @media (min-width: $min) {
       @content;
@@ -70,8 +70,8 @@ $mf-breakpoints: (
 
 // Mobile-first between (min-width and max-width)
 @mixin mf-between($breakpoint-min, $breakpoint-max) {
-  $min: map-get($mf-breakpoints, $breakpoint-min);
-  $max: map-get($mf-breakpoints, $breakpoint-max);
+  $min: map.get($mf-breakpoints, $breakpoint-min);
+  $max: map.get($mf-breakpoints, $breakpoint-max);
   @if $min != null and $max != null {
     @media (min-width: $min) and (max-width: $max) {
       @content;

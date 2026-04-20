@@ -54,7 +54,7 @@
 
 // responsive Mixins
 @mixin media-up($breakpoint) {
-  $min: map-get($breakpoints, $breakpoint);
+  $min: map.get($breakpoints, $breakpoint);
   @if $min {
     @media (min-width: $min) {
       @content;
