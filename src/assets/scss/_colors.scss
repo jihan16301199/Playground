@@ -301,18 +301,23 @@ $brown-dark: #66451c;
   --color-color-red-transparent-dark-red-dark-tsp-2: rgba(255, 89, 89, 0.02);
 }
 
-/* Colors - Light */
+/* Colors - Light Mode - Semantic Variables */
 :root {
+  /* =============== BACKGROUNDS =============== */
   --background-bg-primary: var(--color-color-neutral-neutral-050);
   --background-bg-secondary: var(--color-color-base-white-default);
   --background-bg-tertiary: var(--color-color-neutral-neutral-200);
   --background-bg-inverse: var(--color-color-neutral-neutral-900);
   --background-bg-accent: var(--color-color-green-dark-mode-green-default);
+
+  /* =============== TEXT LABELS =============== */
   --text-label-text-on-label-primary: var(--color-color-green-light-mode-green-default);
   --text-label-text-on-label-secondary: var(--color-color-blue-light-mode-blue-default);
   --text-label-text-on-label-warning: var(--color-color-orange-light-mode-orange-default);
   --text-label-text-on-label-error: var(--color-color-red-light-mode-red-default);
   --text-label-text-on-label-info: var(--color-color-cyan-light-mode-cyan-default);
+
+  /* =============== TEXT INVERSE =============== */
   --text-inverse-text-inverse-light: var(--color-color-base-white-default);
   --text-inverse-text-inverse: var(--color-color-neutral-neutral-050);
   --text-inverse-text-inverse-dark: var(--color-color-neutral-neutral-100);
@@ -323,6 +328,8 @@ $brown-dark: #66451c;
   --text-inverse-text-inverse-50: var(--color-color-white-transparent-white-tsp-50);
   --text-inverse-text-inverse-30: var(--color-color-white-transparent-white-tsp-30);
   --text-inverse-text-inverse-10: var(--color-color-white-transparent-white-tsp-10);
+
+  /* =============== TEXT PRIMARY =============== */
   --text-primary-text-primary-darker: var(--color-color-neutral-neutral-1000);
   --text-primary-text-primary-dark: var(--color-color-neutral-neutral-900);
   --text-primary-text-primary: var(--color-color-neutral-neutral-800);
@@ -334,9 +341,11 @@ $brown-dark: #66451c;
   --text-primary-text-primary-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
   --text-primary-text-primary-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
   --text-primary-text-primary-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
-  --text-accent-text-accent: var(--color-color-green-light-mode-green-default);
+
+  /* =============== TEXT ACCENT =============== */
   --text-accent-text-accent-darkest: var(--color-color-green-light-mode-green-800);
   --text-accent-text-accent-darker: var(--color-color-green-light-mode-green-700);
+  --text-accent-text-accent: var(--color-color-green-light-mode-green-default);
   --text-accent-text-accent-lighter: var(--color-color-green-light-mode-green-200);
   --text-accent-text-accent-lightest: var(--color-color-green-light-mode-green-100);
   --text-accent-text-accent-70: var(--color-color-green-transparent-light-green-light-tsp-70);
@@ -344,6 +353,8 @@ $brown-dark: #66451c;
   --text-accent-text-accent-30: var(--color-color-green-transparent-light-green-light-tsp-30);
   --text-accent-text-accent-10: var(--color-color-green-transparent-light-green-light-tsp-10);
   --text-accent-text-accent-5: var(--color-color-green-transparent-light-green-light-tsp-5);
+
+  /* =============== TEXT SECONDARY =============== */
   --text-secondary-text-accent-secondary-darkest: var(--color-color-blue-light-mode-blue-800);
   --text-secondary-text-accent-secondary-darker: var(--color-color-blue-light-mode-blue-700);
   --text-secondary-text-accent-secondary-dark: var(--color-color-blue-light-mode-blue-600);
@@ -353,6 +364,8 @@ $brown-dark: #66451c;
   --text-secondary-text-accent-secondary-lightest: var(--color-color-blue-light-mode-blue-100);
   --text-link-text-link-default: var(--color-color-blue-light-mode-blue-default);
   --text-link-text-link-hover: var(--color-color-blue-light-mode-blue-default);
+
+  /* =============== TEXT ON STATES =============== */
   --text-on-primary-text-on-primary: var(--color-color-white-transparent-white-tsp-100);
   --text-on-primary-text-on-primary-light: var(--color-color-white-transparent-white-tsp-80);
   --text-on-primary-text-on-primary-lighter: var(--color-color-white-transparent-white-tsp-50);
@@ -365,6 +378,8 @@ $brown-dark: #66451c;
   --text-on-inverse-text-on-inverse-light: var(--color-color-white-transparent-white-tsp-80);
   --text-on-inverse-text-on-inverse-lighter: var(--color-color-white-transparent-white-tsp-50);
   --text-on-inverse-text-on-inverse-lightest: var(--color-color-white-transparent-white-tsp-30);
+
+  /* =============== TEXT BUTTON STATES =============== */
   --text-button-text-on-btn-primary: var(--color-color-neutral-neutral-050);
   --text-button-text-on-btn-secondary: var(--color-color-neutral-neutral-050);
   --text-button-text-on-btn-primary-tint: var(--color-color-blue-light-mode-blue-default);
@@ -376,6 +391,8 @@ $brown-dark: #66451c;
   --text-warning-text-warning: var(--color-color-orange-light-mode-orange-default);
   --text-success-text-success: var(--color-color-green-light-mode-green-default);
   --text-info-text-info: var(--color-color-red-light-mode-red-default);
+
+  /* =============== SURFACE PRIMARY =============== */
   --surface-primary-surface-primary-light: var(--color-color-base-white-default);
   --surface-primary-surface-primary: var(--color-color-neutral-neutral-050);
   --surface-primary-surface-primary-dark: var(--color-color-neutral-neutral-100);
@@ -386,6 +403,8 @@ $brown-dark: #66451c;
   --surface-primary-surface-primary-50: var(--color-color-white-transparent-white-tsp-50);
   --surface-primary-surface-primary-30: var(--color-color-white-transparent-white-tsp-30);
   --surface-primary-surface-primary-10: var(--color-color-white-transparent-white-tsp-10);
+
+  /* =============== SURFACE INVERSE =============== */
   --surface-inverse-surface-inverse-light: var(--color-color-neutral-neutral-600);
   --surface-inverse-surface-inverse: var(--color-color-neutral-neutral-700);
   --surface-inverse-surface-inverse-dark: var(--color-color-neutral-neutral-800);
@@ -398,6 +417,8 @@ $brown-dark: #66451c;
   --surface-inverse-surface-inverse-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
   --surface-inverse-surface-inverse-5: var(--color-color-black-transparent-neutral-dark-tsp-5);
   --surface-inverse-surface-inverse-2: var(--color-color-black-transparent-neutral-dark-tsp-2);
+
+  /* =============== SURFACE ACCENT =============== */
   --surface-accent-surface-accent-lightest: var(--color-color-green-light-mode-green-100);
   --surface-accent-surface-accent-lighter: var(--color-color-green-light-mode-green-300);
   --surface-accent-surface-accent-light: var(--color-color-green-light-mode-green-400);
@@ -411,6 +432,8 @@ $brown-dark: #66451c;
   --surface-accent-surface-accent-30: var(--color-color-green-transparent-light-green-light-tsp-30);
   --surface-accent-surface-accent-10: var(--color-color-green-transparent-light-green-light-tsp-10);
   --surface-accent-surface-accent-5: var(--color-color-green-transparent-light-green-light-tsp-10);
+
+  /* =============== SURFACE ACCENT SECONDARY =============== */
   --surface-accent-secondary-surface-secondary-accent-lightest: var(--color-color-blue-light-mode-blue-100);
   --surface-accent-secondary-surface-secondary-accent-lighter: var(--color-color-blue-light-mode-blue-200);
   --surface-accent-secondary-surface-secondary-accent-light: var(--color-color-blue-light-mode-blue-400);
@@ -423,6 +446,8 @@ $brown-dark: #66451c;
   --surface-accent-secondary-surface-secondary-accent-50: var(--color-color-blue-transparent-light-blue-light-tsp-50);
   --surface-accent-secondary-surface-secondary-accent-30: var(--color-color-blue-transparent-light-blue-light-tsp-30);
   --surface-accent-secondary-surface-secondary-accent-10: var(--color-color-blue-transparent-light-blue-light-tsp-10);
+
+  /* =============== SURFACE ERROR =============== */
   --surface-error-surface-error-lightest: var(--color-color-red-light-mode-red-100);
   --surface-error-surface-error-lighter: var(--color-color-red-light-mode-red-300);
   --surface-error-surface-error-light: var(--color-color-red-light-mode-red-400);
@@ -431,6 +456,8 @@ $brown-dark: #66451c;
   --surface-error-surface-error-darker: var(--color-color-red-light-mode-red-700);
   --surface-error-surface-error-darkest: var(--color-color-red-light-mode-red-800);
   --surface-error-surface-error-10: var(--color-color-red-transparent-light-red-light-tsp-10);
+
+  /* =============== SURFACE WARNING =============== */
   --surface-warning-surface-warning-lightest: var(--color-color-orange-light-mode-orange-100);
   --surface-warning-surface-warning-lighter: var(--color-color-orange-light-mode-orange-200);
   --surface-warning-surface-warning-light: var(--color-color-orange-light-mode-orange-400);
@@ -439,6 +466,8 @@ $brown-dark: #66451c;
   --surface-warning-surface-warning-darker: var(--color-color-orange-light-mode-orange-700);
   --surface-warning-surface-warning-darkest: var(--color-color-orange-light-mode-orange-800);
   --surface-warning-surface-warning-10: var(--color-color-orange-transparent-light-orange-light-tsp-10);
+
+  /* =============== BUTTONS PRIMARY =============== */
   --buttons-primary-button-primary-default: var(--color-color-blue-light-mode-blue-default);
   --buttons-primary-tint-button-primary-tint-default: var(--color-color-blue-transparent-light-blue-light-tsp-10);
   --buttons-primary-tint-button-primary-tint-hover: var(--color-color-blue-light-mode-blue-200);
@@ -452,6 +481,8 @@ $brown-dark: #66451c;
   --buttons-primary-button-primary-outline: var(--color-color-blue-light-mode-blue-300);
   --buttons-primary-button-primary-outline-hover: var(--color-color-blue-light-mode-blue-400);
   --buttons-primary-button-primary-outline-pressed: var(--color-color-blue-light-mode-blue-default);
+
+  /* =============== BUTTONS SECONDARY =============== */
   --buttons-secondary-button-primary-default: var(--color-color-green-light-mode-green-default);
   --buttons-secondary-tint-button-primary-default: var(--color-color-green-light-mode-green-100);
   --buttons-secondary-tint-button-primary-hover: var(--color-color-green-light-mode-green-200);
@@ -462,6 +493,8 @@ $brown-dark: #66451c;
   --buttons-secondary-button-primary-pressed: var(--color-color-green-light-mode-green-700);
   --buttons-secondary-button-primary-disabled: var(--color-color-neutral-neutral-300);
   --buttons-secondary-button-primary-selected: var(--color-color-neutral-neutral-200);
+
+  /* =============== BUTTONS SOLID & INVERSE =============== */
   --buttons-solid-button-solid-default: var(--color-color-black-transparent-neutral-dark-tsp-2);
   --buttons-solid-button-solid-hover: var(--color-color-black-transparent-neutral-dark-tsp-5);
   --buttons-solid-button-solid-pressed: var(--color-color-black-transparent-neutral-dark-tsp-2);
@@ -474,6 +507,8 @@ $brown-dark: #66451c;
   --buttons-inverse-button-inverse-disabled: var(--color-color-black-transparent-neutral-dark-tsp-5);
   --buttons-inverse-button-inverse-selected: var(--color-color-neutral-neutral-700);
   --buttons-inverse-button-inverse-outline: var(--color-color-neutral-neutral-800);
+
+  /* =============== ICONS PRIMARY =============== */
   --icon-primary-icon-primary-lightest: var(--color-color-neutral-neutral-500);
   --icon-primary-icon-primary-lighter: var(--color-color-neutral-neutral-600);
   --icon-primary-icon-primary-light: var(--color-color-neutral-neutral-700);
@@ -486,6 +521,8 @@ $brown-dark: #66451c;
   --icon-primary-icon-primary-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
   --icon-primary-icon-primary-5: var(--color-color-black-transparent-neutral-dark-tsp-5);
   --icon-primary-icon-primary-2: var(--color-color-black-transparent-neutral-dark-tsp-2);
+
+  /* =============== STROKES PRIMARY =============== */
   --stroke-primary-stroke-primary-lighter: var(--color-color-neutral-neutral-200);
   --stroke-primary-stroke-primary-light: var(--color-color-neutral-neutral-300);
   --stroke-primary-stroke-primary: var(--color-color-neutral-neutral-400);
@@ -496,6 +533,8 @@ $brown-dark: #66451c;
   --stroke-primary-stroke-primary-50: var(--color-color-white-transparent-white-tsp-50);
   --stroke-primary-stroke-primary-30: var(--color-color-white-transparent-white-tsp-30);
   --stroke-primary-stroke-primary-10: var(--color-color-white-transparent-white-tsp-10);
+
+  /* =============== STROKES INVERSE & ACCENT =============== */
   --stroke-inverse-stroke-inverse-lightest: var(--color-color-neutral-neutral-500);
   --stroke-inverse-stroke-inverse-lighter: var(--color-color-neutral-neutral-600);
   --stroke-inverse-stroke-inverse-light: var(--color-color-neutral-neutral-700);
@@ -516,6 +555,8 @@ $brown-dark: #66451c;
   --stroke-error-icon-primary-light: var(--color-color-red-light-mode-red-100);
   --stroke-error-icon-primary: var(--color-color-red-light-mode-red-default);
   --stroke-error-icon-primary-dark: var(--color-color-red-light-mode-red-700);
+
+  /* =============== ICONS INVERSE & ACCENT =============== */
   --icon-inverse-icon-inverse-light: var(--color-color-base-white-default);
   --icon-inverse-icon-inverse: var(--color-color-neutral-neutral-050);
   --icon-inverse-icon-inverse-dark: var(--color-color-neutral-neutral-200);
@@ -537,6 +578,8 @@ $brown-dark: #66451c;
   --icon-accent-secondary-icon-primary-dark: var(--color-color-blue-light-mode-blue-700);
   --icon-accent-secondary-icon-primary-50: var(--color-color-blue-transparent-light-blue-light-tsp-50);
   --icon-warning-icon-primary: var(--color-color-orange-light-mode-orange-default);
+
+  /* =============== LABELS =============== */
   --label-label-primary: var(--color-color-green-transparent-light-green-light-tsp-5);
   --label-label-secondary: var(--color-color-blue-transparent-light-blue-light-tsp-10);
   --label-label-warning: var(--color-color-orange-transparent-dark-orange-dark-tsp-5);
@@ -549,22 +592,29 @@ $brown-dark: #66451c;
   --buttons-red-tint-button-solid-disabled: var(--color-color-neutral-neutral-100);
   --buttons-red-tint-button-solid-selected: var(--color-color-neutral-neutral-400);
   --buttons-red-tint-button-solid-outline: var(--color-color-red-light-mode-red-default);
+
+  /* =============== GRADIENTS =============== */
   --gradient-bg-green-white-white: var(--background-bg-secondary);
   --gradient-bg-green-white-green: rgba(246, 255, 251, 1);
 }
 
+/* Colors - Dark Mode - Semantic Variables */
 .dark-mode {
-  /* Colors - Dark */
+  /* =============== BACKGROUNDS =============== */
   --background-bg-primary: var(--color-color-neutral-neutral-1000);
   --background-bg-secondary: var(--color-color-neutral-neutral-900);
   --background-bg-tertiary: var(--color-color-neutral-neutral-900);
   --background-bg-inverse: var(--color-color-neutral-neutral-100);
   --background-bg-accent: var(--color-color-green-dark-mode-green-default);
+
+  /* =============== TEXT LABELS =============== */
   --text-label-text-on-label-primary: var(--color-color-green-dark-mode-green-default);
   --text-label-text-on-label-secondary: var(--color-color-blue-dark-mode-blue-default);
   --text-label-text-on-label-warning: var(--color-color-orange-dark-mode-orange-default);
   --text-label-text-on-label-error: var(--color-color-red-dark-mode-red-default);
   --text-label-text-on-label-info: var(--color-color-cyan-dark-mode-cyan-default);
+
+  /* =============== TEXT INVERSE =============== */
   --text-inverse-text-inverse-light: var(--color-color-neutral-neutral-200);
   --text-inverse-text-inverse: var(--color-color-neutral-neutral-200);
   --text-inverse-text-inverse-dark: var(--color-color-neutral-neutral-200);
@@ -575,6 +625,8 @@ $brown-dark: #66451c;
   --text-inverse-text-inverse-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
   --text-inverse-text-inverse-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
   --text-inverse-text-inverse-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
+
+  /* =============== TEXT PRIMARY =============== */
   --text-primary-text-primary-darker: var(--color-color-neutral-neutral-050);
   --text-primary-text-primary-dark: var(--color-color-neutral-neutral-100);
   // --text-primary-text-primary: var(--color-color-neutral-neutral-050);
@@ -587,6 +639,8 @@ $brown-dark: #66451c;
   --text-primary-text-primary-50: var(--color-color-white-transparent-white-tsp-50);
   --text-primary-text-primary-30: var(--color-color-white-transparent-white-tsp-30);
   --text-primary-text-primary-10: var(--color-color-white-transparent-white-tsp-10);
+
+  /* =============== TEXT ACCENT =============== */
   --text-accent-text-accent: var(--color-color-green-dark-mode-green-default);
   --text-accent-text-accent-darkest: var(--color-color-green-dark-mode-green-default);
   --text-accent-text-accent-darker: var(--color-color-green-dark-mode-green-default);
@@ -597,6 +651,8 @@ $brown-dark: #66451c;
   --text-accent-text-accent-30: var(--color-color-green-transparent-dark-green-dark-tsp-30);
   --text-accent-text-accent-10: var(--color-color-green-transparent-dark-green-dark-tsp-10);
   --text-accent-text-accent-5: var(--color-color-green-transparent-dark-green-dark-tsp-5);
+
+  /* =============== TEXT SECONDARY =============== */
   --text-secondary-text-accent-secondary-darkest: var(--color-color-blue-light-mode-blue-default);
   --text-secondary-text-accent-secondary-darker: var(--color-color-blue-light-mode-blue-default);
   --text-secondary-text-accent-secondary-dark: var(--color-color-blue-light-mode-blue-default);
@@ -606,6 +662,8 @@ $brown-dark: #66451c;
   --text-secondary-text-accent-secondary-lightest: var(--color-color-blue-light-mode-blue-default);
   --text-link-text-link-default: var(--color-color-blue-light-mode-blue-default);
   --text-link-text-link-hover: var(--color-color-blue-light-mode-blue-default);
+
+  /* =============== TEXT ON STATES =============== */
   --text-on-primary-text-on-primary: var(--color-color-neutral-neutral-100);
   --text-on-primary-text-on-primary-light: var(--color-color-neutral-neutral-100);
   --text-on-primary-text-on-primary-lighter: var(--color-color-neutral-neutral-100);
@@ -618,6 +676,8 @@ $brown-dark: #66451c;
   --text-on-inverse-text-on-inverse-light: var(--color-color-neutral-neutral-100);
   --text-on-inverse-text-on-inverse-lighter: var(--color-color-neutral-neutral-100);
   --text-on-inverse-text-on-inverse-lightest: var(--color-color-neutral-neutral-100);
+
+  /* =============== TEXT BUTTON STATES =============== */
   --text-button-text-on-btn-primary: var(--color-color-neutral-neutral-050);
   --text-button-text-on-btn-secondary: var(--color-color-neutral-neutral-100);
   --text-button-text-on-btn-primary-tint: var(--color-color-blue-dark-mode-blue-default);
@@ -629,6 +689,8 @@ $brown-dark: #66451c;
   --text-warning-text-warning: var(--color-color-orange-dark-mode-orange-default);
   --text-success-text-success: var(--color-color-green-dark-mode-green-default);
   --text-info-text-info: var(--color-color-neutral-neutral-100);
+
+  /* =============== SURFACE PRIMARY =============== */
   --surface-primary-surface-primary-light: var(--color-color-base-black-default);
   --surface-primary-surface-primary: var(--color-color-neutral-neutral-900);
   --surface-primary-surface-primary-dark: var(--color-color-neutral-neutral-800);
@@ -639,6 +701,8 @@ $brown-dark: #66451c;
   --surface-primary-surface-primary-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
   --surface-primary-surface-primary-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
   --surface-primary-surface-primary-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
+
+  /* =============== SURFACE INVERSE =============== */
   --surface-inverse-surface-inverse-light: var(--color-color-base-white-default);
   --surface-inverse-surface-inverse: var(--color-color-neutral-neutral-050);
   --surface-inverse-surface-inverse-dark: var(--color-color-neutral-neutral-100);
@@ -651,6 +715,8 @@ $brown-dark: #66451c;
   --surface-inverse-surface-inverse-10: var(--color-color-white-transparent-white-tsp-10);
   --surface-inverse-surface-inverse-5: var(--color-color-white-transparent-white-tsp-10);
   --surface-inverse-surface-inverse-2: var(--color-color-white-transparent-white-tsp-10);
+
+  /* =============== SURFACE ACCENT =============== */
   --surface-accent-surface-accent-lightest: var(--color-color-green-dark-mode-green-100);
   --surface-accent-surface-accent-lighter: var(--color-color-green-dark-mode-green-300);
   --surface-accent-surface-accent-light: var(--color-color-green-dark-mode-green-400);
@@ -664,6 +730,8 @@ $brown-dark: #66451c;
   --surface-accent-surface-accent-30: var(--color-color-green-transparent-dark-green-dark-tsp-30);
   --surface-accent-surface-accent-10: var(--color-color-green-transparent-dark-green-dark-tsp-10);
   --surface-accent-surface-accent-5: var(--color-color-green-transparent-dark-green-dark-tsp-10);
+
+  /* =============== SURFACE ACCENT SECONDARY =============== */
   --surface-accent-secondary-surface-secondary-accent-lightest: var(--color-color-neutral-neutral-800);
   --surface-accent-secondary-surface-secondary-accent-lighter: var(--color-color-neutral-neutral-700);
   --surface-accent-secondary-surface-secondary-accent-light: var(--color-color-neutral-neutral-600);
@@ -676,6 +744,8 @@ $brown-dark: #66451c;
   --surface-accent-secondary-surface-secondary-accent-50: var(--color-color-blue-transparent-dark-blue-dark-tsp-50);
   --surface-accent-secondary-surface-secondary-accent-30: var(--color-color-blue-transparent-dark-blue-dark-tsp-30);
   --surface-accent-secondary-surface-secondary-accent-10: var(--color-color-blue-transparent-dark-blue-dark-tsp-10);
+
+  /* =============== SURFACE ERROR =============== */
   --surface-error-surface-error-lightest: var(--color-color-red-dark-mode-red-800);
   --surface-error-surface-error-lighter: var(--color-color-red-dark-mode-red-700);
   --surface-error-surface-error-light: var(--color-color-red-dark-mode-red-600);
@@ -684,6 +754,8 @@ $brown-dark: #66451c;
   --surface-error-surface-error-darker: var(--color-color-red-dark-mode-red-200);
   --surface-error-surface-error-darkest: var(--color-color-red-dark-mode-red-100);
   --surface-error-surface-error-10: var(--color-color-red-transparent-dark-red-dark-tsp-10);
+
+  /* =============== SURFACE WARNING =============== */
   --surface-warning-surface-warning-lightest: var(--color-color-orange-dark-mode-orange-800);
   --surface-warning-surface-warning-lighter: var(--color-color-orange-dark-mode-orange-700);
   --surface-warning-surface-warning-light: var(--color-color-orange-dark-mode-orange-600);
@@ -692,6 +764,8 @@ $brown-dark: #66451c;
   --surface-warning-surface-warning-darker: var(--color-color-orange-dark-mode-orange-200);
   --surface-warning-surface-warning-darkest: var(--color-color-orange-dark-mode-orange-100);
   --surface-warning-surface-warning-10: var(--color-color-orange-transparent-dark-orange-dark-tsp-10);
+
+  /* =============== BUTTONS PRIMARY =============== */
   --buttons-primary-button-primary-default: var(--color-color-blue-light-mode-blue-default);
   --buttons-primary-tint-button-primary-tint-default: var(--color-color-blue-transparent-light-blue-light-tsp-30);
   --buttons-primary-tint-button-primary-tint-hover: var(--color-color-neutral-neutral-700);
@@ -705,6 +779,8 @@ $brown-dark: #66451c;
   --buttons-primary-button-primary-outline: var(--color-color-blue-light-mode-blue-default);
   --buttons-primary-button-primary-outline-hover: var(--color-color-blue-light-mode-blue-default);
   --buttons-primary-button-primary-outline-pressed: var(--color-color-blue-light-mode-blue-default);
+
+  /* =============== BUTTONS SECONDARY =============== */
   --buttons-secondary-button-primary-default: var(--color-color-blue-light-mode-blue-default);
   --buttons-secondary-tint-button-primary-default: var(--color-color-blue-light-mode-blue-default);
   --buttons-secondary-tint-button-primary-hover: var(--color-color-neutral-neutral-700);
@@ -715,6 +791,8 @@ $brown-dark: #66451c;
   --buttons-secondary-button-primary-pressed: var(--color-color-neutral-neutral-700);
   --buttons-secondary-button-primary-disabled: var(--color-color-neutral-neutral-700);
   --buttons-secondary-button-primary-selected: var(--color-color-neutral-neutral-700);
+
+  /* =============== BUTTONS SOLID & INVERSE =============== */
   --buttons-solid-button-solid-default: var(--color-color-white-transparent-white-tsp-10);
   --buttons-solid-button-solid-hover: var(--color-color-neutral-neutral-700);
   --buttons-solid-button-solid-pressed: var(--color-color-neutral-neutral-700);
@@ -727,6 +805,8 @@ $brown-dark: #66451c;
   --buttons-inverse-button-inverse-disabled: var(--color-color-white-transparent-white-tsp-10);
   --buttons-inverse-button-inverse-selected: var(--color-color-neutral-neutral-700);
   --buttons-inverse-button-inverse-outline: var(--color-color-neutral-neutral-700);
+
+  /* =============== ICONS PRIMARY =============== */
   --icon-primary-icon-primary-lightest: var(--color-color-neutral-neutral-700);
   --icon-primary-icon-primary-lighter: var(--color-color-neutral-neutral-700);
   --icon-primary-icon-primary-light: var(--color-color-neutral-neutral-700);
@@ -739,6 +819,8 @@ $brown-dark: #66451c;
   --icon-primary-icon-primary-10: var(--color-color-white-transparent-white-tsp-10);
   --icon-primary-icon-primary-5: var(--color-color-white-transparent-white-tsp-5);
   --icon-primary-icon-primary-2: var(--color-color-white-transparent-white-tsp-2);
+
+  /* =============== STROKES PRIMARY =============== */
   --stroke-primary-stroke-primary-lighter: var(--color-color-neutral-neutral-700);
   --stroke-primary-stroke-primary-light: var(--color-color-neutral-neutral-600);
   --stroke-primary-stroke-primary: var(--color-color-neutral-neutral-700);
@@ -749,6 +831,8 @@ $brown-dark: #66451c;
   --stroke-primary-stroke-primary-50: var(--color-color-green-light-mode-green-default);
   --stroke-primary-stroke-primary-30: var(--color-color-white-transparent-white-tsp-10);
   --stroke-primary-stroke-primary-10: var(--color-color-green-light-mode-green-default);
+
+  /* =============== STROKES INVERSE & ACCENT =============== */
   --stroke-inverse-stroke-inverse-lightest: var(--color-color-neutral-neutral-700);
   --stroke-inverse-stroke-inverse-lighter: var(--color-color-neutral-neutral-700);
   --stroke-inverse-stroke-inverse-light: var(--color-color-neutral-neutral-700);
@@ -769,6 +853,8 @@ $brown-dark: #66451c;
   --stroke-error-icon-primary-light: var(--color-color-neutral-neutral-700);
   --stroke-error-icon-primary: var(--color-color-green-light-mode-green-default);
   --stroke-error-icon-primary-dark: var(--color-color-green-light-mode-green-default);
+
+  /* =============== ICONS INVERSE & ACCENT =============== */
   --icon-inverse-icon-inverse-light: var(--color-color-neutral-neutral-700);
   --icon-inverse-icon-inverse: var(--color-color-neutral-neutral-050);
   --icon-inverse-icon-inverse-dark: var(--color-color-neutral-neutral-200);
@@ -790,6 +876,8 @@ $brown-dark: #66451c;
   --icon-accent-secondary-icon-primary-dark: var(--color-color-blue-dark-mode-blue-700);
   --icon-accent-secondary-icon-primary-50: var(--color-color-blue-transparent-dark-blue-dark-tsp-50);
   --icon-warning-icon-primary: var(--color-color-orange-dark-mode-orange-default);
+
+  /* =============== LABELS =============== */
   --label-label-primary: var(--color-color-green-transparent-dark-green-dark-tsp-5);
   --label-label-secondary: var(--color-color-blue-transparent-dark-blue-dark-tsp-10);
   --label-label-warning: var(--color-color-orange-transparent-dark-orange-dark-tsp-5);
@@ -802,6 +890,8 @@ $brown-dark: #66451c;
   --buttons-red-tint-button-solid-disabled: var(--color-color-neutral-neutral-700);
   --buttons-red-tint-button-solid-selected: var(--color-color-neutral-neutral-700);
   --buttons-red-tint-button-solid-outline: var(--color-color-neutral-neutral-700);
+
+  /* =============== GRADIENTS =============== */
   --gradient-bg-green-white-white: var(--background-bg-secondary);
   --gradient-bg-green-white-green: rgba(17, 25, 21, 1);
 }
