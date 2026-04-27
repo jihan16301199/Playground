@@ -12,7 +12,7 @@
     z-index: 99;
     border: 1px solid green;
     border-radius: var(--border-radius-radius-lg) var(--border-radius-radius-lg) 0 0;
-    background: var(--surface-primary-surface-primary-light);
+    background: var(--surface-primary-light);
     box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.10);
     touch-action: none;
     overscroll-behavior: contain;
@@ -38,7 +38,7 @@
         }
 
         &--label {
-            color: var(--text-primary-text-primary-70);
+            color: var(--text-primary-70);
             // text-align: center;
             // margin: 6px auto;
             @include label-2-medium;

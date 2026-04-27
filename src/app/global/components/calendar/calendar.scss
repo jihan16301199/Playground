@@ -10,7 +10,7 @@
     align-items: center;
     gap: var(--gap-gap-md);
     border-radius: var(--border-radius-radius-xl);
-    background: var(--surface-primary-surface-primary-light);
+    background: var(--surface-primary-light);
 
     &__switcher {
         display: flex;
@@ -30,12 +30,12 @@
         }
 
         &--text {
-            color: var(--text-primary-text-primary);
+            color: var(--text-primary);
             text-align: center;
             @include headline-2-bold;
 
             &--subtext {
-                color: var(--text-primary-text-primary-lightest);
+                color: var(--text-primary-lightest);
             }
         }
     }
@@ -63,12 +63,12 @@
                 justify-content: center;
 
                 &--text {
-                    color: var(--text-primary-text-primary-lightest);
+                    color: var(--text-primary-lightest);
                     text-align: center;
                     @include body-3-medium;
 
                     &.weekend {
-                        // color: var(--text-error-text-error);
+                        // color: var(--text-error);
                     }
                 }
             }
@@ -90,10 +90,10 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: var(--border-radius-radius-xs);
-                background: var(--surface-primary-surface-primary);
+                background: var(--surface-primary);
 
                 &--text {
-                    color: var(--text-on-primary-text-on-primary);
+                    color: var(--text-on-primary);
                     text-align: center;
                     @include label-2-medium;
                 }
@@ -105,23 +105,23 @@
                 }
 
                 &.booked {
-                    background: var(--surface-accent-secondary-surface-secondary-accent-light);
+                    background: var(--surface-accent-secondary-light);
                 }
 
                 &.delivered {
-                    background: var(--surface-accent-surface-accent);
+                    background: var(--surface-accent);
                 }
 
                 &.pending {
-                    background: var(--surface-warning-surface-warning-light);
+                    background: var(--surface-warning-light);
                 }
 
                 &.cancelled {
-                    background: var(--surface-error-surface-error-light);
+                    background: var(--surface-error-light);
                 }
 
                 &.today {
-                    background: var(--surface-accent-secondary-surface-secondary-accent-dark);
+                    background: var(--surface-accent-secondary-dark);
                     // background: var(--text-accent-text-accent);
                 }
             }

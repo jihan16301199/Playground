@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
 
-    background: var(--surface-primary-surface-primary-30);
+    background: var(--surface-primary-30);
     backdrop-filter: blur(10px);
 
     &__page {
@@ -52,25 +52,25 @@
                 }
 
                 &--heading {
-                    color: var(--text-primary-text-primary);
+                    color: var(--text-primary);
                     @include headline-2-demibold;
                     white-space: nowrap;
                 }
 
                 &--title {
-                    color: #1F1F1F;
+                    color: var(--text-primary);
                     @include body-1-demibold;
                     white-space: nowrap;
                 }
 
                 &--text {
-                    color: var(--text-primary-text-primary);
+                    color: var(--text-primary);
                     @include title-3-demibold;
                     white-space: nowrap;
                 }
 
                 &--subtext {
-                    color: var(--text-accent-text-accent);
+                    color: var(--text-accent);
                     @include label-2-demibold;
                     white-space: nowrap;
                 }

@@ -122,776 +122,811 @@ $brown-dark: #66451c;
   --text-weight-demibold: DemiBold;
   --text-weight-bold: Bold;
   --text-typeface-typeface-primary: TT Hoves Pro;
-  --color-color-base-white-default: rgba(255, 255, 255, 1);
-  --color-color-neutral-neutral-050: rgba(243, 243, 243, 1);
-  --color-color-neutral-neutral-100: rgba(230, 230, 230, 1);
-  --color-color-neutral-neutral-200: rgba(205, 205, 205, 1);
-  --color-color-neutral-neutral-300: rgba(181, 181, 181, 1);
-  --color-color-neutral-neutral-400: rgba(156, 156, 156, 1);
-  // --color-color-neutral-neutral-500: rgba(131, 131, 131, 1);
-  --color-color-neutral-neutral-500: rgba(125, 125, 125, 1);
-  // --color-color-neutral-neutral-600: rgba(105, 105, 105, 1);
-  --color-color-neutral-neutral-600: rgba(93, 93, 93, 1);
-  --color-color-neutral-neutral-700: rgba(66, 66, 66, 1);
-  --color-color-neutral-neutral-800: rgba(33, 33, 33, 1);
-  --color-color-neutral-neutral-900: rgba(20, 20, 20, 1);
-  --color-color-neutral-neutral-1000: rgba(13, 13, 13, 1);
-  --color-color-base-black-default: rgba(13, 13, 13, 1);
-  --color-color-blue-light-mode-blue-100: rgba(211, 225, 248, 1);
-  --color-color-blue-light-mode-blue-200: rgba(166, 195, 241, 1);
-  --color-color-blue-light-mode-blue-300: rgba(122, 165, 233, 1);
-  --color-color-blue-light-mode-blue-400: rgba(77, 135, 226, 1);
-  --color-color-blue-light-mode-blue-default: rgba(33, 105, 219, 1);
-  --color-color-blue-light-mode-blue-600: rgba(26, 84, 175, 1);
-  --color-color-blue-light-mode-blue-700: rgba(20, 63, 131, 1);
-  --color-color-blue-light-mode-blue-800: rgba(13, 42, 88, 1);
-  --color-color-blue-light-mode-blue-900: rgba(7, 21, 44, 1);
-  --color-color-green-light-mode-green-100: rgba(215, 238, 226, 1);
-  --color-color-green-light-mode-green-200: rgba(175, 220, 197, 1);
-  --color-color-green-light-mode-green-300: rgba(135, 203, 168, 1);
-  --color-color-green-light-mode-green-400: rgba(95, 185, 139, 1);
-  --color-color-green-light-mode-green-default: rgba(55, 168, 110, 1);
-  --color-color-green-light-mode-green-600: rgba(44, 134, 88, 1);
-  --color-color-green-light-mode-green-700: rgba(33, 101, 66, 1);
-  --color-color-green-light-mode-green-800: rgba(22, 67, 44, 1);
-  --color-color-green-light-mode-green-900: rgba(11, 34, 22, 1);
-  --color-color-orange-light-mode-orange-100: rgba(255, 238, 218, 1);
-  --color-color-orange-light-mode-orange-200: rgba(255, 222, 181, 1);
-  --color-color-orange-light-mode-orange-300: rgba(255, 205, 144, 1);
-  --color-color-orange-light-mode-orange-400: rgba(255, 189, 107, 1);
-  --color-color-orange-light-mode-orange-default: rgba(255, 172, 70, 1);
-  --color-color-orange-light-mode-orange-600: rgba(204, 138, 56, 1);
-  --color-color-orange-light-mode-orange-700: rgba(153, 103, 42, 1);
-  --color-color-orange-light-mode-orange-800: rgba(102, 69, 28, 1);
-  --color-color-orange-light-mode-orange-900: rgba(51, 34, 14, 1);
-  --color-color-red-light-mode-red-100: rgba(255, 225, 225, 1);
-  --color-color-red-light-mode-red-200: rgba(255, 195, 195, 1);
-  --color-color-red-light-mode-red-300: rgba(254, 166, 166, 1);
-  --color-color-red-light-mode-red-400: rgba(254, 136, 136, 1);
-  --color-color-red-light-mode-red-default: rgba(254, 106, 106, 1);
-  --color-color-red-light-mode-red-600: rgba(203, 85, 85, 1);
-  --color-color-red-light-mode-red-700: rgba(152, 64, 64, 1);
-  --color-color-red-light-mode-red-800: rgba(102, 42, 42, 1);
-  --color-color-red-light-mode-red-900: rgba(51, 21, 21, 1);
-  --color-color-cyan-light-mode-cyan-100: rgba(221, 245, 250, 1);
-  --color-color-cyan-light-mode-cyan-default: rgba(86, 206, 229, 1);
-  --color-color-cyan-light-mode-cyan-700: rgba(52, 124, 137, 1);
-  --color-color-cyan-dark-mode-cyan-100: rgba(218, 248, 253, 1);
-  --color-color-cyan-dark-mode-cyan-default: rgba(71, 219, 247, 1);
-  --color-color-cyan-dark-mode-cyan-700: rgba(43, 131, 148, 1);
-  --color-color-purple-light-mode-purple-100: rgba(227, 222, 252, 1);
-  --color-color-purple-light-mode-purple-default: rgba(114, 91, 242, 1);
-  --color-color-purple-light-mode-purple-700: rgba(68, 55, 145, 1);
-  --color-color-purple-dark-mode-purple-100: rgba(224, 219, 254, 1);
-  --color-color-purple-dark-mode-purple-default: rgba(102, 75, 252, 1);
-  --color-color-purple-dark-mode-purple-700: rgba(61, 45, 151, 1);
-  --color-color-teal-light-mode-purple-100: rgba(216, 247, 239, 1);
-  --color-color-teal-light-mode-purple-default: rgba(60, 215, 176, 1);
-  --color-color-teal-light-mode-purple-700: rgba(36, 129, 106, 1);
-  --color-color-teal-dark-mode-purple-100: rgba(210, 247, 238, 1);
-  --color-color-teal-dark-mode-purple-default: rgba(31, 213, 168, 1);
-  --color-color-teal-dark-mode-purple-700: rgba(19, 128, 101, 1);
-  --color-color-blue-dark-mode-blue-100: rgba(211, 228, 254, 1);
-  --color-color-blue-dark-mode-blue-200: rgba(168, 201, 253, 1);
-  --color-color-blue-dark-mode-blue-300: rgba(124, 173, 251, 1);
-  --color-color-blue-dark-mode-blue-400: rgba(81, 146, 250, 1);
-  --color-color-blue-dark-mode-blue-default: rgba(37, 119, 249, 1);
-  --color-color-blue-dark-mode-blue-600: rgba(30, 95, 199, 1);
-  --color-color-blue-dark-mode-blue-700: rgba(22, 71, 149, 1);
-  --color-color-blue-dark-mode-blue-800: rgba(15, 48, 100, 1);
-  --color-color-blue-dark-mode-blue-900: rgba(7, 24, 50, 1);
-  --color-color-green-dark-mode-green-100: rgba(214, 241, 227, 1);
-  --color-color-green-dark-mode-green-200: rgba(173, 227, 199, 1);
-  --color-color-green-dark-mode-green-300: rgba(133, 212, 172, 1);
-  --color-color-green-dark-mode-green-400: rgba(92, 198, 144, 1);
-  --color-color-green-dark-mode-green-default: rgba(51, 184, 116, 1);
-  --color-color-green-dark-mode-green-600: rgba(41, 147, 93, 1);
-  --color-color-green-dark-mode-green-700: rgba(31, 110, 70, 1);
-  --color-color-green-dark-mode-green-800: rgba(20, 74, 46, 1);
-  --color-color-green-dark-mode-green-900: rgba(10, 37, 23, 1);
-  --color-color-orange-dark-mode-orange-100: rgba(255, 237, 214, 1);
-  --color-color-orange-dark-mode-orange-200: rgba(255, 222, 181, 1);
-  --color-color-orange-dark-mode-orange-300: rgba(255, 205, 144, 1);
-  --color-color-orange-dark-mode-orange-400: rgba(255, 189, 107, 1);
-  --color-color-orange-dark-mode-orange-default: rgba(255, 163, 51, 1);
-  --color-color-orange-dark-mode-orange-600: rgba(204, 138, 56, 1);
-  --color-color-orange-dark-mode-orange-700: rgba(153, 98, 31, 1);
-  --color-color-orange-dark-mode-orange-800: rgba(102, 69, 28, 1);
-  --color-color-orange-dark-mode-orange-900: rgba(51, 34, 14, 1);
-  --color-color-red-dark-mode-red-100: rgba(255, 222, 222, 1);
-  --color-color-red-dark-mode-red-200: rgba(255, 195, 195, 1);
-  --color-color-red-dark-mode-red-300: rgba(254, 166, 166, 1);
-  --color-color-red-dark-mode-red-400: rgba(254, 136, 136, 1);
-  --color-color-red-dark-mode-red-default: rgba(255, 89, 89, 1);
-  --color-color-red-dark-mode-red-600: rgba(203, 85, 85, 1);
-  --color-color-red-dark-mode-red-700: rgba(153, 53, 53, 1);
-  --color-color-red-dark-mode-red-800: rgba(102, 42, 42, 1);
-  --color-color-red-dark-mode-red-900: rgba(51, 21, 21, 1);
-  --color-color-black-transparent-neutral-dark-tsp-100: rgba(20, 20, 20, 1);
-  --color-color-black-transparent-neutral-dark-tsp-80: rgba(20, 20, 20, 0.8);
-  --color-color-black-transparent-neutral-dark-tsp-70: rgba(20, 20, 20, 0.7);
-  --color-color-black-transparent-neutral-dark-tsp-50: rgba(20, 20, 20, 0.5);
-  --color-color-black-transparent-neutral-dark-tsp-30: rgba(20, 20, 20, 0.3);
-  --color-color-black-transparent-neutral-dark-tsp-10: rgba(20, 20, 20, 0.1);
-  --color-color-black-transparent-neutral-dark-tsp-5: rgba(20, 20, 20, 0.05);
-  --color-color-black-transparent-neutral-dark-tsp-2: rgba(20, 20, 20, 0.02);
-  --color-color-white-transparent-white-tsp-100: rgba(255, 255, 255, 1);
-  --color-color-white-transparent-white-tsp-80: rgba(255, 255, 255, 0.8);
-  --color-color-white-transparent-white-tsp-70: rgba(255, 255, 255, 0.7);
-  --color-color-white-transparent-white-tsp-50: rgba(255, 255, 255, 0.5);
-  --color-color-white-transparent-white-tsp-30: rgba(255, 255, 255, 0.3);
-  --color-color-white-transparent-white-tsp-10: rgba(255, 255, 255, 0.1);
-  --color-color-white-transparent-white-tsp-5: rgba(255, 255, 255, 0.05);
-  --color-color-white-transparent-white-tsp-2: rgba(255, 255, 255, 0.02);
-  --color-color-blue-transparent-light-blue-light-tsp-100: rgba(33, 105, 219, 1);
-  --color-color-blue-transparent-light-blue-light-tsp-70: rgba(33, 105, 219, 0.7);
-  --color-color-blue-transparent-light-blue-light-tsp-50: rgba(33, 105, 219, 0.5);
-  --color-color-blue-transparent-light-blue-light-tsp-30: rgba(33, 105, 219, 0.3);
-  --color-color-blue-transparent-light-blue-light-tsp-10: rgba(33, 105, 219, 0.1);
-  --color-color-blue-transparent-light-blue-light-tsp-5: rgba(33, 105, 219, 0.05);
-  --color-color-blue-transparent-dark-blue-dark-tsp-100: rgba(37, 119, 249, 1);
-  --color-color-blue-transparent-dark-blue-dark-tsp-70: rgba(37, 119, 249, 0.7);
-  --color-color-blue-transparent-dark-blue-dark-tsp-50: rgba(37, 119, 249, 0.5);
-  --color-color-blue-transparent-dark-blue-dark-tsp-30: rgba(37, 119, 249, 0.3);
-  --color-color-blue-transparent-dark-blue-dark-tsp-10: rgba(37, 119, 249, 0.1);
-  --color-color-blue-transparent-dark-blue-dark-tsp-5: rgba(37, 119, 249, 0.05);
-  --color-color-green-transparent-light-green-light-tsp-100: rgba(55, 168, 110, 1);
-  --color-color-green-transparent-light-green-light-tsp-70: rgba(55, 168, 110, 0.7);
-  --color-color-green-transparent-light-green-light-tsp-50: rgba(55, 168, 110, 0.5);
-  --color-color-green-transparent-light-green-light-tsp-30: rgba(55, 168, 110, 0.3);
-  --color-color-green-transparent-light-green-light-tsp-10: rgba(55, 168, 110, 0.1);
-  --color-color-green-transparent-light-green-light-tsp-5: rgba(55, 168, 110, 0.05);
-  --color-color-green-transparent-light-green-light-tsp-2: rgba(55, 168, 110, 0.02);
-  --color-color-green-transparent-dark-green-dark-tsp-100: rgba(51, 184, 116, 1);
-  --color-color-green-transparent-dark-green-dark-tsp-70: rgba(51, 184, 116, 0.7);
-  --color-color-green-transparent-dark-green-dark-tsp-50: rgba(51, 184, 116, 0.5);
-  --color-color-green-transparent-dark-green-dark-tsp-30: rgba(51, 184, 116, 0.3);
-  --color-color-green-transparent-dark-green-dark-tsp-10: rgba(51, 184, 116, 0.1);
-  --color-color-green-transparent-dark-green-dark-tsp-5: rgba(51, 184, 116, 0.05);
-  --color-color-green-transparent-dark-green-dark-tsp-2: rgba(51, 184, 116, 0.02);
-  --color-color-orange-transparent-light-orange-light-tsp-100: rgba(255, 172, 70, 1);
-  --color-color-orange-transparent-light-orange-light-tsp-80: rgba(255, 172, 70, 0.8);
-  --color-color-orange-transparent-light-orange-light-tsp-50: rgba(255, 172, 70, 0.5);
-  --color-color-orange-transparent-light-orange-light-tsp-30: rgba(255, 172, 70, 0.3);
-  --color-color-orange-transparent-light-orange-light-tsp-10: rgba(255, 172, 70, 0.1);
-  --color-color-orange-transparent-light-orange-light-tsp-5: rgba(255, 172, 70, 0.05);
-  --color-color-orange-transparent-light-orange-light-tsp-2: rgba(255, 172, 70, 0.02);
-  --color-color-orange-transparent-dark-orange-dark-tsp-100: rgba(255, 163, 51, 1);
-  --color-color-orange-transparent-dark-orange-dark-tsp-80: rgba(255, 163, 51, 0.8);
-  --color-color-orange-transparent-dark-orange-dark-tsp-50: rgba(255, 163, 51, 0.5);
-  --color-color-orange-transparent-dark-orange-dark-tsp-30: rgba(255, 163, 51, 0.3);
-  --color-color-orange-transparent-dark-orange-dark-tsp-10: rgba(255, 163, 51, 0.1);
-  --color-color-orange-transparent-dark-orange-dark-tsp-5: rgba(255, 163, 51, 0.05);
-  --color-color-orange-transparent-dark-orange-dark-tsp-2: rgba(255, 163, 51, 0.02);
-  --color-color-red-transparent-light-red-light-tsp-100: rgba(254, 106, 106, 1);
-  --color-color-red-transparent-light-red-light-tsp-80: rgba(254, 106, 106, 0.8);
-  --color-color-red-transparent-light-red-light-tsp-70: rgba(254, 106, 106, 0.7);
-  --color-color-red-transparent-light-red-light-tsp-50: rgba(254, 106, 106, 0.5);
-  --color-color-red-transparent-light-red-light-tsp-30: rgba(254, 106, 106, 0.3);
-  --color-color-red-transparent-light-red-light-tsp-10: rgba(254, 106, 106, 0.1);
-  --color-color-red-transparent-light-red-light-tsp-5: rgba(254, 106, 106, 0.05);
-  --color-color-red-transparent-light-red-light-tsp-2: rgba(254, 106, 106, 0.02);
-  --color-color-red-transparent-dark-red-dark-tsp-100: rgba(255, 89, 89, 1);
-  --color-color-red-transparent-dark-red-dark-tsp-80: rgba(255, 101, 89, 0.8);
-  --color-color-red-transparent-dark-red-dark-tsp-70: rgba(255, 89, 89, 0.7);
-  --color-color-red-transparent-dark-red-dark-tsp-50: rgba(255, 89, 89, 0.5);
-  --color-color-red-transparent-dark-red-dark-tsp-30: rgba(255, 89, 89, 0.3);
-  --color-color-red-transparent-dark-red-dark-tsp-10: rgba(255, 89, 89, 0.1);
-  --color-color-red-transparent-dark-red-dark-tsp-5: rgba(255, 89, 89, 0.05);
-  --color-color-red-transparent-dark-red-dark-tsp-2: rgba(255, 89, 89, 0.02);
+  --color-base-white-default: rgba(255, 255, 255, 1);
+  --color-neutral-050: rgba(243, 243, 243, 1);
+  --color-neutral-100: rgba(230, 230, 230, 1);
+  --color-neutral-200: rgba(205, 205, 205, 1);
+  --color-neutral-300: rgba(181, 181, 181, 1);
+  --color-neutral-400: rgba(156, 156, 156, 1);
+  // --color-neutral-500: rgba(131, 131, 131, 1);
+  --color-neutral-500: rgba(125, 125, 125, 1);
+  // --color-neutral-600: rgba(105, 105, 105, 1);
+  --color-neutral-600: rgba(93, 93, 93, 1);
+  --color-neutral-700: rgba(66, 66, 66, 1);
+  --color-neutral-800: rgba(33, 33, 33, 1);
+  --color-neutral-900: rgba(20, 20, 20, 1);
+  --color-neutral-1000: rgba(13, 13, 13, 1);
+  --color-base-black-default: rgba(13, 13, 13, 1);
+  --color-blue-light-mode-100: rgba(211, 225, 248, 1);
+  --color-blue-light-mode-200: rgba(166, 195, 241, 1);
+  --color-blue-light-mode-300: rgba(122, 165, 233, 1);
+  --color-blue-light-mode-400: rgba(77, 135, 226, 1);
+  --color-blue-light-mode-default: rgba(33, 105, 219, 1);
+  --color-blue-light-mode-600: rgba(26, 84, 175, 1);
+  --color-blue-light-mode-700: rgba(20, 63, 131, 1);
+  --color-blue-light-mode-800: rgba(13, 42, 88, 1);
+  --color-blue-light-mode-900: rgba(7, 21, 44, 1);
+  --color-blue-dark-mode-100: rgba(211, 228, 254, 1);
+  --color-blue-dark-mode-200: rgba(168, 201, 253, 1);
+  --color-blue-dark-mode-300: rgba(124, 173, 251, 1);
+  --color-blue-dark-mode-400: rgba(81, 146, 250, 1);
+  --color-blue-dark-mode-default: rgba(37, 119, 249, 1);
+  --color-blue-dark-mode-600: rgba(30, 95, 199, 1);
+  --color-blue-dark-mode-700: rgba(22, 71, 149, 1);
+  --color-blue-dark-mode-800: rgba(15, 48, 100, 1);
+  --color-blue-dark-mode-900: rgba(7, 24, 50, 1);
+  --color-green-light-mode-100: rgba(215, 238, 226, 1);
+  --color-green-light-mode-200: rgba(175, 220, 197, 1);
+  --color-green-light-mode-300: rgba(135, 203, 168, 1);
+  --color-green-light-mode-400: rgba(95, 185, 139, 1);
+  --color-green-light-mode-default: rgba(55, 168, 110, 1);
+  --color-green-light-mode-600: rgba(44, 134, 88, 1);
+  --color-green-light-mode-700: rgba(33, 101, 66, 1);
+  --color-green-light-mode-800: rgba(22, 67, 44, 1);
+  --color-green-light-mode-900: rgba(11, 34, 22, 1);
+  --color-green-dark-mode-100: rgba(214, 241, 227, 1);
+  --color-green-dark-mode-200: rgba(173, 227, 199, 1);
+  --color-green-dark-mode-300: rgba(133, 212, 172, 1);
+  --color-green-dark-mode-400: rgba(92, 198, 144, 1);
+  --color-green-dark-mode-default: rgba(51, 184, 116, 1);
+  --color-green-dark-mode-600: rgba(41, 147, 93, 1);
+  --color-green-dark-mode-700: rgba(31, 110, 70, 1);
+  --color-green-dark-mode-800: rgba(20, 74, 46, 1);
+  --color-green-dark-mode-900: rgba(10, 37, 23, 1);
+  --color-orange-light-mode-100: rgba(255, 238, 218, 1);
+  --color-orange-light-mode-200: rgba(255, 222, 181, 1);
+  --color-orange-light-mode-300: rgba(255, 205, 144, 1);
+  --color-orange-light-mode-400: rgba(255, 189, 107, 1);
+  --color-orange-light-mode-default: rgba(255, 172, 70, 1);
+  --color-orange-light-mode-600: rgba(204, 138, 56, 1);
+  --color-orange-light-mode-700: rgba(153, 103, 42, 1);
+  --color-orange-light-mode-800: rgba(102, 69, 28, 1);
+  --color-orange-light-mode-900: rgba(51, 34, 14, 1);
+  --color-orange-dark-mode-100: rgba(255, 237, 214, 1);
+  --color-orange-dark-mode-200: rgba(255, 222, 181, 1);
+  --color-orange-dark-mode-300: rgba(255, 205, 144, 1);
+  --color-orange-dark-mode-400: rgba(255, 189, 107, 1);
+  --color-orange-dark-mode-default: rgba(255, 163, 51, 1);
+  --color-orange-dark-mode-600: rgba(204, 138, 56, 1);
+  --color-orange-dark-mode-700: rgba(153, 98, 31, 1);
+  --color-orange-dark-mode-800: rgba(102, 69, 28, 1);
+  --color-orange-dark-mode-900: rgba(51, 34, 14, 1);
+  --color-red-light-mode-100: rgba(255, 225, 225, 1);
+  --color-red-light-mode-200: rgba(255, 195, 195, 1);
+  --color-red-light-mode-300: rgba(254, 166, 166, 1);
+  --color-red-light-mode-400: rgba(254, 136, 136, 1);
+  --color-red-light-mode-default: rgba(254, 106, 106, 1);
+  --color-red-light-mode-600: rgba(203, 85, 85, 1);
+  --color-red-light-mode-700: rgba(152, 64, 64, 1);
+  --color-red-light-mode-800: rgba(102, 42, 42, 1);
+  --color-red-light-mode-900: rgba(51, 21, 21, 1);
+  --color-red-dark-mode-100: rgba(255, 222, 222, 1);
+  --color-red-dark-mode-200: rgba(255, 195, 195, 1);
+  --color-red-dark-mode-300: rgba(254, 166, 166, 1);
+  --color-red-dark-mode-400: rgba(254, 136, 136, 1);
+  --color-red-dark-mode-default: rgba(255, 89, 89, 1);
+  --color-red-dark-mode-600: rgba(203, 85, 85, 1);
+  --color-red-dark-mode-700: rgba(153, 53, 53, 1);
+  --color-red-dark-mode-800: rgba(102, 42, 42, 1);
+  --color-red-dark-mode-900: rgba(51, 21, 21, 1);
+  --color-cyan-light-mode-100: rgba(221, 245, 250, 1);
+  --color-cyan-light-mode-default: rgba(86, 206, 229, 1);
+  --color-cyan-light-mode-700: rgba(52, 124, 137, 1);
+  --color-cyan-dark-mode-100: rgba(218, 248, 253, 1);
+  --color-cyan-dark-mode-default: rgba(71, 219, 247, 1);
+  --color-cyan-dark-mode-700: rgba(43, 131, 148, 1);
+  --color-purple-light-mode-100: rgba(227, 222, 252, 1);
+  --color-purple-light-mode-default: rgba(114, 91, 242, 1);
+  --color-purple-light-mode-700: rgba(68, 55, 145, 1);
+  --color-purple-dark-mode-100: rgba(224, 219, 254, 1);
+  --color-purple-dark-mode-default: rgba(102, 75, 252, 1);
+  --color-purple-dark-mode-700: rgba(61, 45, 151, 1);
+  --color-teal-light-mode-100: rgba(216, 247, 239, 1);
+  --color-teal-light-mode-default: rgba(60, 215, 176, 1);
+  --color-teal-light-mode-700: rgba(36, 129, 106, 1);
+  --color-teal-dark-mode-100: rgba(210, 247, 238, 1);
+  --color-teal-dark-mode-default: rgba(31, 213, 168, 1);
+  --color-teal-dark-mode-700: rgba(19, 128, 101, 1);
+  --color-black-transparent-100: rgba(20, 20, 20, 1);
+  --color-black-transparent-80: rgba(20, 20, 20, 0.8);
+  --color-black-transparent-70: rgba(20, 20, 20, 0.7);
+  --color-black-transparent-50: rgba(20, 20, 20, 0.5);
+  --color-black-transparent-30: rgba(20, 20, 20, 0.3);
+  --color-black-transparent-10: rgba(20, 20, 20, 0.1);
+  --color-black-transparent-5: rgba(20, 20, 20, 0.05);
+  --color-black-transparent-2: rgba(20, 20, 20, 0.02);
+  --color-white-transparent-100: rgba(255, 255, 255, 1);
+  --color-white-transparent-80: rgba(255, 255, 255, 0.8);
+  --color-white-transparent-70: rgba(255, 255, 255, 0.7);
+  --color-white-transparent-50: rgba(255, 255, 255, 0.5);
+  --color-white-transparent-30: rgba(255, 255, 255, 0.3);
+  --color-white-transparent-10: rgba(255, 255, 255, 0.1);
+  --color-white-transparent-5: rgba(255, 255, 255, 0.05);
+  --color-white-transparent-2: rgba(255, 255, 255, 0.02);
+  --color-blue-transparent-light-100: rgba(33, 105, 219, 1);
+  --color-blue-transparent-light-70: rgba(33, 105, 219, 0.7);
+  --color-blue-transparent-light-50: rgba(33, 105, 219, 0.5);
+  --color-blue-transparent-light-30: rgba(33, 105, 219, 0.3);
+  --color-blue-transparent-light-10: rgba(33, 105, 219, 0.1);
+  --color-blue-transparent-light-5: rgba(33, 105, 219, 0.05);
+  --color-blue-transparent-dark-100: rgba(37, 119, 249, 1);
+  --color-blue-transparent-dark-70: rgba(37, 119, 249, 0.7);
+  --color-blue-transparent-dark-50: rgba(37, 119, 249, 0.5);
+  --color-blue-transparent-dark-30: rgba(37, 119, 249, 0.3);
+  --color-blue-transparent-dark-10: rgba(37, 119, 249, 0.1);
+  --color-blue-transparent-dark-5: rgba(37, 119, 249, 0.05);
+  --color-green-transparent-light-100: rgba(55, 168, 110, 1);
+  --color-green-transparent-light-70: rgba(55, 168, 110, 0.7);
+  --color-green-transparent-light-50: rgba(55, 168, 110, 0.5);
+  --color-green-transparent-light-30: rgba(55, 168, 110, 0.3);
+  --color-green-transparent-light-10: rgba(55, 168, 110, 0.1);
+  --color-green-transparent-light-5: rgba(55, 168, 110, 0.05);
+  --color-green-transparent-light-2: rgba(55, 168, 110, 0.02);
+  --color-green-transparent-dark-100: rgba(51, 184, 116, 1);
+  --color-green-transparent-dark-70: rgba(51, 184, 116, 0.7);
+  --color-green-transparent-dark-50: rgba(51, 184, 116, 0.5);
+  --color-green-transparent-dark-30: rgba(51, 184, 116, 0.3);
+  --color-green-transparent-dark-10: rgba(51, 184, 116, 0.1);
+  --color-green-transparent-dark-5: rgba(51, 184, 116, 0.05);
+  --color-green-transparent-dark-2: rgba(51, 184, 116, 0.02);
+  --color-orange-transparent-light-100: rgba(255, 172, 70, 1);
+  --color-orange-transparent-light-80: rgba(255, 172, 70, 0.8);
+  --color-orange-transparent-light-50: rgba(255, 172, 70, 0.5);
+  --color-orange-transparent-light-30: rgba(255, 172, 70, 0.3);
+  --color-orange-transparent-light-10: rgba(255, 172, 70, 0.1);
+  --color-orange-transparent-light-5: rgba(255, 172, 70, 0.05);
+  --color-orange-transparent-light-2: rgba(255, 172, 70, 0.02);
+  --color-orange-transparent-dark-100: rgba(255, 163, 51, 1);
+  --color-orange-transparent-dark-80: rgba(255, 163, 51, 0.8);
+  --color-orange-transparent-dark-50: rgba(255, 163, 51, 0.5);
+  --color-orange-transparent-dark-30: rgba(255, 163, 51, 0.3);
+  --color-orange-transparent-dark-10: rgba(255, 163, 51, 0.1);
+  --color-orange-transparent-dark-5: rgba(255, 163, 51, 0.05);
+  --color-orange-transparent-dark-2: rgba(255, 163, 51, 0.02);
+  --color-red-transparent-light-100: rgba(254, 106, 106, 1);
+  --color-red-transparent-light-80: rgba(254, 106, 106, 0.8);
+  --color-red-transparent-light-70: rgba(254, 106, 106, 0.7);
+  --color-red-transparent-light-50: rgba(254, 106, 106, 0.5);
+  --color-red-transparent-light-30: rgba(254, 106, 106, 0.3);
+  --color-red-transparent-light-10: rgba(254, 106, 106, 0.1);
+  --color-red-transparent-light-5: rgba(254, 106, 106, 0.05);
+  --color-red-transparent-light-2: rgba(254, 106, 106, 0.02);
+  --color-red-transparent-dark-100: rgba(255, 89, 89, 1);
+  --color-red-transparent-dark-80: rgba(255, 101, 89, 0.8);
+  --color-red-transparent-dark-70: rgba(255, 89, 89, 0.7);
+  --color-red-transparent-dark-50: rgba(255, 89, 89, 0.5);
+  --color-red-transparent-dark-30: rgba(255, 89, 89, 0.3);
+  --color-red-transparent-dark-10: rgba(255, 89, 89, 0.1);
+  --color-red-transparent-dark-5: rgba(255, 89, 89, 0.05);
+  --color-red-transparent-dark-2: rgba(255, 89, 89, 0.02);
 }
 
 /* Colors - Light Mode - Semantic Variables */
 :root {
-  /* =============== BACKGROUNDS =============== */
-  --background-bg-primary: var(--color-color-neutral-neutral-050);
-  --background-bg-secondary: var(--color-color-base-white-default);
-  --background-bg-tertiary: var(--color-color-neutral-neutral-200);
-  --background-bg-inverse: var(--color-color-neutral-neutral-900);
-  --background-bg-accent: var(--color-color-green-dark-mode-green-default);
+  /* =============== BACKGROUND - PRIMARY =============== */
+  --background-primary: var(--color-neutral-050);
+  --background-secondary: var(--color-base-white-default);
+  --background-tertiary: var(--color-neutral-200);
 
-  /* =============== TEXT LABELS =============== */
-  --text-label-text-on-label-primary: var(--color-color-green-light-mode-green-default);
-  --text-label-text-on-label-secondary: var(--color-color-blue-light-mode-blue-default);
-  --text-label-text-on-label-warning: var(--color-color-orange-light-mode-orange-default);
-  --text-label-text-on-label-error: var(--color-color-red-light-mode-red-default);
-  --text-label-text-on-label-info: var(--color-color-cyan-light-mode-cyan-default);
+  /* =============== BACKGROUND - ACCENT =============== */
+  --background-accent: var(--color-green-dark-mode-green-default);
 
-  /* =============== TEXT INVERSE =============== */
-  --text-inverse-text-inverse-light: var(--color-color-base-white-default);
-  --text-inverse-text-inverse: var(--color-color-neutral-neutral-050);
-  --text-inverse-text-inverse-dark: var(--color-color-neutral-neutral-100);
-  --text-inverse-text-inverse-darker: var(--color-color-neutral-neutral-200);
-  --text-inverse-text-inverse-darkest: var(--color-color-neutral-neutral-400);
-  --text-inverse-text-inverse-80: var(--color-color-white-transparent-white-tsp-80);
-  --text-inverse-text-inverse-70: var(--color-color-white-transparent-white-tsp-70);
-  --text-inverse-text-inverse-50: var(--color-color-white-transparent-white-tsp-50);
-  --text-inverse-text-inverse-30: var(--color-color-white-transparent-white-tsp-30);
-  --text-inverse-text-inverse-10: var(--color-color-white-transparent-white-tsp-10);
+  /* =============== BACKGROUND - INVERSE =============== */
+  --background-inverse: var(--color-neutral-900);
 
-  /* =============== TEXT PRIMARY =============== */
-  --text-primary-text-primary-darker: var(--color-color-neutral-neutral-1000);
-  --text-primary-text-primary-dark: var(--color-color-neutral-neutral-900);
-  --text-primary-text-primary: var(--color-color-neutral-neutral-800);
-  --text-primary-text-primary-light: var(--color-color-neutral-neutral-700);
-  --text-primary-text-primary-lighter: var(--color-color-neutral-neutral-600);
-  --text-primary-text-primary-lightest: var(--color-color-neutral-neutral-500);
-  --text-primary-text-primary-80: var(--color-color-black-transparent-neutral-dark-tsp-80);
-  --text-primary-text-primary-70: var(--color-color-black-transparent-neutral-dark-tsp-70);
-  --text-primary-text-primary-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
-  --text-primary-text-primary-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
-  --text-primary-text-primary-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
+  /* =============== SURFACE - PRIMARY =============== */
+  --surface-primary-light: var(--color-base-white-default);
+  --surface-primary: var(--color-neutral-050);
+  --surface-primary-dark: var(--color-neutral-100);
+  --surface-primary-darker: var(--color-neutral-200);
+  --surface-primary-darkest: var(--color-neutral-300);
+  --surface-primary-80: var(--color-white-transparent-80);
+  --surface-primary-70: var(--color-white-transparent-70);
+  --surface-primary-50: var(--color-white-transparent-50);
+  --surface-primary-30: var(--color-white-transparent-30);
+  --surface-primary-10: var(--color-white-transparent-10);
 
-  /* =============== TEXT ACCENT =============== */
-  --text-accent-text-accent-darkest: var(--color-color-green-light-mode-green-800);
-  --text-accent-text-accent-darker: var(--color-color-green-light-mode-green-700);
-  --text-accent-text-accent: var(--color-color-green-light-mode-green-default);
-  --text-accent-text-accent-lighter: var(--color-color-green-light-mode-green-200);
-  --text-accent-text-accent-lightest: var(--color-color-green-light-mode-green-100);
-  --text-accent-text-accent-70: var(--color-color-green-transparent-light-green-light-tsp-70);
-  --text-accent-text-accent-50: var(--color-color-green-transparent-light-green-light-tsp-50);
-  --text-accent-text-accent-30: var(--color-color-green-transparent-light-green-light-tsp-30);
-  --text-accent-text-accent-10: var(--color-color-green-transparent-light-green-light-tsp-10);
-  --text-accent-text-accent-5: var(--color-color-green-transparent-light-green-light-tsp-5);
+  /* =============== SURFACE - ACCENT =============== */
+  --surface-accent-lightest: var(--color-green-light-mode-100);
+  --surface-accent-lighter: var(--color-green-light-mode-300);
+  --surface-accent-light: var(--color-green-light-mode-400);
+  --surface-accent: var(--color-green-light-mode-default);
+  --surface-accent-dark: var(--color-green-light-mode-600);
+  --surface-accent-darker: var(--color-green-light-mode-700);
+  --surface-accent-darkest: var(--color-green-light-mode-800);
+  --surface-accent-100: var(--color-green-transparent-light-100);
+  --surface-accent-70: var(--color-green-transparent-light-70);
+  --surface-accent-50: var(--color-green-transparent-light-50);
+  --surface-accent-30: var(--color-green-transparent-light-30);
+  --surface-accent-10: var(--color-green-transparent-light-10);
+  --surface-accent-5: var(--color-green-transparent-light-10);
 
-  /* =============== TEXT SECONDARY =============== */
-  --text-secondary-text-accent-secondary-darkest: var(--color-color-blue-light-mode-blue-800);
-  --text-secondary-text-accent-secondary-darker: var(--color-color-blue-light-mode-blue-700);
-  --text-secondary-text-accent-secondary-dark: var(--color-color-blue-light-mode-blue-600);
-  --text-secondary-text-accent-secondary: var(--color-color-blue-light-mode-blue-default);
-  --text-secondary-text-accent-secondary-light: var(--color-color-blue-light-mode-blue-400);
-  --text-secondary-text-accent-secondary-lighter: var(--color-color-blue-light-mode-blue-300);
-  --text-secondary-text-accent-secondary-lightest: var(--color-color-blue-light-mode-blue-100);
-  --text-link-text-link-default: var(--color-color-blue-light-mode-blue-default);
-  --text-link-text-link-hover: var(--color-color-blue-light-mode-blue-default);
+  /* =============== SURFACE - ACCENT-SECONDARY =============== */
+  --surface-accent-secondary-lightest: var(--color-blue-light-mode-100);
+  --surface-accent-secondary-lighter: var(--color-blue-light-mode-200);
+  --surface-accent-secondary-light: var(--color-blue-light-mode-400);
+  --surface-accent-secondary: var(--color-blue-light-mode-default);
+  --surface-accent-secondary-dark: var(--color-blue-light-mode-600);
+  --surface-accent-secondary-darker: var(--color-blue-light-mode-700);
+  --surface-accent-secondary-darkest: var(--color-blue-light-mode-800);
+  --surface-accent-secondary-100: var(--color-blue-transparent-light-100);
+  --surface-accent-secondary-70: var(--color-blue-transparent-light-70);
+  --surface-accent-secondary-50: var(--color-blue-transparent-light-50);
+  --surface-accent-secondary-30: var(--color-blue-transparent-light-30);
+  --surface-accent-secondary-10: var(--color-blue-transparent-light-10);
 
-  /* =============== TEXT ON STATES =============== */
-  --text-on-primary-text-on-primary: var(--color-color-white-transparent-white-tsp-100);
-  --text-on-primary-text-on-primary-light: var(--color-color-white-transparent-white-tsp-80);
-  --text-on-primary-text-on-primary-lighter: var(--color-color-white-transparent-white-tsp-50);
-  --text-on-primary-text-on-primary-lightest: var(--color-color-white-transparent-white-tsp-30);
-  --text-on-accent-text-on-accent: var(--color-color-white-transparent-white-tsp-100);
-  --text-on-accent-text-on-accent-light: var(--color-color-white-transparent-white-tsp-80);
-  --text-on-accent-text-on-accent-lighter: var(--color-color-white-transparent-white-tsp-50);
-  --text-on-accent-text-on-accent-lightest: var(--color-color-white-transparent-white-tsp-30);
-  --text-on-inverse-text-on-inverse: var(--color-color-neutral-neutral-050);
-  --text-on-inverse-text-on-inverse-light: var(--color-color-white-transparent-white-tsp-80);
-  --text-on-inverse-text-on-inverse-lighter: var(--color-color-white-transparent-white-tsp-50);
-  --text-on-inverse-text-on-inverse-lightest: var(--color-color-white-transparent-white-tsp-30);
+  /* =============== SURFACE - INVERSE =============== */
+  --surface-inverse-light: var(--color-neutral-600);
+  --surface-inverse: var(--color-neutral-700);
+  --surface-inverse-dark: var(--color-neutral-800);
+  --surface-inverse-darker: var(--color-neutral-900);
+  --surface-inverse-darkest: var(--color-neutral-1000);
+  --surface-inverse-80: var(--color-black-transparent-80);
+  --surface-inverse-70: var(--color-black-transparent-70);
+  --surface-inverse-50: var(--color-black-transparent-50);
+  --surface-inverse-30: var(--color-black-transparent-30);
+  --surface-inverse-10: var(--color-black-transparent-10);
+  --surface-inverse-5: var(--color-black-transparent-5);
+  --surface-inverse-2: var(--color-black-transparent-2);
 
-  /* =============== TEXT BUTTON STATES =============== */
-  --text-button-text-on-btn-primary: var(--color-color-neutral-neutral-050);
-  --text-button-text-on-btn-secondary: var(--color-color-neutral-neutral-050);
-  --text-button-text-on-btn-primary-tint: var(--color-color-blue-light-mode-blue-default);
-  --text-button-text-on-btn-secondary-tint: var(--color-color-green-dark-mode-green-600);
-  --text-button-text-on-btn-solid: var(--color-color-neutral-neutral-800);
-  --text-button-text-on-btn-disabled: var(--color-color-black-transparent-neutral-dark-tsp-30);
-  --text-button-text-on-btn-inverse: var(--color-color-neutral-neutral-100);
-  --text-error-text-error: var(--color-color-red-light-mode-red-default);
-  --text-warning-text-warning: var(--color-color-orange-light-mode-orange-default);
-  --text-success-text-success: var(--color-color-green-light-mode-green-default);
-  --text-info-text-info: var(--color-color-red-light-mode-red-default);
+  /* =============== SURFACE - WARNING =============== */
+  --surface-warning-lightest: var(--color-orange-light-mode-100);
+  --surface-warning-lighter: var(--color-orange-light-mode-200);
+  --surface-warning-light: var(--color-orange-light-mode-400);
+  --surface-warning: var(--color-orange-light-mode-default);
+  --surface-warning-dark: var(--color-orange-light-mode-600);
+  --surface-warning-darker: var(--color-orange-light-mode-700);
+  --surface-warning-darkest: var(--color-orange-light-mode-800);
+  --surface-warning-10: var(--color-orange-transparent-light-10);
 
-  /* =============== SURFACE PRIMARY =============== */
-  --surface-primary-surface-primary-light: var(--color-color-base-white-default);
-  --surface-primary-surface-primary: var(--color-color-neutral-neutral-050);
-  --surface-primary-surface-primary-dark: var(--color-color-neutral-neutral-100);
-  --surface-primary-surface-primary-darker: var(--color-color-neutral-neutral-200);
-  --surface-primary-surface-primary-darkest: var(--color-color-neutral-neutral-300);
-  --surface-primary-surface-primary-80: var(--color-color-white-transparent-white-tsp-80);
-  --surface-primary-surface-primary-70: var(--color-color-white-transparent-white-tsp-70);
-  --surface-primary-surface-primary-50: var(--color-color-white-transparent-white-tsp-50);
-  --surface-primary-surface-primary-30: var(--color-color-white-transparent-white-tsp-30);
-  --surface-primary-surface-primary-10: var(--color-color-white-transparent-white-tsp-10);
+  /* =============== SURFACE - ERROR =============== */
+  --surface-error-lightest: var(--color-red-light-mode-100);
+  --surface-error-lighter: var(--color-red-light-mode-300);
+  --surface-error-light: var(--color-red-light-mode-400);
+  --surface-error: var(--color-red-light-mode-default);
+  --surface-error-dark: var(--color-red-light-mode-600);
+  --surface-error-darker: var(--color-red-light-mode-700);
+  --surface-error-darkest: var(--color-red-light-mode-800);
+  --surface-error-10: var(--color-red-transparent-light-10);
 
-  /* =============== SURFACE INVERSE =============== */
-  --surface-inverse-surface-inverse-light: var(--color-color-neutral-neutral-600);
-  --surface-inverse-surface-inverse: var(--color-color-neutral-neutral-700);
-  --surface-inverse-surface-inverse-dark: var(--color-color-neutral-neutral-800);
-  --surface-inverse-surface-inverse-darker: var(--color-color-neutral-neutral-900);
-  --surface-inverse-surface-inverse-darkest: var(--color-color-neutral-neutral-1000);
-  --surface-inverse-surface-inverse-80: var(--color-color-black-transparent-neutral-dark-tsp-80);
-  --surface-inverse-surface-inverse-70: var(--color-color-black-transparent-neutral-dark-tsp-70);
-  --surface-inverse-surface-inverse-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
-  --surface-inverse-surface-inverse-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
-  --surface-inverse-surface-inverse-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
-  --surface-inverse-surface-inverse-5: var(--color-color-black-transparent-neutral-dark-tsp-5);
-  --surface-inverse-surface-inverse-2: var(--color-color-black-transparent-neutral-dark-tsp-2);
+  /* =============== TEXT - PRIMARY =============== */
+  --text-primary-darker: var(--color-neutral-1000);
+  --text-primary-dark: var(--color-neutral-900);
+  --text-primary: var(--color-neutral-800);
+  --text-primary-light: var(--color-neutral-700);
+  --text-primary-lighter: var(--color-neutral-600);
+  --text-primary-lightest: var(--color-neutral-500);
+  --text-primary-80: var(--color-black-transparent-80);
+  --text-primary-70: var(--color-black-transparent-70);
+  --text-primary-50: var(--color-black-transparent-50);
+  --text-primary-30: var(--color-black-transparent-30);
+  --text-primary-10: var(--color-black-transparent-10);
 
-  /* =============== SURFACE ACCENT =============== */
-  --surface-accent-surface-accent-lightest: var(--color-color-green-light-mode-green-100);
-  --surface-accent-surface-accent-lighter: var(--color-color-green-light-mode-green-300);
-  --surface-accent-surface-accent-light: var(--color-color-green-light-mode-green-400);
-  --surface-accent-surface-accent: var(--color-color-green-light-mode-green-default);
-  --surface-accent-surface-accent-dark: var(--color-color-green-light-mode-green-600);
-  --surface-accent-surface-accent-darker: var(--color-color-green-light-mode-green-700);
-  --surface-accent-surface-accent-darkest: var(--color-color-green-light-mode-green-800);
-  --surface-accent-surface-accent-100: var(--color-color-green-transparent-light-green-light-tsp-100);
-  --surface-accent-surface-accent-70: var(--color-color-green-transparent-light-green-light-tsp-70);
-  --surface-accent-surface-accent-50: var(--color-color-green-transparent-light-green-light-tsp-50);
-  --surface-accent-surface-accent-30: var(--color-color-green-transparent-light-green-light-tsp-30);
-  --surface-accent-surface-accent-10: var(--color-color-green-transparent-light-green-light-tsp-10);
-  --surface-accent-surface-accent-5: var(--color-color-green-transparent-light-green-light-tsp-10);
+  /* =============== TEXT - ACCENT =============== */
+  --text-accent-darkest: var(--color-green-light-mode-800);
+  --text-accent-darker: var(--color-green-light-mode-700);
+  --text-accent: var(--color-green-light-mode-default);
+  --text-accent-lighter: var(--color-green-light-mode-200);
+  --text-accent-lightest: var(--color-green-light-mode-100);
+  --text-accent-70: var(--color-green-transparent-light-70);
+  --text-accent-50: var(--color-green-transparent-light-50);
+  --text-accent-30: var(--color-green-transparent-light-30);
+  --text-accent-10: var(--color-green-transparent-light-10);
+  --text-accent-5: var(--color-green-transparent-light-5);
 
-  /* =============== SURFACE ACCENT SECONDARY =============== */
-  --surface-accent-secondary-surface-secondary-accent-lightest: var(--color-color-blue-light-mode-blue-100);
-  --surface-accent-secondary-surface-secondary-accent-lighter: var(--color-color-blue-light-mode-blue-200);
-  --surface-accent-secondary-surface-secondary-accent-light: var(--color-color-blue-light-mode-blue-400);
-  --surface-accent-secondary-surface-secondary-accent: var(--color-color-blue-light-mode-blue-default);
-  --surface-accent-secondary-surface-secondary-accent-dark: var(--color-color-blue-light-mode-blue-600);
-  --surface-accent-secondary-surface-secondary-accent-darker: var(--color-color-blue-light-mode-blue-700);
-  --surface-accent-secondary-surface-secondary-accent-darkest: var(--color-color-blue-light-mode-blue-800);
-  --surface-accent-secondary-surface-secondary-accent-100: var(--color-color-blue-transparent-light-blue-light-tsp-100);
-  --surface-accent-secondary-surface-secondary-accent-70: var(--color-color-blue-transparent-light-blue-light-tsp-70);
-  --surface-accent-secondary-surface-secondary-accent-50: var(--color-color-blue-transparent-light-blue-light-tsp-50);
-  --surface-accent-secondary-surface-secondary-accent-30: var(--color-color-blue-transparent-light-blue-light-tsp-30);
-  --surface-accent-secondary-surface-secondary-accent-10: var(--color-color-blue-transparent-light-blue-light-tsp-10);
+  /* =============== TEXT - ACCENT-SECONDARY =============== */
+  --text-accent-secondary-darkest: var(--color-blue-light-mode-800);
+  --text-accent-secondary-darker: var(--color-blue-light-mode-700);
+  --text-accent-secondary-dark: var(--color-blue-light-mode-600);
+  --text-accent-secondary: var(--color-blue-light-mode-default);
+  --text-accent-secondary-light: var(--color-blue-light-mode-400);
+  --text-accent-secondary-lighter: var(--color-blue-light-mode-300);
+  --text-accent-secondary-lightest: var(--color-blue-light-mode-100);
+  --text-link-text-link-default: var(--color-blue-light-mode-default);
+  --text-link-text-link-hover: var(--color-blue-light-mode-default);
 
-  /* =============== SURFACE ERROR =============== */
-  --surface-error-surface-error-lightest: var(--color-color-red-light-mode-red-100);
-  --surface-error-surface-error-lighter: var(--color-color-red-light-mode-red-300);
-  --surface-error-surface-error-light: var(--color-color-red-light-mode-red-400);
-  --surface-error-surface-error: var(--color-color-red-light-mode-red-default);
-  --surface-error-surface-error-dark: var(--color-color-red-light-mode-red-600);
-  --surface-error-surface-error-darker: var(--color-color-red-light-mode-red-700);
-  --surface-error-surface-error-darkest: var(--color-color-red-light-mode-red-800);
-  --surface-error-surface-error-10: var(--color-color-red-transparent-light-red-light-tsp-10);
+  /* =============== TEXT - INVERSE =============== */
+  --text-inverse-lighter: var(--color-base-white-default);
+  --text-inverse-light: var(--color-neutral-050);
+  --text-inverse: var(--color-neutral-100);
+  --text-inverse-dark: var(--color-neutral-200);
+  --text-inverse-darker: var(--color-neutral-300);
+  --text-inverse-darkest: var(--color-neutral-400);
+  --text-inverse-80: var(--color-white-transparent-80);
+  --text-inverse-70: var(--color-white-transparent-70);
+  --text-inverse-50: var(--color-white-transparent-50);
+  --text-inverse-30: var(--color-white-transparent-30);
+  --text-inverse-10: var(--color-white-transparent-10);
+  
+  --text-info: var(--color-red-light-mode-default);
+  --text-success: var(--color-green-light-mode-default);
+  --text-warning: var(--color-orange-light-mode-default);
+  --text-error: var(--color-red-light-mode-default);
 
-  /* =============== SURFACE WARNING =============== */
-  --surface-warning-surface-warning-lightest: var(--color-color-orange-light-mode-orange-100);
-  --surface-warning-surface-warning-lighter: var(--color-color-orange-light-mode-orange-200);
-  --surface-warning-surface-warning-light: var(--color-color-orange-light-mode-orange-400);
-  --surface-warning-surface-warning: var(--color-color-orange-light-mode-orange-default);
-  --surface-warning-surface-warning-dark: var(--color-color-orange-light-mode-orange-600);
-  --surface-warning-surface-warning-darker: var(--color-color-orange-light-mode-orange-700);
-  --surface-warning-surface-warning-darkest: var(--color-color-orange-light-mode-orange-800);
-  --surface-warning-surface-warning-10: var(--color-color-orange-transparent-light-orange-light-tsp-10);
+  /* =============== TEXT - ON STATES =============== */
+  --text-on-label-primary: var(--color-green-light-mode-default);
+  --text-on-label-secondary: var(--color-blue-light-mode-default);
+  --text-on-label-warning: var(--color-orange-light-mode-default);
+  --text-on-label-error: var(--color-red-light-mode-default);
+  --text-on-label-info: var(--color-cyan-light-mode-default);
+  --text-on-primary: var(--color-white-transparent-100);
+  --text-on-primary-light: var(--color-white-transparent-80);
+  --text-on-primary-lighter: var(--color-white-transparent-50);
+  --text-on-primary-lightest: var(--color-white-transparent-30);
+  --text-on-accent: var(--color-white-transparent-100);
+  --text-on-accent-light: var(--color-white-transparent-80);
+  --text-on-accent-lighter: var(--color-white-transparent-50);
+  --text-on-accent-lightest: var(--color-white-transparent-30);
+  --text-on-inverse: var(--color-neutral-050);
+  --text-on-inverse-light: var(--color-white-transparent-80);
+  --text-on-inverse-lighter: var(--color-white-transparent-50);
+  --text-on-inverse-lightest: var(--color-white-transparent-30);
+  --text-on-button-primary: var(--color-neutral-050);
+  --text-on-button-secondary: var(--color-neutral-050);
+  --text-on-button-primary-tint: var(--color-blue-light-mode-default);
+  --text-on-button-secondary-tint: var(--color-green-dark-mode-green-600);
+  --text-on-button-inverse: var(--color-neutral-100);
+  --text-on-button-solid: var(--color-neutral-800);
+  --text-on-button-disabled: var(--color-black-transparent-30);
 
-  /* =============== BUTTONS PRIMARY =============== */
-  --buttons-primary-button-primary-default: var(--color-color-blue-light-mode-blue-default);
-  --buttons-primary-tint-button-primary-tint-default: var(--color-color-blue-transparent-light-blue-light-tsp-10);
-  --buttons-primary-tint-button-primary-tint-hover: var(--color-color-blue-light-mode-blue-200);
-  --buttons-primary-tint-button-primary-tint-pressed: var(--color-color-blue-dark-mode-blue-100);
-  --buttons-primary-tint-button-primary-tint-disabled: var(--color-color-neutral-neutral-100);
-  --buttons-primary-tint-button-primary-tint-selected: var(--color-color-neutral-neutral-200);
-  --buttons-primary-button-primary-hover: var(--color-color-blue-light-mode-blue-400);
-  --buttons-primary-button-primary-pressed: var(--color-color-blue-dark-mode-blue-600);
-  --buttons-primary-button-primary-selected: var(--color-color-blue-dark-mode-blue-800);
-  --buttons-primary-button-primary-disabled: var(--color-color-neutral-neutral-100);
-  --buttons-primary-button-primary-outline: var(--color-color-blue-light-mode-blue-300);
-  --buttons-primary-button-primary-outline-hover: var(--color-color-blue-light-mode-blue-400);
-  --buttons-primary-button-primary-outline-pressed: var(--color-color-blue-light-mode-blue-default);
+  --label-primary: var(--color-green-transparent-light-5);
+  --label-secondary: var(--color-blue-transparent-light-10);
+  --label-warning: var(--color-orange-transparent-dark-5);
+  --label-error: var(--color-red-transparent-light-5);
+  --label-info: var(--color-cyan-dark-mode-100);
 
-  /* =============== BUTTONS SECONDARY =============== */
-  --buttons-secondary-button-primary-default: var(--color-color-green-light-mode-green-default);
-  --buttons-secondary-tint-button-primary-default: var(--color-color-green-light-mode-green-100);
-  --buttons-secondary-tint-button-primary-hover: var(--color-color-green-light-mode-green-200);
-  --buttons-secondary-tint-button-primary-pressed: var(--color-color-green-light-mode-green-400);
-  --buttons-secondary-tint-button-primary-disabled: var(--color-color-neutral-neutral-300);
-  --buttons-secondary-tint-button-primary-selected: var(--color-color-neutral-neutral-200);
-  --buttons-secondary-button-primary-hover: var(--color-color-green-light-mode-green-600);
-  --buttons-secondary-button-primary-pressed: var(--color-color-green-light-mode-green-700);
-  --buttons-secondary-button-primary-disabled: var(--color-color-neutral-neutral-300);
-  --buttons-secondary-button-primary-selected: var(--color-color-neutral-neutral-200);
+  /* =============== ICON - PRIMARY =============== */
+  --icon-white: var(--color-base-white-default);
+  --icon-black: var(--color-base-black-default);
+  --icon-primary-lightest: var(--color-neutral-500);
+  --icon-primary-lighter: var(--color-neutral-600);
+  --icon-primary-light: var(--color-neutral-700);
+  --icon-primary: var(--color-neutral-800);
+  --icon-primary-dark: var(--color-neutral-900);
+  --icon-primary-80: var(--color-black-transparent-80);
+  --icon-primary-70: var(--color-black-transparent-70);
+  --icon-primary-50: var(--color-black-transparent-50);
+  --icon-primary-30: var(--color-black-transparent-30);
+  --icon-primary-10: var(--color-black-transparent-10);
+  --icon-primary-5: var(--color-black-transparent-5);
+  --icon-primary-2: var(--color-black-transparent-2);
 
-  /* =============== BUTTONS SOLID & INVERSE =============== */
-  --buttons-solid-button-solid-default: var(--color-color-black-transparent-neutral-dark-tsp-2);
-  --buttons-solid-button-solid-hover: var(--color-color-black-transparent-neutral-dark-tsp-5);
-  --buttons-solid-button-solid-pressed: var(--color-color-black-transparent-neutral-dark-tsp-2);
-  --buttons-solid-button-solid-disabled: var(--color-color-neutral-neutral-100);
-  --buttons-solid-button-solid-selected: var(--color-color-neutral-neutral-400);
-  --buttons-solid-button-solid-outline: var(--color-color-neutral-neutral-100);
-  --buttons-inverse-button-inversed-default: var(--color-color-neutral-neutral-900);
-  --buttons-inverse-button-inversed-hover: var(--color-color-neutral-neutral-700);
-  --buttons-inverse-button-inversed-pressed: var(--color-color-neutral-neutral-800);
-  --buttons-inverse-button-inverse-disabled: var(--color-color-black-transparent-neutral-dark-tsp-5);
-  --buttons-inverse-button-inverse-selected: var(--color-color-neutral-neutral-700);
-  --buttons-inverse-button-inverse-outline: var(--color-color-neutral-neutral-800);
+  /* =============== ICON - ACCENT =============== */
+  --icon-accent-light: var(--color-green-light-mode-300);
+  --icon-accent: var(--color-green-light-mode-default);
+  --icon-accent-dark: var(--color-green-light-mode-700);
+  --icon-accent-50: var(--color-green-transparent-light-50);
 
-  /* =============== ICONS PRIMARY =============== */
-  --icon-primary-icon-primary-lightest: var(--color-color-neutral-neutral-500);
-  --icon-primary-icon-primary-lighter: var(--color-color-neutral-neutral-600);
-  --icon-primary-icon-primary-light: var(--color-color-neutral-neutral-700);
-  --icon-primary-icon-primary: var(--color-color-neutral-neutral-800);
-  --icon-primary-icon-primary-dark: var(--color-color-neutral-neutral-900);
-  --icon-primary-icon-primary-80: var(--color-color-black-transparent-neutral-dark-tsp-80);
-  --icon-primary-icon-primary-70: var(--color-color-black-transparent-neutral-dark-tsp-70);
-  --icon-primary-icon-primary-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
-  --icon-primary-icon-primary-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
-  --icon-primary-icon-primary-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
-  --icon-primary-icon-primary-5: var(--color-color-black-transparent-neutral-dark-tsp-5);
-  --icon-primary-icon-primary-2: var(--color-color-black-transparent-neutral-dark-tsp-2);
+  /* =============== ICON - ACCENT-SECONDARY =============== */
+  --icon-accent-secondary-light: var(--color-blue-light-mode-300);
+  --icon-accent-secondary: var(--color-blue-light-mode-default);
+  --icon-accent-secondary-dark: var(--color-blue-light-mode-700);
+  --icon-accent-secondary-50: var(--color-blue-transparent-light-50);
 
-  /* =============== STROKES PRIMARY =============== */
-  --stroke-primary-stroke-primary-lighter: var(--color-color-neutral-neutral-200);
-  --stroke-primary-stroke-primary-light: var(--color-color-neutral-neutral-300);
-  --stroke-primary-stroke-primary: var(--color-color-neutral-neutral-400);
-  --stroke-primary-stroke-primary-dark: var(--color-color-neutral-neutral-500);
-  --stroke-primary-stroke-primary-darker: var(--color-color-neutral-neutral-500);
-  --stroke-primary-stroke-primary-80: var(--color-color-white-transparent-white-tsp-80);
-  --stroke-primary-stroke-primary-70: var(--color-color-white-transparent-white-tsp-70);
-  --stroke-primary-stroke-primary-50: var(--color-color-white-transparent-white-tsp-50);
-  --stroke-primary-stroke-primary-30: var(--color-color-white-transparent-white-tsp-30);
-  --stroke-primary-stroke-primary-10: var(--color-color-white-transparent-white-tsp-10);
+  /* =============== ICON - INVERSE =============== */
+  --icon-inverse-light: var(--color-base-white-default);
+  --icon-inverse: var(--color-neutral-050);
+  --icon-inverse-dark: var(--color-neutral-200);
+  --icon-inverse-darker: var(--color-neutral-300);
+  --icon-inverse-darkest: var(--color-neutral-400);
+  --icon-inverse-80: var(--color-white-transparent-80);
+  --icon-inverse-70: var(--color-white-transparent-70);
+  --icon-inverse-50: var(--color-white-transparent-50);
+  --icon-inverse-30: var(--color-white-transparent-30);
+  --icon-inverse-10: var(--color-white-transparent-10);
+  --icon-inverse-5: var(--color-white-transparent-5);
+  --icon-inverse-2: var(--color-white-transparent-2);
 
-  /* =============== STROKES INVERSE & ACCENT =============== */
-  --stroke-inverse-stroke-inverse-lightest: var(--color-color-neutral-neutral-500);
-  --stroke-inverse-stroke-inverse-lighter: var(--color-color-neutral-neutral-600);
-  --stroke-inverse-stroke-inverse-light: var(--color-color-neutral-neutral-700);
-  --stroke-inverse-stroke-inverse: var(--color-color-neutral-neutral-800);
-  --stroke-inverse-stroke-inverse-dark: var(--color-color-neutral-neutral-900);
-  --stroke-inverse-stroke-inverse-darkest: var(--color-color-neutral-neutral-1000);
-  --stroke-inverse-stroke-inverse-80: var(--color-color-black-transparent-neutral-dark-tsp-80);
-  --stroke-inverse-stroke-inverse-70: var(--color-color-black-transparent-neutral-dark-tsp-70);
-  --stroke-inverse-stroke-inverse-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
-  --stroke-inverse-stroke-inverse-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
-  --stroke-inverse-stroke-inverse-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
-  --stroke-accent-stroke-accent-light: var(--color-color-green-dark-mode-green-400);
-  --stroke-secondary-stroke-accent-secondary-light: var(--color-color-blue-light-mode-blue-300);
-  --stroke-secondary-stroke-accent-secondary: var(--color-color-blue-light-mode-blue-default);
-  --stroke-secondary-stroke-accent-secondary-dark: var(--color-color-blue-light-mode-blue-600);
-  --stroke-accent-stroke-accent: var(--color-color-green-light-mode-green-default);
-  --stroke-accent-stroke-accent-dark: var(--color-color-green-light-mode-green-600);
-  --stroke-error-icon-primary-light: var(--color-color-red-light-mode-red-100);
-  --stroke-error-icon-primary: var(--color-color-red-light-mode-red-default);
-  --stroke-error-icon-primary-dark: var(--color-color-red-light-mode-red-700);
+  --icon-warning: var(--color-orange-light-mode-default);
+  --icon-error: var(--color-red-light-mode-default);
 
-  /* =============== ICONS INVERSE & ACCENT =============== */
-  --icon-inverse-icon-inverse-light: var(--color-color-base-white-default);
-  --icon-inverse-icon-inverse: var(--color-color-neutral-neutral-050);
-  --icon-inverse-icon-inverse-dark: var(--color-color-neutral-neutral-200);
-  --icon-inverse-icon-inverse-darker: var(--color-color-neutral-neutral-300);
-  --icon-inverse-icon-inverse-darkest: var(--color-color-neutral-neutral-400);
-  --icon-inverse-icon-inverse-80: var(--color-color-white-transparent-white-tsp-80);
-  --icon-inverse-icon-inverse-70: var(--color-color-white-transparent-white-tsp-70);
-  --icon-inverse-icon-inverse-50: var(--color-color-white-transparent-white-tsp-50);
-  --icon-inverse-icon-inverse-30: var(--color-color-white-transparent-white-tsp-30);
-  --icon-inverse-icon-inverse-10: var(--color-color-white-transparent-white-tsp-10);
-  --icon-inverse-icon-inverse-5: var(--color-color-white-transparent-white-tsp-5);
-  --icon-inverse-icon-inverse-2: var(--color-color-white-transparent-white-tsp-2);
-  --icon-accent-icon-primary-light: var(--color-color-green-light-mode-green-300);
-  --icon-accent-icon-primary: var(--color-color-green-light-mode-green-default);
-  --icon-accent-icon-primary-dark: var(--color-color-green-light-mode-green-700);
-  --icon-accent-secondary-icon-primary-light: var(--color-color-blue-light-mode-blue-300);
-  --icon-accent-icon-primary-50: var(--color-color-green-transparent-light-green-light-tsp-50);
-  --icon-accent-secondary-icon-primary: var(--color-color-blue-light-mode-blue-default);
-  --icon-accent-secondary-icon-primary-dark: var(--color-color-blue-light-mode-blue-700);
-  --icon-accent-secondary-icon-primary-50: var(--color-color-blue-transparent-light-blue-light-tsp-50);
-  --icon-warning-icon-primary: var(--color-color-orange-light-mode-orange-default);
+  /* =============== STROKE - PRIMARY =============== */
+  --stroke-primary-lighter: var(--color-neutral-200);
+  --stroke-primary-light: var(--color-neutral-300);
+  --stroke-primary: var(--color-neutral-400);
+  --stroke-primary-dark: var(--color-neutral-500);
+  --stroke-primary-darker: var(--color-neutral-500);
+  --stroke-primary-80: var(--color-white-transparent-80);
+  --stroke-primary-70: var(--color-white-transparent-70);
+  --stroke-primary-50: var(--color-white-transparent-50);
+  --stroke-primary-30: var(--color-white-transparent-30);
+  --stroke-primary-10: var(--color-white-transparent-10);
 
-  /* =============== LABELS =============== */
-  --label-label-primary: var(--color-color-green-transparent-light-green-light-tsp-5);
-  --label-label-secondary: var(--color-color-blue-transparent-light-blue-light-tsp-10);
-  --label-label-warning: var(--color-color-orange-transparent-dark-orange-dark-tsp-5);
-  --label-label-error: var(--color-color-red-transparent-light-red-light-tsp-5);
-  --label-label-info: var(--color-color-cyan-dark-mode-cyan-100);
-  --icon-error-icon-primary: var(--color-color-red-light-mode-red-default);
-  --buttons-red-tint-button-solid-default: var(--color-color-red-light-mode-red-100);
-  --buttons-red-tint-button-solid-hover: var(--color-color-red-light-mode-red-100);
-  --buttons-red-tint-button-solid-pressed: var(--color-color-red-light-mode-red-100);
-  --buttons-red-tint-button-solid-disabled: var(--color-color-neutral-neutral-100);
-  --buttons-red-tint-button-solid-selected: var(--color-color-neutral-neutral-400);
-  --buttons-red-tint-button-solid-outline: var(--color-color-red-light-mode-red-default);
+  /* =============== STROKE - ACCENT =============== */
+  --stroke-accent-light: var(--color-green-dark-mode-green-400);
+  --stroke-accent: var(--color-green-light-mode-default);
+  --stroke-accent-dark: var(--color-green-light-mode-600);
+
+  /* =============== STROKE - ACCENT-SECONDARY =============== */
+  --stroke-accent-secondary-light: var(--color-blue-light-mode-300);
+  --stroke-accent-secondary: var(--color-blue-light-mode-default);
+  --stroke-accent-secondary-dark: var(--color-blue-light-mode-600);
+
+  /* =============== STROKE - INVERSE =============== */
+  --stroke-inverse-lightest: var(--color-neutral-500);
+  --stroke-inverse-lighter: var(--color-neutral-600);
+  --stroke-inverse-light: var(--color-neutral-700);
+  --stroke-inverse: var(--color-neutral-800);
+  --stroke-inverse-dark: var(--color-neutral-900);
+  --stroke-inverse-darkest: var(--color-neutral-1000);
+  --stroke-inverse-80: var(--color-black-transparent-80);
+  --stroke-inverse-70: var(--color-black-transparent-70);
+  --stroke-inverse-50: var(--color-black-transparent-50);
+  --stroke-inverse-30: var(--color-black-transparent-30);
+  --stroke-inverse-10: var(--color-black-transparent-10);
+
+  /* =============== STROKE - ERROR =============== */
+  --stroke-error-light: var(--color-red-light-mode-100);
+  --stroke-error: var(--color-red-light-mode-default);
+  --stroke-error-dark: var(--color-red-light-mode-700);
+
+  /* =============== BUTTON - PRIMARY =============== */
+  --buttons-primary-default: var(--color-blue-light-mode-default);
+  --buttons-primary-tint-default: var(--color-blue-transparent-light-10);
+  --buttons-primary-tint-hover: var(--color-blue-light-mode-200);
+  --buttons-primary-tint-pressed: var(--color-blue-dark-mode-100);
+  --buttons-primary-tint-disabled: var(--color-neutral-100);
+  --buttons-primary-tint-selected: var(--color-neutral-200);
+  --buttons-primary-hover: var(--color-blue-light-mode-400);
+  --buttons-primary-pressed: var(--color-blue-dark-mode-600);
+  --buttons-primary-selected: var(--color-blue-dark-mode-800);
+  --buttons-primary-disabled: var(--color-neutral-100);
+  --buttons-primary-outline: var(--color-blue-light-mode-300);
+  --buttons-primary-outline-hover: var(--color-blue-light-mode-400);
+  --buttons-primary-outline-pressed: var(--color-blue-light-mode-default);
+
+  /* =============== BUTTON - ACCENT =============== */
+  --buttons-accent-default: var(--color-green-light-mode-default);
+  --buttons-accent-hover: var(--color-green-light-mode-600);
+  --buttons-accent-pressed: var(--color-green-light-mode-700);
+  --buttons-accent-disabled: var(--color-neutral-300);
+  --buttons-accent-selected: var(--color-neutral-200);
+  --buttons-accent-tint-default: var(--color-green-light-mode-100);
+  --buttons-accent-tint-hover: var(--color-green-light-mode-200);
+  --buttons-accent-tint-pressed: var(--color-green-light-mode-400);
+  --buttons-accent-tint-disabled: var(--color-neutral-300);
+  --buttons-accent-tint-selected: var(--color-neutral-200);
+
+  /* =============== BUTTON - SOLID =============== */
+  --buttons-solid-default: var(--color-black-transparent-2);
+  --buttons-solid-hover: var(--color-black-transparent-5);
+  --buttons-solid-pressed: var(--color-black-transparent-2);
+  --buttons-solid-disabled: var(--color-neutral-100);
+  --buttons-solid-selected: var(--color-neutral-400);
+  --buttons-solid-outline: var(--color-neutral-100);
+
+  /* =============== BUTTON - INVERSE =============== */
+  --buttons-inverse-default: var(--color-neutral-900);
+  --buttons-inverse-hover: var(--color-neutral-700);
+  --buttons-inverse-pressed: var(--color-neutral-800);
+  --buttons-inverse-disabled: var(--color-black-transparent-5);
+  --buttons-inverse-selected: var(--color-neutral-700);
+  --buttons-inverse-outline: var(--color-neutral-800);
+
+  /* =============== BUTTON - ERROR =============== */
+  --buttons-red-tint-default: var(--color-red-light-mode-100);
+  --buttons-red-tint-hover: var(--color-red-light-mode-100);
+  --buttons-red-tint-pressed: var(--color-red-light-mode-100);
+  --buttons-red-tint-disabled: var(--color-neutral-100);
+  --buttons-red-tint-selected: var(--color-neutral-400);
+  --buttons-red-tint-outline: var(--color-red-light-mode-default);
 
   /* =============== GRADIENTS =============== */
-  --gradient-bg-green-white-white: var(--background-bg-secondary);
+  --gradient-bg-green-white-white: var(--background-secondary);
   --gradient-bg-green-white-green: rgba(246, 255, 251, 1);
 }
 
 /* Colors - Dark Mode - Semantic Variables */
 .dark-mode {
-  /* =============== BACKGROUNDS =============== */
-  --background-bg-primary: var(--color-color-neutral-neutral-1000);
-  --background-bg-secondary: var(--color-color-neutral-neutral-900);
-  --background-bg-tertiary: var(--color-color-neutral-neutral-900);
-  --background-bg-inverse: var(--color-color-neutral-neutral-100);
-  --background-bg-accent: var(--color-color-green-dark-mode-green-default);
+  /* =============== BACKGROUND - PRIMARY =============== */
+  --background-primary: var(--color-neutral-1000);
+  --background-secondary: var(--color-neutral-900);
+  --background-tertiary: var(--color-neutral-900);
 
-  /* =============== TEXT LABELS =============== */
-  --text-label-text-on-label-primary: var(--color-color-green-dark-mode-green-default);
-  --text-label-text-on-label-secondary: var(--color-color-blue-dark-mode-blue-default);
-  --text-label-text-on-label-warning: var(--color-color-orange-dark-mode-orange-default);
-  --text-label-text-on-label-error: var(--color-color-red-dark-mode-red-default);
-  --text-label-text-on-label-info: var(--color-color-cyan-dark-mode-cyan-default);
+  /* =============== BACKGROUND - ACCENT =============== */
+  --background-accent: var(--color-green-dark-mode-green-default);
 
-  /* =============== TEXT INVERSE =============== */
-  --text-inverse-text-inverse-light: var(--color-color-neutral-neutral-200);
-  --text-inverse-text-inverse: var(--color-color-neutral-neutral-200);
-  --text-inverse-text-inverse-dark: var(--color-color-neutral-neutral-200);
-  --text-inverse-text-inverse-darker: var(--color-color-neutral-neutral-200);
-  --text-inverse-text-inverse-darkest: var(--color-color-neutral-neutral-200);
-  --text-inverse-text-inverse-80: var(--color-color-black-transparent-neutral-dark-tsp-80);
-  --text-inverse-text-inverse-70: var(--color-color-black-transparent-neutral-dark-tsp-70);
-  --text-inverse-text-inverse-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
-  --text-inverse-text-inverse-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
-  --text-inverse-text-inverse-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
+  /* =============== BACKGROUND - INVERSE =============== */
+  --background-inverse: var(--color-neutral-100);
 
-  /* =============== TEXT PRIMARY =============== */
-  --text-primary-text-primary-darker: var(--color-color-neutral-neutral-050);
-  --text-primary-text-primary-dark: var(--color-color-neutral-neutral-100);
-  // --text-primary-text-primary: var(--color-color-neutral-neutral-050);
-  --text-primary-text-primary: var(--color-color-neutral-neutral-200);
-  --text-primary-text-primary-light: var(--color-color-neutral-neutral-300);
-  --text-primary-text-primary-lighter: var(--color-color-neutral-neutral-400);
-  --text-primary-text-primary-lightest: var(--color-color-neutral-neutral-500);
-  --text-primary-text-primary-80: var(--color-color-white-transparent-white-tsp-80);
-  --text-primary-text-primary-70: var(--color-color-white-transparent-white-tsp-70);
-  --text-primary-text-primary-50: var(--color-color-white-transparent-white-tsp-50);
-  --text-primary-text-primary-30: var(--color-color-white-transparent-white-tsp-30);
-  --text-primary-text-primary-10: var(--color-color-white-transparent-white-tsp-10);
+  /* =============== SURFACE - PRIMARY =============== */
+  --surface-primary-light: var(--color-base-black-default);
+  --surface-primary: var(--color-neutral-900);
+  --surface-primary-dark: var(--color-neutral-800);
+  --surface-primary-darker: var(--color-neutral-700);
+  --surface-primary-darkest: var(--color-neutral-600);
+  --surface-primary-80: var(--color-black-transparent-80);
+  --surface-primary-70: var(--color-black-transparent-70);
+  --surface-primary-50: var(--color-black-transparent-50);
+  --surface-primary-30: var(--color-black-transparent-30);
+  --surface-primary-10: var(--color-black-transparent-10);
 
-  /* =============== TEXT ACCENT =============== */
-  --text-accent-text-accent: var(--color-color-green-dark-mode-green-default);
-  --text-accent-text-accent-darkest: var(--color-color-green-dark-mode-green-default);
-  --text-accent-text-accent-darker: var(--color-color-green-dark-mode-green-default);
-  --text-accent-text-accent-lighter: var(--color-color-green-dark-mode-green-default);
-  --text-accent-text-accent-lightest: var(--color-color-green-dark-mode-green-default);
-  --text-accent-text-accent-70: var(--color-color-green-transparent-dark-green-dark-tsp-70);
-  --text-accent-text-accent-50: var(--color-color-green-transparent-dark-green-dark-tsp-50);
-  --text-accent-text-accent-30: var(--color-color-green-transparent-dark-green-dark-tsp-30);
-  --text-accent-text-accent-10: var(--color-color-green-transparent-dark-green-dark-tsp-10);
-  --text-accent-text-accent-5: var(--color-color-green-transparent-dark-green-dark-tsp-5);
+  /* =============== SURFACE - ACCENT =============== */
+  --surface-accent-lightest: var(--color-green-dark-mode-green-100);
+  --surface-accent-lighter: var(--color-green-dark-mode-green-300);
+  --surface-accent-light: var(--color-green-dark-mode-green-400);
+  --surface-accent: var(--color-green-dark-mode-green-default);
+  --surface-accent-dark: var(--color-green-dark-mode-green-600);
+  --surface-accent-darker: var(--color-green-dark-mode-green-700);
+  --surface-accent-darkest: var(--color-green-dark-mode-green-800);
+  --surface-accent-100: var(--color-green-transparent-dark-100);
+  --surface-accent-70: var(--color-green-transparent-dark-70);
+  --surface-accent-50: var(--color-green-transparent-dark-50);
+  --surface-accent-30: var(--color-green-transparent-dark-30);
+  --surface-accent-10: var(--color-green-transparent-dark-10);
+  --surface-accent-5: var(--color-green-transparent-dark-10);
 
-  /* =============== TEXT SECONDARY =============== */
-  --text-secondary-text-accent-secondary-darkest: var(--color-color-blue-light-mode-blue-default);
-  --text-secondary-text-accent-secondary-darker: var(--color-color-blue-light-mode-blue-default);
-  --text-secondary-text-accent-secondary-dark: var(--color-color-blue-light-mode-blue-default);
-  --text-secondary-text-accent-secondary: var(--color-color-blue-dark-mode-blue-default);
-  --text-secondary-text-accent-secondary-light: var(--color-color-blue-light-mode-blue-default);
-  --text-secondary-text-accent-secondary-lighter: var(--color-color-blue-light-mode-blue-default);
-  --text-secondary-text-accent-secondary-lightest: var(--color-color-blue-light-mode-blue-default);
-  --text-link-text-link-default: var(--color-color-blue-light-mode-blue-default);
-  --text-link-text-link-hover: var(--color-color-blue-light-mode-blue-default);
+  /* =============== SURFACE - ACCENT-SECONDARY =============== */
+  --surface-accent-secondary-lightest: var(--color-neutral-800);
+  --surface-accent-secondary-lighter: var(--color-neutral-700);
+  --surface-accent-secondary-light: var(--color-neutral-600);
+  --surface-accent-secondary: var(--color-blue-dark-mode-default);
+  --surface-accent-secondary-dark: var(--color-neutral-400);
+  --surface-accent-secondary-darker: var(--color-neutral-200);
+  --surface-accent-secondary-darkest: var(--color-neutral-100);
+  --surface-accent-secondary-100: var(--color-blue-transparent-dark-100);
+  --surface-accent-secondary-70: var(--color-blue-transparent-dark-70);
+  --surface-accent-secondary-50: var(--color-blue-transparent-dark-50);
+  --surface-accent-secondary-30: var(--color-blue-transparent-dark-30);
+  --surface-accent-secondary-10: var(--color-blue-transparent-dark-10);
 
-  /* =============== TEXT ON STATES =============== */
-  --text-on-primary-text-on-primary: var(--color-color-neutral-neutral-100);
-  --text-on-primary-text-on-primary-light: var(--color-color-neutral-neutral-100);
-  --text-on-primary-text-on-primary-lighter: var(--color-color-neutral-neutral-100);
-  --text-on-primary-text-on-primary-lightest: var(--color-color-neutral-neutral-100);
-  --text-on-accent-text-on-accent: var(--color-color-neutral-neutral-100);
-  --text-on-accent-text-on-accent-light: var(--color-color-neutral-neutral-100);
-  --text-on-accent-text-on-accent-lighter: var(--color-color-neutral-neutral-100);
-  --text-on-accent-text-on-accent-lightest: var(--color-color-neutral-neutral-100);
-  --text-on-inverse-text-on-inverse: var(--color-color-neutral-neutral-100);
-  --text-on-inverse-text-on-inverse-light: var(--color-color-neutral-neutral-100);
-  --text-on-inverse-text-on-inverse-lighter: var(--color-color-neutral-neutral-100);
-  --text-on-inverse-text-on-inverse-lightest: var(--color-color-neutral-neutral-100);
+  /* =============== SURFACE - INVERSE =============== */
+  --surface-inverse-light: var(--color-base-white-default);
+  --surface-inverse: var(--color-neutral-050);
+  --surface-inverse-dark: var(--color-neutral-100);
+  --surface-inverse-darker: var(--color-neutral-200);
+  --surface-inverse-darkest: var(--color-neutral-300);
+  --surface-inverse-80: var(--color-white-transparent-80);
+  --surface-inverse-70: var(--color-white-transparent-70);
+  --surface-inverse-50: var(--color-white-transparent-50);
+  --surface-inverse-30: var(--color-white-transparent-30);
+  --surface-inverse-10: var(--color-white-transparent-10);
+  --surface-inverse-5: var(--color-white-transparent-10);
+  --surface-inverse-2: var(--color-white-transparent-10);
 
-  /* =============== TEXT BUTTON STATES =============== */
-  --text-button-text-on-btn-primary: var(--color-color-neutral-neutral-050);
-  --text-button-text-on-btn-secondary: var(--color-color-neutral-neutral-100);
-  --text-button-text-on-btn-primary-tint: var(--color-color-blue-dark-mode-blue-default);
-  --text-button-text-on-btn-secondary-tint: var(--color-color-green-dark-mode-green-default);
-  --text-button-text-on-btn-solid: var(--color-color-neutral-neutral-100);
-  --text-button-text-on-btn-disabled: var(--color-color-white-transparent-white-tsp-30);
-  --text-button-text-on-btn-inverse: var(--color-color-neutral-neutral-100);
-  --text-error-text-error: var(--color-color-red-dark-mode-red-default);
-  --text-warning-text-warning: var(--color-color-orange-dark-mode-orange-default);
-  --text-success-text-success: var(--color-color-green-dark-mode-green-default);
-  --text-info-text-info: var(--color-color-neutral-neutral-100);
+  /* =============== SURFACE - WARNING =============== */
+  --surface-warning-lightest: var(--color-orange-dark-mode-800);
+  --surface-warning-lighter: var(--color-orange-dark-mode-700);
+  --surface-warning-light: var(--color-orange-dark-mode-600);
+  --surface-warning: var(--color-orange-dark-mode-default);
+  --surface-warning-dark: var(--color-orange-dark-mode-400);
+  --surface-warning-darker: var(--color-orange-dark-mode-200);
+  --surface-warning-darkest: var(--color-orange-dark-mode-100);
+  --surface-warning-10: var(--color-orange-transparent-dark-10);
 
-  /* =============== SURFACE PRIMARY =============== */
-  --surface-primary-surface-primary-light: var(--color-color-base-black-default);
-  --surface-primary-surface-primary: var(--color-color-neutral-neutral-900);
-  --surface-primary-surface-primary-dark: var(--color-color-neutral-neutral-800);
-  --surface-primary-surface-primary-darker: var(--color-color-neutral-neutral-700);
-  --surface-primary-surface-primary-darkest: var(--color-color-neutral-neutral-600);
-  --surface-primary-surface-primary-80: var(--color-color-black-transparent-neutral-dark-tsp-80);
-  --surface-primary-surface-primary-70: var(--color-color-black-transparent-neutral-dark-tsp-70);
-  --surface-primary-surface-primary-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
-  --surface-primary-surface-primary-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
-  --surface-primary-surface-primary-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
+  /* =============== SURFACE - ERROR =============== */
+  --surface-error-lightest: var(--color-red-dark-mode-800);
+  --surface-error-lighter: var(--color-red-dark-mode-700);
+  --surface-error-light: var(--color-red-dark-mode-600);
+  --surface-error: var(--color-red-dark-mode-default);
+  --surface-error-dark: var(--color-red-dark-mode-400);
+  --surface-error-darker: var(--color-red-dark-mode-200);
+  --surface-error-darkest: var(--color-red-dark-mode-100);
+  --surface-error-10: var(--color-red-transparent-dark-10);
 
-  /* =============== SURFACE INVERSE =============== */
-  --surface-inverse-surface-inverse-light: var(--color-color-base-white-default);
-  --surface-inverse-surface-inverse: var(--color-color-neutral-neutral-050);
-  --surface-inverse-surface-inverse-dark: var(--color-color-neutral-neutral-100);
-  --surface-inverse-surface-inverse-darker: var(--color-color-neutral-neutral-200);
-  --surface-inverse-surface-inverse-darkest: var(--color-color-neutral-neutral-300);
-  --surface-inverse-surface-inverse-80: var(--color-color-white-transparent-white-tsp-80);
-  --surface-inverse-surface-inverse-70: var(--color-color-white-transparent-white-tsp-70);
-  --surface-inverse-surface-inverse-50: var(--color-color-white-transparent-white-tsp-50);
-  --surface-inverse-surface-inverse-30: var(--color-color-white-transparent-white-tsp-30);
-  --surface-inverse-surface-inverse-10: var(--color-color-white-transparent-white-tsp-10);
-  --surface-inverse-surface-inverse-5: var(--color-color-white-transparent-white-tsp-10);
-  --surface-inverse-surface-inverse-2: var(--color-color-white-transparent-white-tsp-10);
+  /* =============== TEXT - PRIMARY =============== */
+  --text-primary-darker: var(--color-neutral-050);
+  --text-primary-dark: var(--color-neutral-100);
+  --text-primary: var(--color-neutral-200);
+  --text-primary-light: var(--color-neutral-300);
+  --text-primary-lighter: var(--color-neutral-400);
+  --text-primary-lightest: var(--color-neutral-500);
+  --text-primary-80: var(--color-white-transparent-80);
+  --text-primary-70: var(--color-white-transparent-70);
+  --text-primary-50: var(--color-white-transparent-50);
+  --text-primary-30: var(--color-white-transparent-30);
+  --text-primary-10: var(--color-white-transparent-10);
 
-  /* =============== SURFACE ACCENT =============== */
-  --surface-accent-surface-accent-lightest: var(--color-color-green-dark-mode-green-100);
-  --surface-accent-surface-accent-lighter: var(--color-color-green-dark-mode-green-300);
-  --surface-accent-surface-accent-light: var(--color-color-green-dark-mode-green-400);
-  --surface-accent-surface-accent: var(--color-color-green-dark-mode-green-default);
-  --surface-accent-surface-accent-dark: var(--color-color-green-dark-mode-green-600);
-  --surface-accent-surface-accent-darker: var(--color-color-green-dark-mode-green-700);
-  --surface-accent-surface-accent-darkest: var(--color-color-green-dark-mode-green-800);
-  --surface-accent-surface-accent-100: var(--color-color-green-transparent-dark-green-dark-tsp-100);
-  --surface-accent-surface-accent-70: var(--color-color-green-transparent-dark-green-dark-tsp-70);
-  --surface-accent-surface-accent-50: var(--color-color-green-transparent-dark-green-dark-tsp-50);
-  --surface-accent-surface-accent-30: var(--color-color-green-transparent-dark-green-dark-tsp-30);
-  --surface-accent-surface-accent-10: var(--color-color-green-transparent-dark-green-dark-tsp-10);
-  --surface-accent-surface-accent-5: var(--color-color-green-transparent-dark-green-dark-tsp-10);
+  /* =============== TEXT - ACCENT =============== */
+  --text-accent: var(--color-green-dark-mode-green-default);
+  --text-accent-darkest: var(--color-green-dark-mode-green-default);
+  --text-accent-darker: var(--color-green-dark-mode-green-default);
+  --text-accent-lighter: var(--color-green-dark-mode-green-default);
+  --text-accent-lightest: var(--color-green-dark-mode-green-default);
+  --text-accent-70: var(--color-green-transparent-dark-70);
+  --text-accent-50: var(--color-green-transparent-dark-50);
+  --text-accent-30: var(--color-green-transparent-dark-30);
+  --text-accent-10: var(--color-green-transparent-dark-10);
+  --text-accent-5: var(--color-green-transparent-dark-5);
 
-  /* =============== SURFACE ACCENT SECONDARY =============== */
-  --surface-accent-secondary-surface-secondary-accent-lightest: var(--color-color-neutral-neutral-800);
-  --surface-accent-secondary-surface-secondary-accent-lighter: var(--color-color-neutral-neutral-700);
-  --surface-accent-secondary-surface-secondary-accent-light: var(--color-color-neutral-neutral-600);
-  --surface-accent-secondary-surface-secondary-accent: var(--color-color-blue-dark-mode-blue-default);
-  --surface-accent-secondary-surface-secondary-accent-dark: var(--color-color-neutral-neutral-400);
-  --surface-accent-secondary-surface-secondary-accent-darker: var(--color-color-neutral-neutral-200);
-  --surface-accent-secondary-surface-secondary-accent-darkest: var(--color-color-neutral-neutral-100);
-  --surface-accent-secondary-surface-secondary-accent-100: var(--color-color-blue-transparent-dark-blue-dark-tsp-100);
-  --surface-accent-secondary-surface-secondary-accent-70: var(--color-color-blue-transparent-dark-blue-dark-tsp-70);
-  --surface-accent-secondary-surface-secondary-accent-50: var(--color-color-blue-transparent-dark-blue-dark-tsp-50);
-  --surface-accent-secondary-surface-secondary-accent-30: var(--color-color-blue-transparent-dark-blue-dark-tsp-30);
-  --surface-accent-secondary-surface-secondary-accent-10: var(--color-color-blue-transparent-dark-blue-dark-tsp-10);
+  /* =============== TEXT - ACCENT-SECONDARY =============== */
+  --text-accent-secondary-darkest: var(--color-blue-light-mode-default);
+  --text-accent-secondary-darker: var(--color-blue-light-mode-default);
+  --text-accent-secondary-dark: var(--color-blue-light-mode-default);
+  --text-accent-secondary: var(--color-blue-dark-mode-default);
+  --text-accent-secondary-light: var(--color-blue-light-mode-default);
+  --text-accent-secondary-lighter: var(--color-blue-light-mode-default);
+  --text-accent-secondary-lightest: var(--color-blue-light-mode-default);
+  --text-link-text-link-default: var(--color-blue-light-mode-default);
+  --text-link-text-link-hover: var(--color-blue-light-mode-default);
 
-  /* =============== SURFACE ERROR =============== */
-  --surface-error-surface-error-lightest: var(--color-color-red-dark-mode-red-800);
-  --surface-error-surface-error-lighter: var(--color-color-red-dark-mode-red-700);
-  --surface-error-surface-error-light: var(--color-color-red-dark-mode-red-600);
-  --surface-error-surface-error: var(--color-color-red-dark-mode-red-default);
-  --surface-error-surface-error-dark: var(--color-color-red-dark-mode-red-400);
-  --surface-error-surface-error-darker: var(--color-color-red-dark-mode-red-200);
-  --surface-error-surface-error-darkest: var(--color-color-red-dark-mode-red-100);
-  --surface-error-surface-error-10: var(--color-color-red-transparent-dark-red-dark-tsp-10);
+  /* =============== TEXT - INVERSE =============== */
+  --text-inverse-lighter: var(--color-neutral-1000);
+  --text-inverse-light: var(--color-neutral-900);
+  --text-inverse: var(--color-neutral-800);
+  --text-inverse-dark: var(--color-neutral-700);
+  --text-inverse-darker: var(--color-neutral-600);
+  --text-inverse-darkest: var(--color-neutral-500);
+  --text-inverse-80: var(--color-black-transparent-80);
+  --text-inverse-70: var(--color-black-transparent-70);
+  --text-inverse-50: var(--color-black-transparent-50);
+  --text-inverse-30: var(--color-black-transparent-30);
+  --text-inverse-10: var(--color-black-transparent-10);
 
-  /* =============== SURFACE WARNING =============== */
-  --surface-warning-surface-warning-lightest: var(--color-color-orange-dark-mode-orange-800);
-  --surface-warning-surface-warning-lighter: var(--color-color-orange-dark-mode-orange-700);
-  --surface-warning-surface-warning-light: var(--color-color-orange-dark-mode-orange-600);
-  --surface-warning-surface-warning: var(--color-color-orange-dark-mode-orange-default);
-  --surface-warning-surface-warning-dark: var(--color-color-orange-dark-mode-orange-400);
-  --surface-warning-surface-warning-darker: var(--color-color-orange-dark-mode-orange-200);
-  --surface-warning-surface-warning-darkest: var(--color-color-orange-dark-mode-orange-100);
-  --surface-warning-surface-warning-10: var(--color-color-orange-transparent-dark-orange-dark-tsp-10);
+  --text-info: var(--color-neutral-100);
+  --text-success: var(--color-green-dark-mode-green-default);
+  --text-warning: var(--color-orange-dark-mode-default);
+  --text-error: var(--color-red-dark-mode-default);
 
-  /* =============== BUTTONS PRIMARY =============== */
-  --buttons-primary-button-primary-default: var(--color-color-blue-light-mode-blue-default);
-  --buttons-primary-tint-button-primary-tint-default: var(--color-color-blue-transparent-light-blue-light-tsp-30);
-  --buttons-primary-tint-button-primary-tint-hover: var(--color-color-neutral-neutral-700);
-  --buttons-primary-tint-button-primary-tint-pressed: var(--color-color-neutral-neutral-700);
-  --buttons-primary-tint-button-primary-tint-disabled: var(--color-color-neutral-neutral-700);
-  --buttons-primary-tint-button-primary-tint-selected: var(--color-color-neutral-neutral-700);
-  --buttons-primary-button-primary-hover: var(--color-color-neutral-neutral-700);
-  --buttons-primary-button-primary-pressed: var(--color-color-neutral-neutral-700);
-  --buttons-primary-button-primary-selected: var(--color-color-neutral-neutral-700);
-  --buttons-primary-button-primary-disabled: var(--color-color-neutral-neutral-700);
-  --buttons-primary-button-primary-outline: var(--color-color-blue-light-mode-blue-default);
-  --buttons-primary-button-primary-outline-hover: var(--color-color-blue-light-mode-blue-default);
-  --buttons-primary-button-primary-outline-pressed: var(--color-color-blue-light-mode-blue-default);
+  /* =============== TEXT - ON STATES =============== */
+  --text-on-label-primary: var(--color-green-dark-mode-green-default);
+  --text-on-label-secondary: var(--color-blue-dark-mode-default);
+  --text-on-label-warning: var(--color-orange-dark-mode-default);
+  --text-on-label-error: var(--color-red-dark-mode-default);
+  --text-on-label-info: var(--color-cyan-dark-mode-default);
+  --text-on-primary: var(--color-neutral-100);
+  --text-on-primary-light: var(--color-neutral-100);
+  --text-on-primary-lighter: var(--color-neutral-100);
+  --text-on-primary-lightest: var(--color-neutral-100);
+  --text-on-accent: var(--color-neutral-100);
+  --text-on-accent-light: var(--color-neutral-100);
+  --text-on-accent-lighter: var(--color-neutral-100);
+  --text-on-accent-lightest: var(--color-neutral-100);
+  --text-on-inverse: var(--color-neutral-100);
+  --text-on-inverse-light: var(--color-neutral-100);
+  --text-on-inverse-lighter: var(--color-neutral-100);
+  --text-on-inverse-lightest: var(--color-neutral-100);
+  --text-on-button-primary: var(--color-neutral-050);
+  --text-on-button-secondary: var(--color-neutral-100);
+  --text-on-button-primary-tint: var(--color-blue-dark-mode-default);
+  --text-on-button-secondary-tint: var(--color-green-dark-mode-green-default);
+  --text-on-button-inverse: var(--color-neutral-100);
+  --text-on-button-solid: var(--color-neutral-100);
+  --text-on-button-disabled: var(--color-white-transparent-30);
 
-  /* =============== BUTTONS SECONDARY =============== */
-  --buttons-secondary-button-primary-default: var(--color-color-blue-light-mode-blue-default);
-  --buttons-secondary-tint-button-primary-default: var(--color-color-blue-light-mode-blue-default);
-  --buttons-secondary-tint-button-primary-hover: var(--color-color-neutral-neutral-700);
-  --buttons-secondary-tint-button-primary-pressed: var(--color-color-neutral-neutral-700);
-  --buttons-secondary-tint-button-primary-disabled: var(--color-color-neutral-neutral-700);
-  --buttons-secondary-tint-button-primary-selected: var(--color-color-neutral-neutral-700);
-  --buttons-secondary-button-primary-hover: var(--color-color-neutral-neutral-700);
-  --buttons-secondary-button-primary-pressed: var(--color-color-neutral-neutral-700);
-  --buttons-secondary-button-primary-disabled: var(--color-color-neutral-neutral-700);
-  --buttons-secondary-button-primary-selected: var(--color-color-neutral-neutral-700);
+  --label-primary: var(--color-green-transparent-dark-5);
+  --label-secondary: var(--color-blue-transparent-dark-10);
+  --label-warning: var(--color-orange-transparent-dark-5);
+  --label-error: var(--color-red-transparent-dark-5);
+  --label-info: rgba(255, 255, 255, 1);
 
-  /* =============== BUTTONS SOLID & INVERSE =============== */
-  --buttons-solid-button-solid-default: var(--color-color-white-transparent-white-tsp-10);
-  --buttons-solid-button-solid-hover: var(--color-color-neutral-neutral-700);
-  --buttons-solid-button-solid-pressed: var(--color-color-neutral-neutral-700);
-  --buttons-solid-button-solid-disabled: var(--color-color-neutral-neutral-700);
-  --buttons-solid-button-solid-selected: var(--color-color-neutral-neutral-700);
-  --buttons-solid-button-solid-outline: var(--color-color-neutral-neutral-700);
-  --buttons-inverse-button-inversed-default: var(--color-color-blue-light-mode-blue-default);
-  --buttons-inverse-button-inversed-hover: var(--color-color-neutral-neutral-700);
-  --buttons-inverse-button-inversed-pressed: var(--color-color-neutral-neutral-700);
-  --buttons-inverse-button-inverse-disabled: var(--color-color-white-transparent-white-tsp-10);
-  --buttons-inverse-button-inverse-selected: var(--color-color-neutral-neutral-700);
-  --buttons-inverse-button-inverse-outline: var(--color-color-neutral-neutral-700);
+  /* =============== ICON - PRIMARY =============== */
+  --icon-white: var(--color-base-white-default);
+  --icon-black: var(--color-base-black-default);
+  --icon-primary-lightest: var(--color-neutral-700);
+  --icon-primary-lighter: var(--color-neutral-700);
+  --icon-primary-light: var(--color-neutral-700);
+  --icon-primary: var(--color-neutral-050);
+  --icon-primary-dark: var(--color-neutral-100);
+  --icon-primary-80: var(--color-white-transparent-80);
+  --icon-primary-70: var(--color-white-transparent-70);
+  --icon-primary-50: var(--color-white-transparent-50);
+  --icon-primary-30: var(--color-white-transparent-30);
+  --icon-primary-10: var(--color-white-transparent-10);
+  --icon-primary-5: var(--color-white-transparent-5);
+  --icon-primary-2: var(--color-white-transparent-2);
 
-  /* =============== ICONS PRIMARY =============== */
-  --icon-primary-icon-primary-lightest: var(--color-color-neutral-neutral-700);
-  --icon-primary-icon-primary-lighter: var(--color-color-neutral-neutral-700);
-  --icon-primary-icon-primary-light: var(--color-color-neutral-neutral-700);
-  --icon-primary-icon-primary: var(--color-color-neutral-neutral-050);
-  --icon-primary-icon-primary-dark: var(--color-color-neutral-neutral-100);
-  --icon-primary-icon-primary-80: var(--color-color-white-transparent-white-tsp-80);
-  --icon-primary-icon-primary-70: var(--color-color-white-transparent-white-tsp-70);
-  --icon-primary-icon-primary-50: var(--color-color-white-transparent-white-tsp-50);
-  --icon-primary-icon-primary-30: var(--color-color-white-transparent-white-tsp-30);
-  --icon-primary-icon-primary-10: var(--color-color-white-transparent-white-tsp-10);
-  --icon-primary-icon-primary-5: var(--color-color-white-transparent-white-tsp-5);
-  --icon-primary-icon-primary-2: var(--color-color-white-transparent-white-tsp-2);
+  /* =============== ICON - ACCENT =============== */
+  --icon-accent-light: var(--color-green-dark-mode-green-100);
+  --icon-accent: var(--color-green-light-mode-default);
+  --icon-accent-dark: var(--color-green-light-mode-default);
+  --icon-accent-50: var(--color-green-transparent-dark-50);
 
-  /* =============== STROKES PRIMARY =============== */
-  --stroke-primary-stroke-primary-lighter: var(--color-color-neutral-neutral-700);
-  --stroke-primary-stroke-primary-light: var(--color-color-neutral-neutral-600);
-  --stroke-primary-stroke-primary: var(--color-color-neutral-neutral-700);
-  --stroke-primary-stroke-primary-dark: var(--color-color-neutral-neutral-050);
-  --stroke-primary-stroke-primary-darker: var(--color-color-green-light-mode-green-default);
-  --stroke-primary-stroke-primary-80: var(--color-color-green-light-mode-green-default);
-  --stroke-primary-stroke-primary-70: var(--color-color-green-light-mode-green-default);
-  --stroke-primary-stroke-primary-50: var(--color-color-green-light-mode-green-default);
-  --stroke-primary-stroke-primary-30: var(--color-color-white-transparent-white-tsp-10);
-  --stroke-primary-stroke-primary-10: var(--color-color-green-light-mode-green-default);
+  /* =============== ICON - ACCENT-SECONDARY =============== */
+  --icon-accent-secondary-light: var(--color-blue-dark-mode-300);
+  --icon-accent-secondary: var(--color-blue-dark-mode-default);
+  --icon-accent-secondary-dark: var(--color-blue-dark-mode-700);
+  --icon-accent-secondary-50: var(--color-blue-transparent-dark-50);
 
-  /* =============== STROKES INVERSE & ACCENT =============== */
-  --stroke-inverse-stroke-inverse-lightest: var(--color-color-neutral-neutral-700);
-  --stroke-inverse-stroke-inverse-lighter: var(--color-color-neutral-neutral-700);
-  --stroke-inverse-stroke-inverse-light: var(--color-color-neutral-neutral-700);
-  --stroke-inverse-stroke-inverse: var(--color-color-white-transparent-white-tsp-70);
-  --stroke-inverse-stroke-inverse-dark: var(--color-color-white-transparent-white-tsp-80);
-  --stroke-inverse-stroke-inverse-darkest: var(--color-color-white-transparent-white-tsp-70);
-  --stroke-inverse-stroke-inverse-80: var(--color-color-white-transparent-white-tsp-70);
-  --stroke-inverse-stroke-inverse-70: var(--color-color-white-transparent-white-tsp-70);
-  --stroke-inverse-stroke-inverse-50: var(--color-color-white-transparent-white-tsp-50);
-  --stroke-inverse-stroke-inverse-30: var(--color-color-white-transparent-white-tsp-30);
-  --stroke-inverse-stroke-inverse-10: var(--color-color-white-transparent-white-tsp-10);
-  --stroke-accent-stroke-accent-light: var(--color-color-neutral-neutral-700);
-  --stroke-secondary-stroke-accent-secondary-light: var(--color-color-neutral-neutral-700);
-  --stroke-secondary-stroke-accent-secondary: var(--color-color-green-light-mode-green-default);
-  --stroke-secondary-stroke-accent-secondary-dark: var(--color-color-green-light-mode-green-default);
-  --stroke-accent-stroke-accent: var(--color-color-green-light-mode-green-default);
-  --stroke-accent-stroke-accent-dark: var(--color-color-green-light-mode-green-default);
-  --stroke-error-icon-primary-light: var(--color-color-neutral-neutral-700);
-  --stroke-error-icon-primary: var(--color-color-green-light-mode-green-default);
-  --stroke-error-icon-primary-dark: var(--color-color-green-light-mode-green-default);
+  /* =============== ICON - INVERSE =============== */
+  --icon-inverse-light: var(--color-neutral-700);
+  --icon-inverse: var(--color-neutral-050);
+  --icon-inverse-dark: var(--color-neutral-200);
+  --icon-inverse-darker: var(--color-neutral-300);
+  --icon-inverse-darkest: var(--color-neutral-400);
+  --icon-inverse-80: var(--color-black-transparent-80);
+  --icon-inverse-70: var(--color-black-transparent-70);
+  --icon-inverse-50: var(--color-black-transparent-50);
+  --icon-inverse-30: var(--color-black-transparent-30);
+  --icon-inverse-10: var(--color-black-transparent-10);
+  --icon-inverse-5: var(--color-black-transparent-5);
+  --icon-inverse-2: var(--color-black-transparent-2);
 
-  /* =============== ICONS INVERSE & ACCENT =============== */
-  --icon-inverse-icon-inverse-light: var(--color-color-neutral-neutral-700);
-  --icon-inverse-icon-inverse: var(--color-color-neutral-neutral-050);
-  --icon-inverse-icon-inverse-dark: var(--color-color-neutral-neutral-200);
-  --icon-inverse-icon-inverse-darker: var(--color-color-neutral-neutral-300);
-  --icon-inverse-icon-inverse-darkest: var(--color-color-neutral-neutral-400);
-  --icon-inverse-icon-inverse-80: var(--color-color-black-transparent-neutral-dark-tsp-80);
-  --icon-inverse-icon-inverse-70: var(--color-color-black-transparent-neutral-dark-tsp-70);
-  --icon-inverse-icon-inverse-50: var(--color-color-black-transparent-neutral-dark-tsp-50);
-  --icon-inverse-icon-inverse-30: var(--color-color-black-transparent-neutral-dark-tsp-30);
-  --icon-inverse-icon-inverse-10: var(--color-color-black-transparent-neutral-dark-tsp-10);
-  --icon-inverse-icon-inverse-5: var(--color-color-black-transparent-neutral-dark-tsp-5);
-  --icon-inverse-icon-inverse-2: var(--color-color-black-transparent-neutral-dark-tsp-2);
-  --icon-accent-icon-primary-light: var(--color-color-green-dark-mode-green-100);
-  --icon-accent-icon-primary: var(--color-color-green-light-mode-green-default);
-  --icon-accent-icon-primary-dark: var(--color-color-green-light-mode-green-default);
-  --icon-accent-secondary-icon-primary-light: var(--color-color-blue-dark-mode-blue-300);
-  --icon-accent-icon-primary-50: var(--color-color-green-transparent-dark-green-dark-tsp-50);
-  --icon-accent-secondary-icon-primary: var(--color-color-blue-dark-mode-blue-default);
-  --icon-accent-secondary-icon-primary-dark: var(--color-color-blue-dark-mode-blue-700);
-  --icon-accent-secondary-icon-primary-50: var(--color-color-blue-transparent-dark-blue-dark-tsp-50);
-  --icon-warning-icon-primary: var(--color-color-orange-dark-mode-orange-default);
+  --icon-warning: var(--color-orange-dark-mode-default);
+  --icon-error: var(--color-orange-dark-mode-default);
 
-  /* =============== LABELS =============== */
-  --label-label-primary: var(--color-color-green-transparent-dark-green-dark-tsp-5);
-  --label-label-secondary: var(--color-color-blue-transparent-dark-blue-dark-tsp-10);
-  --label-label-warning: var(--color-color-orange-transparent-dark-orange-dark-tsp-5);
-  --label-label-error: var(--color-color-red-transparent-dark-red-dark-tsp-5);
-  --label-label-info: rgba(255, 255, 255, 1);
-  --icon-error-icon-primary: var(--color-color-orange-dark-mode-orange-default);
-  --buttons-red-tint-button-solid-default: var(--color-color-neutral-neutral-700);
-  --buttons-red-tint-button-solid-hover: var(--color-color-neutral-neutral-700);
-  --buttons-red-tint-button-solid-pressed: var(--color-color-neutral-neutral-700);
-  --buttons-red-tint-button-solid-disabled: var(--color-color-neutral-neutral-700);
-  --buttons-red-tint-button-solid-selected: var(--color-color-neutral-neutral-700);
-  --buttons-red-tint-button-solid-outline: var(--color-color-neutral-neutral-700);
+  /* =============== STROKE - PRIMARY =============== */
+  --stroke-primary-lighter: var(--color-neutral-700);
+  --stroke-primary-light: var(--color-neutral-600);
+  --stroke-primary: var(--color-neutral-700);
+  --stroke-primary-dark: var(--color-neutral-050);
+  --stroke-primary-darker: var(--color-green-light-mode-default);
+  --stroke-primary-80: var(--color-green-light-mode-default);
+  --stroke-primary-70: var(--color-green-light-mode-default);
+  --stroke-primary-50: var(--color-green-light-mode-default);
+  --stroke-primary-30: var(--color-white-transparent-10);
+  --stroke-primary-10: var(--color-green-light-mode-default);
+
+  /* =============== STROKE - ACCENT =============== */
+  --stroke-accent-light: var(--color-neutral-700);
+  --stroke-accent: var(--color-green-light-mode-default);
+  --stroke-accent-dark: var(--color-green-light-mode-default);
+
+  /* =============== STROKE - ACCENT-SECONDARY =============== */
+  --stroke-accent-secondary-light: var(--color-neutral-700);
+  --stroke-accent-secondary: var(--color-green-light-mode-default);
+  --stroke-accent-secondary-dark: var(--color-green-light-mode-default);
+
+  /* =============== STROKE - INVERSE =============== */
+  --stroke-inverse-lightest: var(--color-neutral-700);
+  --stroke-inverse-lighter: var(--color-neutral-700);
+  --stroke-inverse-light: var(--color-neutral-700);
+  --stroke-inverse: var(--color-white-transparent-70);
+  --stroke-inverse-dark: var(--color-white-transparent-80);
+  --stroke-inverse-darkest: var(--color-white-transparent-70);
+  --stroke-inverse-80: var(--color-white-transparent-70);
+  --stroke-inverse-70: var(--color-white-transparent-70);
+  --stroke-inverse-50: var(--color-white-transparent-50);
+  --stroke-inverse-30: var(--color-white-transparent-30);
+  --stroke-inverse-10: var(--color-white-transparent-10);
+
+  /* =============== STROKE - ERROR =============== */
+  --stroke-error-light: var(--color-neutral-700);
+  --stroke-error: var(--color-green-light-mode-default);
+  --stroke-error-dark: var(--color-green-light-mode-default);
+
+  /* =============== BUTTON - PRIMARY =============== */
+  --buttons-primary-default: var(--color-blue-light-mode-default);
+  --buttons-primary-tint-default: var(--color-blue-transparent-light-30);
+  --buttons-primary-tint-hover: var(--color-neutral-700);
+  --buttons-primary-tint-pressed: var(--color-neutral-700);
+  --buttons-primary-tint-disabled: var(--color-neutral-700);
+  --buttons-primary-tint-selected: var(--color-neutral-700);
+  --buttons-primary-hover: var(--color-neutral-700);
+  --buttons-primary-pressed: var(--color-neutral-700);
+  --buttons-primary-selected: var(--color-neutral-700);
+  --buttons-primary-disabled: var(--color-neutral-700);
+  --buttons-primary-outline: var(--color-blue-light-mode-default);
+  --buttons-primary-outline-hover: var(--color-blue-light-mode-default);
+  --buttons-primary-outline-pressed: var(--color-blue-light-mode-default);
+
+  /* =============== BUTTON - ACCENT =============== */
+  --buttons-accent-default: var(--color-green-light-mode-default);
+  --buttons-accent-hover: var(--color-green-light-mode-600);
+  --buttons-accent-pressed: var(--color-green-light-mode-700);
+  --buttons-accent-disabled: var(--color-neutral-300);
+  --buttons-accent-selected: var(--color-neutral-200);
+  --buttons-accent-tint-default: var(--color-green-light-mode-100);
+  --buttons-accent-tint-hover: var(--color-green-light-mode-200);
+  --buttons-accent-tint-pressed: var(--color-green-light-mode-400);
+  --buttons-accent-tint-disabled: var(--color-neutral-300);
+  --buttons-accent-tint-selected: var(--color-neutral-200);
+
+  /* =============== BUTTON - SOLID =============== */
+  --buttons-solid-default: var(--color-white-transparent-10);
+  --buttons-solid-hover: var(--color-neutral-700);
+  --buttons-solid-pressed: var(--color-neutral-700);
+  --buttons-solid-disabled: var(--color-neutral-700);
+  --buttons-solid-selected: var(--color-neutral-700);
+  --buttons-solid-outline: var(--color-neutral-700);
+
+  /* =============== BUTTON - INVERSE =============== */
+  --buttons-inverse-default: var(--color-blue-light-mode-default);
+  --buttons-inverse-hover: var(--color-neutral-700);
+  --buttons-inverse-pressed: var(--color-neutral-700);
+  --buttons-inverse-disabled: var(--color-white-transparent-10);
+  --buttons-inverse-selected: var(--color-neutral-700);
+  --buttons-inverse-outline: var(--color-neutral-700);
+
+  /* =============== BUTTON - ERROR =============== */
+  --buttons-red-tint-default: var(--color-neutral-700);
+  --buttons-red-tint-hover: var(--color-neutral-700);
+  --buttons-red-tint-pressed: var(--color-neutral-700);
+  --buttons-red-tint-disabled: var(--color-neutral-700);
+  --buttons-red-tint-selected: var(--color-neutral-700);
+  --buttons-red-tint-outline: var(--color-neutral-700);
 
   /* =============== GRADIENTS =============== */
-  --gradient-bg-green-white-white: var(--background-bg-secondary);
+  --gradient-bg-green-white-white: var(--background-secondary);
   --gradient-bg-green-white-green: rgba(17, 25, 21, 1);
 }

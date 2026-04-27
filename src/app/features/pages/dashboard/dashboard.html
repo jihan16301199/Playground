@@ -2,9 +2,22 @@
     <div class="container-xxl">
         <div class="header">
             <div class="header__motd">
-                <!-- <div class="header__motd--profile">
-
-                </div> -->
+                <div class="header__motd--membership">
+                    <div class="membership">
+                        <div class="membership__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-user-icon lucide-user">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <div class="membership__details">
+                            <span class="membership__details--text">Premium Subscription</span>
+                            <div class="membership__details--underline"></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="header__motd--greetings">
                     <div class="greetings">
                         <div class="greetings__message">Greetings,
@@ -23,7 +36,27 @@
 
                 </div>
             </div>
-            <div class="header__subscription"></div>
+            <div class="header__subscription">
+                <span class="header__subscription--subtext">Subscription</span>
+                <span class="header__subscription--text">
+                    You have
+                    <span class="header__subscription--text-highlight">14 days</span>
+                    left on your Premium plan.
+                </span>
+                <div class="header__subscription--action">
+                    <button class="action__button button button-accent button-block">
+                        <span class="action__button--text">Renew Now</span>
+                        <div class="action__button--icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                                <path d="M7 7h10v10" />
+                                <path d="M7 17 17 7" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

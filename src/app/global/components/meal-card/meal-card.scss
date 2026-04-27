@@ -10,7 +10,7 @@
     align-self: stretch;
     gap: var(--gap-gap-2xl);
     border-radius: var(--border-radius-radius-xl);
-    background: var(--surface-primary-surface-primary-light);
+    background: var(--surface-primary-light);
 
     &__order {
         display: flex;
@@ -40,10 +40,10 @@
                         align-items: center;
                         gap: var(--gap-gap-sm);
                         border-radius: var(--border-radius-radius-md);
-                        background: var(--surface-warning-surface-warning-10);
+                        background: var(--surface-warning-10);
 
                         &--text {
-                            color: var(--text-warning-text-warning);
+                            color: var(--text-warning);
                             @include body-2-medium;
                         }
 
@@ -66,14 +66,14 @@
 
                     &--date {
                         &--text {
-                            color: var(--text-primary-text-primary);
+                            color: var(--text-primary);
                             // @include headline-2-demibold;
                             @include headline-2-bold;
                             align-self: stretch;
                         }
 
                         &--subtext {
-                            color: var(--text-primary-text-primary-lightest);
+                            color: var(--text-primary-lightest);
                             // @include headline-3-medium;
                             @include headline-3-demibold;
                             align-self: stretch;
@@ -113,14 +113,14 @@
             gap: var(--gap-gap-xs);
 
             &--label {
-                color: var(--text-primary-text-primary-lightest);
+                color: var(--text-primary-lightest);
                 // @include label-2-medium;
                 @include label-2-demibold;
                 white-space: nowrap;
             }
 
             &--text {
-                color: var(--text-primary-text-primary-lighter);
+                color: var(--text-primary-lighter);
                 // @include label-2-medium;
                 @include label-2-demibold;
             }
@@ -155,11 +155,11 @@
                         align-items: center;
                         gap: var(--gap-gap-sm);
                         border-radius: var(--border-radius-radius-md);
-                        // background: var(--surface-inverse-surface-inverse-2);
-                        background: var(--surface-inverse-surface-inverse-5);
+                        // background: var(--surface-inverse-2);
+                        background: var(--surface-inverse-5);
 
                         &--text {
-                            color: var(--text-primary-text-primary);
+                            color: var(--text-primary);
                             @include body-2-medium;
                         }
 
@@ -210,7 +210,7 @@
                                 align-self: stretch;
 
                                 &--text {
-                                    color: var(--text-primary-text-primary);
+                                    color: var(--text-primary);
                                     @include title-2-bold;
                                     font-weight: 800;
                                 }
@@ -254,7 +254,7 @@
                             }
 
                             &__subtext {
-                                color: var(--text-primary-text-primary-lightest);
+                                color: var(--text-primary-lightest);
                                 align-self: stretch;
                                 @include label-3-demibold;
                             }
@@ -276,8 +276,8 @@
                     gap: var(--gap-gap-xs);
 
                     &--icon {
-                        color: var(--text-warning-text-warning);
-                        // color: var(--text-secondary-text-accent-secondary);
+                        color: var(--text-warning);
+                        // color: var(--text-accent-secondary);
                         display: flex;
                         width: 16px;
                         height: 16px;
@@ -288,8 +288,8 @@
 
                     &--text {
                         // max-width: 160px;
-                        color: var(--text-warning-text-warning);
-                        // color: var(--text-secondary-text-accent-secondary);
+                        color: var(--text-warning);
+                        // color: var(--text-accent-secondary);
                         @include label-2-medium;
                     }
                 }
@@ -326,12 +326,12 @@
                         gap: var(--gap-gap-sm);
 
                         &--text {
-                            color: var(--text-primary-text-primary);
+                            color: var(--text-primary);
                             @include title-2-demibold;
                         }
 
                         &--subtext {
-                            color: var(--text-primary-text-primary-light);
+                            color: var(--text-primary-light);
                             @include body-3-medium;
                         }
                     }
@@ -343,13 +343,13 @@
                         flex: 1 0 0;
 
                         &--text {
-                            color: var(--text-primary-text-primary);
+                            color: var(--text-primary);
                             @include headline-3-bold;
                             font-weight: 800;
                         }
 
                         &--subtext {
-                            // color: var(--text-primary-text-primary-lightest);
+                            // color: var(--text-primary-lightest);
                             color: #5daa80;
                             @include headline-3-medium;
                         }
@@ -389,13 +389,13 @@
                                     align-items: flex-start;
 
                                     &--text {
-                                        color: var(--text-primary-text-primary-lightest);
+                                        color: var(--text-primary-lightest);
                                         @include label-2-medium;
                                     }
 
                                     &--subtext {
                                         @include label-2-bold;
-                                        color: var(--text-primary-text-primary-lighter);
+                                        color: var(--text-primary-lighter);
                                     }
                                 }
                             }
@@ -435,7 +435,7 @@
                                 flex: 1 0 0;
 
                                 &--icon {
-                                    color: var(--text-secondary-text-accent-secondary);
+                                    color: var(--text-accent-secondary);
                                     display: flex;
                                     width: 26px;
                                     height: 26px;
@@ -450,7 +450,7 @@
                                     align-items: flex-start;
 
                                     &--text {
-                                        color: var(--text-secondary-text-accent-secondary);
+                                        color: var(--text-accent-secondary);
                                         @include label-2-medium;
 
                                         &--highlight {
