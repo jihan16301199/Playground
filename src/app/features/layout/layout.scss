@@ -24,12 +24,12 @@
 
 .sidebar {
     width: var(--sidebar-width);
+    height: calc(100dvh - var(--header-height));
+    border: 1px solid blue;
     position: fixed;
     top: var(--header-height);
     left: 0;
-    z-index: 99;
-    height: calc(100dvh - var(--header-height));
-    border: 1px solid blue;
+    z-index: 100;
 }
 
 .content {
@@ -41,6 +41,10 @@
         height: 100%;
         display: flex;
         border: 1px solid orange;
+
+        .route {
+            width: 100%;
+        }
     }
 
     // &.no-scroll {
@@ -58,65 +62,6 @@
     // padding-bottom: var(--footer-height);
 }
 
-.swipe {
-    width: 100%;
-    position: fixed;
-    // bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    border: 1px solid green;
-    border-radius: var(--border-radius-radius-lg) var(--border-radius-radius-lg) 0 0;
-    background: var(--surface-primary-surface-primary-light);
-    box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.10);
-    touch-action: none;
-    overscroll-behavior: contain;
-
-    &__handle {
-        display: flex;
-        height: 42px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: var(--gap-gap-xs);
-
-        &--bar {
-            height: 3px;
-            width: 87px;
-            background: black;
-            border-radius: 3px;
-            // margin: var(--gap-gap-md) auto 0 auto;
-        }
-
-        &--label {
-            color: var(--text-primary-text-primary-70);
-            // text-align: center;
-            // margin: 6px auto;
-            @include label-2-medium;
-        }
-    }
-
-    &__partial {}
-
-    &__rest {
-        // height: 300px;
-    }
-}
-
-.action {
-    position: fixed;
-    // bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-
-    &__container {
-        padding: var(--padding-padding-lg);
-        background: #fff;
-        border: 1px solid blue;
-    }
-}
-
 .footer {
     position: fixed;
     bottom: 0;
@@ -128,7 +73,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid purple;
+        border: 1px solid blue;
 
         .navbar {
             display: flex;

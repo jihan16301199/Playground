@@ -1,0 +1,97 @@
+<div class="container-fluid" [style.marginBottom]="contentMarginBottom">
+    <div class="container-xxl">
+        <div class="header">
+            <div class="header__motd">
+                <div class="header__motd--membership">
+                    <div class="membership">
+                        <div class="membership__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-user-icon lucide-user">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                        <div class="membership__details">
+                            <span class="membership__details--text">Premium Subscription</span>
+                            <div class="membership__details--underline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__motd--greetings">
+                    <div class="greetings">
+                        <div class="greetings__message">Greetings,
+                            <span class="greetings__message--text">Jihan
+                                <span class="greetings__message--text-underline"></span>
+                            </span>
+                        </div>
+                        <div class="greetings__information">
+                            <span class="greetings__information--text">Your personalized healthy journey is ready
+                                <span class="greetings__information--text-italic">- Select your plan</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__motd--alert">
+
+                </div>
+            </div>
+            <div class="header__subscription">
+                <span class="header__subscription--subtext">Subscription</span>
+                <span class="header__subscription--text">
+                    You have
+                    <span class="header__subscription--text-highlight">14 days</span>
+                    left on your Premium plan.
+                </span>
+                <div class="header__subscription--action">
+                    <button class="action__button button button-accent button-block">
+                        <span class="action__button--text">Renew Now</span>
+                        <div class="action__button--icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                                <path d="M7 7h10v10" />
+                                <path d="M7 17 17 7" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="swipe" [class.open]="isOpen" [style.transform]="transform" [style.bottom]="swipeBottom"
+    (touchstart)="onStart($event)" (touchmove)="onMove($event)" (touchend)="onEnd()" (mousedown)="onMouseStart($event)"
+    (mousemove)="onMouseMove($event)" (mouseup)="onMouseEnd()" (mouseleave)="onMouseEnd()">
+    <div class="swipe__handle" #handle>
+        <div class="swipe__handle--bar"></div>
+        <span class="swipe__handle--label">Swipe up to see details</span>
+        <!-- <span class="swipe__handle--label">Swipe up to see details</span> -->
+    </div>
+    <div class="swipe__partial" #partial>
+        <div style="display: flex; flex-direction: column; padding: 16px;">
+            <span>swipe</span>
+            <span>content</span>
+            <span>partial</span>
+        </div>
+    </div>
+    <div class="swipe__restre" #rest>
+        <div style="display: flex; flex-direction: column; padding: 16px;">
+            <span>swipe</span>
+            <span>content</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+            <span>rest</span>
+        </div>
+    </div>
+</div>
+<div class="action" #action [style.bottom]="actionBottom">
+    <div class="action__container">
+        <button class="button-primary button-block">Click</button>
+    </div>
+</div>

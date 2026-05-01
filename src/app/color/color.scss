@@ -1,0 +1,43 @@
+.container{
+    height: 100dvh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.box{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+    &.background-light{
+        background-color: rgb(255, 255, 255);
+    }
+
+    &.background-dark{
+        background-color: rgb(13, 13, 13);
+    }
+
+    .color{
+        height: 50px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFAC46;
+        gap: 15px;
+
+        &.color-target{
+            background-color: #FFEEDA;
+        }
+
+        &.color-temp{
+            background-color: #FFAC46;
+        }
+    }
+}

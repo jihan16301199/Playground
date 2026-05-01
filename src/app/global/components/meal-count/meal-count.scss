@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: flex-start;
     border-radius: var(--border-radius-radius-xl);
-    background: var(--surface-primary-surface-primary-light);
+    background: var(--surface-primary-light);
 
     &__total {
         display: flex;
@@ -20,13 +20,13 @@
         align-items: flex-start;
 
         &--label {
-            color: var(--text-primary-text-primary);
+            color: var(--text-primary);
             @include title-3-medium;
             align-self: stretch;
         }
 
         &--text {
-            color: var(--text-primary-text-primary);
+            color: var(--text-primary);
             @include display-2-demibold;
             align-self: stretch;
         }
@@ -53,12 +53,12 @@
                 align-self: stretch;
 
                 &--label {
-                    color: var(--text-primary-text-primary-lightest);
+                    color: var(--text-primary-lightest);
                     @include title-3-medium;
                 }
 
                 &--text {
-                    color: var(--text-primary-text-primary);
+                    color: var(--text-primary);
                     text-align: right;
                     @include title-3-medium;
                 }
