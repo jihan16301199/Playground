@@ -117,11 +117,6 @@ $brown-dark: #66451c;
 
 /* Primitives - Value */
 :root {
-  --text-weight-regular: Regular;
-  --text-weight-medium: Medium;
-  --text-weight-demibold: DemiBold;
-  --text-weight-bold: Bold;
-  --text-typeface-typeface-primary: TT Hoves Pro;
   --color-base-white-default: rgba(255, 255, 255, 1);
   --color-neutral-050: rgba(243, 243, 243, 1);
   --color-neutral-100: rgba(230, 230, 230, 1);
@@ -232,6 +227,7 @@ $brown-dark: #66451c;
   --color-black-transparent-70: rgba(20, 20, 20, 0.7);
   --color-black-transparent-50: rgba(20, 20, 20, 0.5);
   --color-black-transparent-30: rgba(20, 20, 20, 0.3);
+  --color-black-transparent-20: rgba(20, 20, 20, 0.2);
   --color-black-transparent-10: rgba(20, 20, 20, 0.1);
   --color-black-transparent-5: rgba(20, 20, 20, 0.05);
   --color-black-transparent-2: rgba(20, 20, 20, 0.02);
@@ -240,6 +236,7 @@ $brown-dark: #66451c;
   --color-white-transparent-70: rgba(255, 255, 255, 0.7);
   --color-white-transparent-50: rgba(255, 255, 255, 0.5);
   --color-white-transparent-30: rgba(255, 255, 255, 0.3);
+  --color-white-transparent-20: rgba(255, 255, 255, 0.2);
   --color-white-transparent-10: rgba(255, 255, 255, 0.1);
   --color-white-transparent-5: rgba(255, 255, 255, 0.05);
   --color-white-transparent-2: rgba(255, 255, 255, 0.02);
@@ -247,18 +244,21 @@ $brown-dark: #66451c;
   --color-blue-transparent-light-70: rgba(33, 105, 219, 0.7);
   --color-blue-transparent-light-50: rgba(33, 105, 219, 0.5);
   --color-blue-transparent-light-30: rgba(33, 105, 219, 0.3);
+  --color-blue-transparent-light-20: rgba(33, 105, 219, 0.2);
   --color-blue-transparent-light-10: rgba(33, 105, 219, 0.1);
   --color-blue-transparent-light-5: rgba(33, 105, 219, 0.05);
   --color-blue-transparent-dark-100: rgba(37, 119, 249, 1);
   --color-blue-transparent-dark-70: rgba(37, 119, 249, 0.7);
   --color-blue-transparent-dark-50: rgba(37, 119, 249, 0.5);
   --color-blue-transparent-dark-30: rgba(37, 119, 249, 0.3);
+  --color-blue-transparent-dark-20: rgba(37, 119, 249, 0.2);
   --color-blue-transparent-dark-10: rgba(37, 119, 249, 0.1);
   --color-blue-transparent-dark-5: rgba(37, 119, 249, 0.05);
   --color-green-transparent-light-100: rgba(55, 168, 110, 1);
   --color-green-transparent-light-70: rgba(55, 168, 110, 0.7);
   --color-green-transparent-light-50: rgba(55, 168, 110, 0.5);
   --color-green-transparent-light-30: rgba(55, 168, 110, 0.3);
+  --color-green-transparent-light-20: rgba(55, 168, 110, 0.2);
   --color-green-transparent-light-10: rgba(55, 168, 110, 0.1);
   --color-green-transparent-light-5: rgba(55, 168, 110, 0.05);
   --color-green-transparent-light-2: rgba(55, 168, 110, 0.02);
@@ -266,6 +266,7 @@ $brown-dark: #66451c;
   --color-green-transparent-dark-70: rgba(51, 184, 116, 0.7);
   --color-green-transparent-dark-50: rgba(51, 184, 116, 0.5);
   --color-green-transparent-dark-30: rgba(51, 184, 116, 0.3);
+  --color-green-transparent-dark-20: rgba(51, 184, 116, 0.2);
   --color-green-transparent-dark-10: rgba(51, 184, 116, 0.1);
   --color-green-transparent-dark-5: rgba(51, 184, 116, 0.05);
   --color-green-transparent-dark-2: rgba(51, 184, 116, 0.02);
@@ -273,6 +274,7 @@ $brown-dark: #66451c;
   --color-orange-transparent-light-80: rgba(255, 172, 70, 0.8);
   --color-orange-transparent-light-50: rgba(255, 172, 70, 0.5);
   --color-orange-transparent-light-30: rgba(255, 172, 70, 0.3);
+  --color-orange-transparent-light-20: rgba(255, 172, 70, 0.2);
   --color-orange-transparent-light-10: rgba(255, 172, 70, 0.1);
   --color-orange-transparent-light-5: rgba(255, 172, 70, 0.05);
   --color-orange-transparent-light-2: rgba(255, 172, 70, 0.02);
@@ -280,6 +282,7 @@ $brown-dark: #66451c;
   --color-orange-transparent-dark-80: rgba(255, 163, 51, 0.8);
   --color-orange-transparent-dark-50: rgba(255, 163, 51, 0.5);
   --color-orange-transparent-dark-30: rgba(255, 163, 51, 0.3);
+  --color-orange-transparent-dark-20: rgba(255, 163, 51, 0.2);
   --color-orange-transparent-dark-10: rgba(255, 163, 51, 0.1);
   --color-orange-transparent-dark-5: rgba(255, 163, 51, 0.05);
   --color-orange-transparent-dark-2: rgba(255, 163, 51, 0.02);
@@ -288,6 +291,7 @@ $brown-dark: #66451c;
   --color-red-transparent-light-70: rgba(254, 106, 106, 0.7);
   --color-red-transparent-light-50: rgba(254, 106, 106, 0.5);
   --color-red-transparent-light-30: rgba(254, 106, 106, 0.3);
+  --color-red-transparent-light-20: rgba(254, 106, 106, 0.2);
   --color-red-transparent-light-10: rgba(254, 106, 106, 0.1);
   --color-red-transparent-light-5: rgba(254, 106, 106, 0.05);
   --color-red-transparent-light-2: rgba(254, 106, 106, 0.02);
@@ -296,6 +300,7 @@ $brown-dark: #66451c;
   --color-red-transparent-dark-70: rgba(255, 89, 89, 0.7);
   --color-red-transparent-dark-50: rgba(255, 89, 89, 0.5);
   --color-red-transparent-dark-30: rgba(255, 89, 89, 0.3);
+  --color-red-transparent-dark-20: rgba(255, 89, 89, 0.2);
   --color-red-transparent-dark-10: rgba(255, 89, 89, 0.1);
   --color-red-transparent-dark-5: rgba(255, 89, 89, 0.05);
   --color-red-transparent-dark-2: rgba(255, 89, 89, 0.02);
@@ -309,7 +314,7 @@ $brown-dark: #66451c;
   --background-tertiary: var(--color-neutral-200);
 
   /* =============== BACKGROUND - ACCENT =============== */
-  --background-accent: var(--color-green-dark-mode-green-default);
+  --background-accent: var(--color-green-dark-mode-default);
 
   /* =============== BACKGROUND - INVERSE =============== */
   --background-inverse: var(--color-neutral-900);
@@ -437,7 +442,7 @@ $brown-dark: #66451c;
   --text-inverse-50: var(--color-white-transparent-50);
   --text-inverse-30: var(--color-white-transparent-30);
   --text-inverse-10: var(--color-white-transparent-10);
-  
+
   --text-info: var(--color-red-light-mode-default);
   --text-success: var(--color-green-light-mode-default);
   --text-warning: var(--color-orange-light-mode-default);
@@ -461,13 +466,23 @@ $brown-dark: #66451c;
   --text-on-inverse-light: var(--color-white-transparent-80);
   --text-on-inverse-lighter: var(--color-white-transparent-50);
   --text-on-inverse-lightest: var(--color-white-transparent-30);
-  --text-on-button-primary: var(--color-neutral-050);
-  --text-on-button-secondary: var(--color-neutral-050);
-  --text-on-button-primary-tint: var(--color-blue-light-mode-default);
-  --text-on-button-secondary-tint: var(--color-green-dark-mode-green-600);
-  --text-on-button-inverse: var(--color-neutral-100);
-  --text-on-button-solid: var(--color-neutral-800);
+  --text-on-button: var(--color-black-transparent-80);
   --text-on-button-disabled: var(--color-black-transparent-30);
+  --text-on-button-transparent: var(--color-neutral-050);
+  --text-on-button-white: var(--color-neutral-800);
+  --text-on-button-black: var(--color-neutral-050);
+  --text-on-button-solid: var(--color-neutral-800);
+  --text-on-button-solid-tint: var(--color-black-transparent-80);
+  --text-on-button-inverse: var(--color-neutral-050);
+  --text-on-button-primary: var(--color-neutral-050);
+  --text-on-button-primary-tint: var(--color-blue-light-mode-default);
+  --text-on-button-accent: var(--color-neutral-050);
+  --text-on-button-accent-tint: var(--color-green-light-mode-default);
+  --text-on-button-secondary: var(--color-neutral-050);
+  --text-on-button-secondary-tint: var(--color-green-dark-mode-600);
+  --text-on-button-warning-tint: var(--color-orange-light-mode-default);
+  --text-on-button-red: var(--color-neutral-050);
+  --text-on-button-red-tint: var(--color-red-light-mode-default);
 
   --label-primary: var(--color-green-transparent-light-5);
   --label-secondary: var(--color-blue-transparent-light-10);
@@ -533,7 +548,7 @@ $brown-dark: #66451c;
   --stroke-primary-10: var(--color-white-transparent-10);
 
   /* =============== STROKE - ACCENT =============== */
-  --stroke-accent-light: var(--color-green-dark-mode-green-400);
+  --stroke-accent-light: var(--color-green-dark-mode-400);
   --stroke-accent: var(--color-green-light-mode-default);
   --stroke-accent-dark: var(--color-green-light-mode-600);
 
@@ -560,56 +575,136 @@ $brown-dark: #66451c;
   --stroke-error: var(--color-red-light-mode-default);
   --stroke-error-dark: var(--color-red-light-mode-700);
 
+  /* =============== BUTTON - DEFAULT =============== */
+  --buttons-default: var(--color-black-transparent-2);
+  --buttons-hover: var(--color-black-transparent-5);
+  --buttons-pressed: var(--color-black-transparent-2);
+  --buttons-selected: unset;
+  --buttons-disabled: unset;
+  --buttons-outline: var(--color-black-transparent-20);
+  --buttons-outline-hover: var(--color-black-transparent-30);
+  --buttons-outline-pressed: var(--color-black-transparent-20);
+
+  /* =============== BUTTON - DISABLED =============== */
+  --buttons-disabled: var(--color-black-transparent-5);
+  --buttons-disabled-outline: var(--color-black-transparent-5);
+
+  /* =============== BUTTON - TRANSPARENT =============== */
+  --buttons-transparent-default: var(--color-black-transparent-2);
+  --buttons-transparent-hover: var(--color-black-transparent-5);
+  --buttons-transparent-pressed: var(--color-black-transparent-10);
+  --buttons-transparent-selected: unset;
+  --buttons-transparent-disabled: unset;
+  --buttons-transparent-outline: var(--color-white-transparent-50);
+  --buttons-transparent-outline-hover: var(--color-white-transparent-30);
+  --buttons-transparent-outline-pressed: var(--color-white-transparent-10);
+
+  /* =============== BUTTON - WHITE =============== */
+  --buttons-white-default: var(--color-base-white-default);
+  --buttons-white-hover: var(--color-neutral-100);
+  --buttons-white-pressed: var(--color-neutral-050);
+  --buttons-white-selected: unset;
+  --buttons-white-disabled: unset;
+  --buttons-white-outline: var(--color-base-white-default);
+  --buttons-white-outline-hover: var(--color-neutral-100);
+  --buttons-white-outline-pressed: var(--color-neutral-200);
+
+  /* =============== BUTTON - BLACK =============== */
+  --buttons-black-default: var(--color-neutral-900);
+  --buttons-black-hover: var(--color-neutral-600);
+  --buttons-black-pressed: var(--color-neutral-800);
+  --buttons-black-selected: unset;
+  --buttons-black-disabled: unset;
+  --buttons-black-outline: var(--color-neutral-900);
+  --buttons-black-outline-hover: var(--color-neutral-600);
+  --buttons-black-outline-pressed: var(--color-neutral-500);
+
   /* =============== BUTTON - PRIMARY =============== */
   --buttons-primary-default: var(--color-blue-light-mode-default);
-  --buttons-primary-tint-default: var(--color-blue-transparent-light-10);
-  --buttons-primary-tint-hover: var(--color-blue-light-mode-200);
-  --buttons-primary-tint-pressed: var(--color-blue-dark-mode-100);
-  --buttons-primary-tint-disabled: var(--color-neutral-100);
-  --buttons-primary-tint-selected: var(--color-neutral-200);
   --buttons-primary-hover: var(--color-blue-light-mode-400);
-  --buttons-primary-pressed: var(--color-blue-dark-mode-600);
-  --buttons-primary-selected: var(--color-blue-dark-mode-800);
-  --buttons-primary-disabled: var(--color-neutral-100);
-  --buttons-primary-outline: var(--color-blue-light-mode-300);
+  --buttons-primary-pressed: var(--color-blue-light-mode-600);
+  --buttons-primary-selected: unset;
+  --buttons-primary-disabled: unset;
+  --buttons-primary-outline: var(--color-blue-light-mode-default);
   --buttons-primary-outline-hover: var(--color-blue-light-mode-400);
-  --buttons-primary-outline-pressed: var(--color-blue-light-mode-default);
+  --buttons-primary-outline-pressed: var(--color-blue-light-mode-400);
+
+  --buttons-primary-tint-default: var(--color-blue-transparent-light-20);
+  --buttons-primary-tint-hover: var(--color-blue-transparent-light-30);
+  --buttons-primary-tint-pressed: var(--color-blue-transparent-light-30);
+  --buttons-primary-tint-selected: unset;
+  --buttons-primary-tint-disabled: unset;
+  --buttons-primary-tint-outline: var(--color-blue-transparent-light-20);
+  --buttons-primary-tint-outline-hover: var(--color-blue-transparent-light-100);
+  --buttons-primary-tint-outline-pressed: var(--color-blue-transparent-light-50);
 
   /* =============== BUTTON - ACCENT =============== */
   --buttons-accent-default: var(--color-green-light-mode-default);
-  --buttons-accent-hover: var(--color-green-light-mode-600);
-  --buttons-accent-pressed: var(--color-green-light-mode-700);
-  --buttons-accent-disabled: var(--color-neutral-300);
-  --buttons-accent-selected: var(--color-neutral-200);
-  --buttons-accent-tint-default: var(--color-green-light-mode-100);
-  --buttons-accent-tint-hover: var(--color-green-light-mode-200);
-  --buttons-accent-tint-pressed: var(--color-green-light-mode-400);
-  --buttons-accent-tint-disabled: var(--color-neutral-300);
-  --buttons-accent-tint-selected: var(--color-neutral-200);
+  --buttons-accent-hover: var(--color-green-light-mode-400);
+  --buttons-accent-pressed: var(--color-green-light-mode-600);
+  --buttons-accent-selected: unset;
+  --buttons-accent-disabled: unset;
+  --buttons-accent-outline: var(--color-green-light-mode-default);
+  --buttons-accent-outline-hover: var(--color-green-light-mode-400);
+  --buttons-accent-outline-pressed: var(--color-green-light-mode-400);
+
+  --buttons-accent-tint-default: var(--color-green-transparent-light-20);
+  --buttons-accent-tint-hover: var(--color-green-transparent-light-30);
+  --buttons-accent-tint-pressed: var(--color-green-transparent-light-30);
+  --buttons-accent-tint-selected: unset;
+  --buttons-accent-tint-disabled: unset;
+  --buttons-accent-tint-outline: var(--color-green-transparent-light-20);
+  --buttons-accent-tint-outline-hover: var(--color-green-transparent-light-100);
+  --buttons-accent-tint-outline-pressed: var(--color-green-transparent-light-50);
 
   /* =============== BUTTON - SOLID =============== */
-  --buttons-solid-default: var(--color-black-transparent-2);
-  --buttons-solid-hover: var(--color-black-transparent-5);
-  --buttons-solid-pressed: var(--color-black-transparent-2);
-  --buttons-solid-disabled: var(--color-neutral-100);
-  --buttons-solid-selected: var(--color-neutral-400);
-  --buttons-solid-outline: var(--color-neutral-100);
+  --buttons-solid-default: var(--color-neutral-050);
+  --buttons-solid-hover: var(--color-neutral-100);
+  --buttons-solid-pressed: var(--color-neutral-050);
+  --buttons-solid-selected: unset;
+  --buttons-solid-disabled: unset;
+  --buttons-solid-outline: var(--color-neutral-200);
+  --buttons-solid-outline-hover: var(--color-neutral-300);
+  --buttons-solid-outline-pressed: var(--color-neutral-200);
+
+  --buttons-solid-tint-default: var(--color-black-transparent-2);
+  --buttons-solid-tint-hover: var(--color-black-transparent-5);
+  --buttons-solid-tint-pressed: var(--color-black-transparent-2);
+  --buttons-solid-tint-selected: unset;
+  --buttons-solid-tint-disabled: unset;
+  --buttons-solid-tint-outline: var(--color-black-transparent-20);
+  --buttons-solid-tint-outline-hover: var(--color-black-transparent-30);
+  --buttons-solid-tint-outline-pressed: var(--color-black-transparent-20);
 
   /* =============== BUTTON - INVERSE =============== */
   --buttons-inverse-default: var(--color-neutral-900);
-  --buttons-inverse-hover: var(--color-neutral-700);
+  --buttons-inverse-hover: var(--color-neutral-600);
   --buttons-inverse-pressed: var(--color-neutral-800);
-  --buttons-inverse-disabled: var(--color-black-transparent-5);
-  --buttons-inverse-selected: var(--color-neutral-700);
-  --buttons-inverse-outline: var(--color-neutral-800);
+  --buttons-inverse-selected: unset;
+  --buttons-inverse-disabled: unset;
+  --buttons-inverse-outline: var(--color-neutral-900);
+  --buttons-inverse-outline-hover: var(--color-neutral-600);
+  --buttons-inverse-outline-pressed: var(--color-neutral-500);
+
+  /* =============== BUTTON - WARNING =============== */
+  --buttons-warning-tint-default: var(--color-orange-transparent-light-20);
+  --buttons-warning-tint-hover: var(--color-orange-transparent-light-30);
+  --buttons-warning-tint-pressed: var(--color-orange-transparent-light-30);
+  --buttons-warning-tint-selected: unset;
+  --buttons-warning-tint-disabled: unset;
+  --buttons-warning-tint-outline: var(--color-orange-transparent-light-20);
+  --buttons-warning-tint-outline-hover: var(--color-orange-transparent-light-100);
+  --buttons-warning-tint-outline-pressed: var(--color-orange-transparent-light-50);
 
   /* =============== BUTTON - ERROR =============== */
-  --buttons-red-tint-default: var(--color-red-light-mode-100);
-  --buttons-red-tint-hover: var(--color-red-light-mode-100);
-  --buttons-red-tint-pressed: var(--color-red-light-mode-100);
-  --buttons-red-tint-disabled: var(--color-neutral-100);
-  --buttons-red-tint-selected: var(--color-neutral-400);
-  --buttons-red-tint-outline: var(--color-red-light-mode-default);
+  --buttons-red-tint-default: var(--color-red-transparent-light-20);
+  --buttons-red-tint-hover: var(--color-red-transparent-light-30);
+  --buttons-red-tint-pressed: var(--color-red-transparent-light-30);
+  --buttons-red-tint-selected: unset;
+  --buttons-red-tint-disabled: unset;
+  --buttons-red-tint-outline: var(--color-red-transparent-light-20);
+  --buttons-red-tint-outline-hover: var(--color-red-transparent-light-100);
+  --buttons-red-tint-outline-pressed: var(--color-red-transparent-light-50);
 
   /* =============== GRADIENTS =============== */
   --gradient-bg-green-white-white: var(--background-secondary);
@@ -624,7 +719,7 @@ $brown-dark: #66451c;
   --background-tertiary: var(--color-neutral-900);
 
   /* =============== BACKGROUND - ACCENT =============== */
-  --background-accent: var(--color-green-dark-mode-green-default);
+  --background-accent: var(--color-green-dark-mode-default);
 
   /* =============== BACKGROUND - INVERSE =============== */
   --background-inverse: var(--color-neutral-100);
@@ -642,13 +737,13 @@ $brown-dark: #66451c;
   --surface-primary-10: var(--color-black-transparent-10);
 
   /* =============== SURFACE - ACCENT =============== */
-  --surface-accent-lightest: var(--color-green-dark-mode-green-100);
-  --surface-accent-lighter: var(--color-green-dark-mode-green-300);
-  --surface-accent-light: var(--color-green-dark-mode-green-400);
-  --surface-accent: var(--color-green-dark-mode-green-default);
-  --surface-accent-dark: var(--color-green-dark-mode-green-600);
-  --surface-accent-darker: var(--color-green-dark-mode-green-700);
-  --surface-accent-darkest: var(--color-green-dark-mode-green-800);
+  --surface-accent-lightest: var(--color-green-dark-mode-100);
+  --surface-accent-lighter: var(--color-green-dark-mode-300);
+  --surface-accent-light: var(--color-green-dark-mode-400);
+  --surface-accent: var(--color-green-dark-mode-default);
+  --surface-accent-dark: var(--color-green-dark-mode-600);
+  --surface-accent-darker: var(--color-green-dark-mode-700);
+  --surface-accent-darkest: var(--color-green-dark-mode-800);
   --surface-accent-100: var(--color-green-transparent-dark-100);
   --surface-accent-70: var(--color-green-transparent-dark-70);
   --surface-accent-50: var(--color-green-transparent-dark-50);
@@ -718,11 +813,11 @@ $brown-dark: #66451c;
   --text-primary-10: var(--color-white-transparent-10);
 
   /* =============== TEXT - ACCENT =============== */
-  --text-accent: var(--color-green-dark-mode-green-default);
-  --text-accent-darkest: var(--color-green-dark-mode-green-default);
-  --text-accent-darker: var(--color-green-dark-mode-green-default);
-  --text-accent-lighter: var(--color-green-dark-mode-green-default);
-  --text-accent-lightest: var(--color-green-dark-mode-green-default);
+  --text-accent: var(--color-green-dark-mode-default);
+  --text-accent-darkest: var(--color-green-dark-mode-default);
+  --text-accent-darker: var(--color-green-dark-mode-default);
+  --text-accent-lighter: var(--color-green-dark-mode-default);
+  --text-accent-lightest: var(--color-green-dark-mode-default);
   --text-accent-70: var(--color-green-transparent-dark-70);
   --text-accent-50: var(--color-green-transparent-dark-50);
   --text-accent-30: var(--color-green-transparent-dark-30);
@@ -754,12 +849,12 @@ $brown-dark: #66451c;
   --text-inverse-10: var(--color-black-transparent-10);
 
   --text-info: var(--color-neutral-100);
-  --text-success: var(--color-green-dark-mode-green-default);
+  --text-success: var(--color-green-dark-mode-default);
   --text-warning: var(--color-orange-dark-mode-default);
   --text-error: var(--color-red-dark-mode-default);
 
   /* =============== TEXT - ON STATES =============== */
-  --text-on-label-primary: var(--color-green-dark-mode-green-default);
+  --text-on-label-primary: var(--color-green-dark-mode-default);
   --text-on-label-secondary: var(--color-blue-dark-mode-default);
   --text-on-label-warning: var(--color-orange-dark-mode-default);
   --text-on-label-error: var(--color-red-dark-mode-default);
@@ -776,13 +871,23 @@ $brown-dark: #66451c;
   --text-on-inverse-light: var(--color-neutral-100);
   --text-on-inverse-lighter: var(--color-neutral-100);
   --text-on-inverse-lightest: var(--color-neutral-100);
-  --text-on-button-primary: var(--color-neutral-050);
-  --text-on-button-secondary: var(--color-neutral-100);
-  --text-on-button-primary-tint: var(--color-blue-dark-mode-default);
-  --text-on-button-secondary-tint: var(--color-green-dark-mode-green-default);
-  --text-on-button-inverse: var(--color-neutral-100);
-  --text-on-button-solid: var(--color-neutral-100);
+  --text-on-button: var(--color-white-transparent-80);
   --text-on-button-disabled: var(--color-white-transparent-30);
+  --text-on-button-transparent: var(--color-neutral-050);
+  --text-on-button-white: var(--color-neutral-800);
+  --text-on-button-black: var(--color-neutral-050);
+  --text-on-button-solid: var(--color-neutral-200);
+  --text-on-button-solid-tint: var(--color-white-transparent-80);
+  --text-on-button-inverse: var(--color-neutral-800);
+  --text-on-button-primary: var(--color-neutral-050);
+  --text-on-button-primary-tint: var(--color-blue-dark-mode-default);
+  --text-on-button-accent: var(--color-neutral-050);
+  --text-on-button-accent-tint: var(--color-green-dark-mode-default);
+  --text-on-button-secondary: var(--color-neutral-100);
+  --text-on-button-secondary-tint: var(--color-green-dark-mode-default);
+  --text-on-button-warning-tint: var(--color-orange-dark-mode-default);
+  --text-on-button-red: var(--color-neutral-050);
+  --text-on-button-red-tint: var(--color-red-dark-mode-default);
 
   --label-primary: var(--color-green-transparent-dark-5);
   --label-secondary: var(--color-blue-transparent-dark-10);
@@ -807,7 +912,7 @@ $brown-dark: #66451c;
   --icon-primary-2: var(--color-white-transparent-2);
 
   /* =============== ICON - ACCENT =============== */
-  --icon-accent-light: var(--color-green-dark-mode-green-100);
+  --icon-accent-light: var(--color-green-dark-mode-100);
   --icon-accent: var(--color-green-light-mode-default);
   --icon-accent-dark: var(--color-green-light-mode-default);
   --icon-accent-50: var(--color-green-transparent-dark-50);
@@ -875,56 +980,136 @@ $brown-dark: #66451c;
   --stroke-error: var(--color-green-light-mode-default);
   --stroke-error-dark: var(--color-green-light-mode-default);
 
+  /* =============== BUTTON - DEFAULT =============== */
+  --buttons-default: var(--color-white-transparent-10);
+  --buttons-hover: var(--color-white-transparent-20);
+  --buttons-pressed: var(--color-white-transparent-10);
+  --buttons-selected: unset;
+  --buttons-disabled: unset;
+  --buttons-outline: var(--color-white-transparent-20);
+  --buttons-outline-hover: var(--color-white-transparent-30);
+  --buttons-outline-pressed: var(--color-white-transparent-20);
+
+  /* =============== BUTTON - DISABLED =============== */
+  --buttons-disabled: var(--color-white-transparent-20);
+  --buttons-disabled-outline: var(--color-white-transparent-20);
+
+  /* =============== BUTTON - TRANSPARENT =============== */
+  --buttons-transparent-default: var(--color-black-transparent-2);
+  --buttons-transparent-hover: var(--color-black-transparent-5);
+  --buttons-transparent-pressed: var(--color-black-transparent-10);
+  --buttons-transparent-selected: unset;
+  --buttons-transparent-disabled: unset;
+  --buttons-transparent-outline: var(--color-white-transparent-50);
+  --buttons-transparent-outline-hover: var(--color-white-transparent-30);
+  --buttons-transparent-outline-pressed: var(--color-white-transparent-10);
+
+  /* =============== BUTTON - WHITE =============== */
+  --buttons-white-default: var(--color-base-white-default);
+  --buttons-white-hover: var(--color-neutral-200);
+  --buttons-white-pressed: var(--color-neutral-100);
+  --buttons-white-selected: unset;
+  --buttons-white-disabled: unset;
+  --buttons-white-outline: var(--color-base-white-default);
+  --buttons-white-outline-hover: var(--color-neutral-200);
+  --buttons-white-outline-pressed: var(--color-neutral-300);
+
+  /* =============== BUTTON - BLACK =============== */
+  --buttons-black-default: var(--color-neutral-900);
+  --buttons-black-hover: var(--color-neutral-700);
+  --buttons-black-pressed: var(--color-neutral-800);
+  --buttons-black-selected: unset;
+  --buttons-black-disabled: unset;
+  --buttons-black-outline: var(--color-neutral-900);
+  --buttons-black-outline-hover: var(--color-neutral-700);
+  --buttons-black-outline-pressed: var(--color-neutral-600);
+
   /* =============== BUTTON - PRIMARY =============== */
-  --buttons-primary-default: var(--color-blue-light-mode-default);
-  --buttons-primary-tint-default: var(--color-blue-transparent-light-30);
-  --buttons-primary-tint-hover: var(--color-neutral-700);
-  --buttons-primary-tint-pressed: var(--color-neutral-700);
-  --buttons-primary-tint-disabled: var(--color-neutral-700);
-  --buttons-primary-tint-selected: var(--color-neutral-700);
-  --buttons-primary-hover: var(--color-neutral-700);
-  --buttons-primary-pressed: var(--color-neutral-700);
-  --buttons-primary-selected: var(--color-neutral-700);
-  --buttons-primary-disabled: var(--color-neutral-700);
-  --buttons-primary-outline: var(--color-blue-light-mode-default);
-  --buttons-primary-outline-hover: var(--color-blue-light-mode-default);
-  --buttons-primary-outline-pressed: var(--color-blue-light-mode-default);
+  --buttons-primary-default: var(--color-blue-dark-mode-default);
+  --buttons-primary-hover: var(--color-blue-dark-mode-400);
+  --buttons-primary-pressed: var(--color-blue-dark-mode-600);
+  --buttons-primary-selected: unset;
+  --buttons-primary-disabled: unset;
+  --buttons-primary-outline: var(--color-blue-dark-mode-default);
+  --buttons-primary-outline-hover: var(--color-blue-dark-mode-400);
+  --buttons-primary-outline-pressed: var(--color-blue-dark-mode-400);
+
+  --buttons-primary-tint-default: var(--color-blue-transparent-dark-20);
+  --buttons-primary-tint-hover: var(--color-blue-transparent-dark-30);
+  --buttons-primary-tint-pressed: var(--color-blue-transparent-dark-30);
+  --buttons-primary-tint-selected: unset;
+  --buttons-primary-tint-disabled: unset;
+  --buttons-primary-tint-outline: var(--color-blue-transparent-dark-20);
+  --buttons-primary-tint-outline-hover: var(--color-blue-transparent-dark-100);
+  --buttons-primary-tint-outline-pressed: var(--color-blue-transparent-dark-50);
 
   /* =============== BUTTON - ACCENT =============== */
-  --buttons-accent-default: var(--color-green-light-mode-default);
-  --buttons-accent-hover: var(--color-green-light-mode-600);
-  --buttons-accent-pressed: var(--color-green-light-mode-700);
-  --buttons-accent-disabled: var(--color-neutral-300);
-  --buttons-accent-selected: var(--color-neutral-200);
-  --buttons-accent-tint-default: var(--color-green-light-mode-100);
-  --buttons-accent-tint-hover: var(--color-green-light-mode-200);
-  --buttons-accent-tint-pressed: var(--color-green-light-mode-400);
-  --buttons-accent-tint-disabled: var(--color-neutral-300);
-  --buttons-accent-tint-selected: var(--color-neutral-200);
+  --buttons-accent-default: var(--color-green-dark-mode-default);
+  --buttons-accent-hover: var(--color-green-dark-mode-400);
+  --buttons-accent-pressed: var(--color-green-dark-mode-600);
+  --buttons-accent-selected: unset;
+  --buttons-accent-disabled: unset;
+  --buttons-accent-outline: var(--color-green-dark-mode-default);
+  --buttons-accent-outline-hover: var(--color-green-dark-mode-400);
+  --buttons-accent-outline-pressed: var(--color-green-dark-mode-400);
+
+  --buttons-accent-tint-default: var(--color-green-transparent-dark-20);
+  --buttons-accent-tint-hover: var(--color-green-transparent-dark-30);
+  --buttons-accent-tint-pressed: var(--color-green-transparent-dark-30);
+  --buttons-accent-tint-selected: unset;
+  --buttons-accent-tint-disabled: unset;
+  --buttons-accent-tint-outline: var(--color-green-transparent-dark-20);
+  --buttons-accent-tint-outline-hover: var(--color-green-transparent-dark-100);
+  --buttons-accent-tint-outline-pressed: var(--color-green-transparent-dark-50);
 
   /* =============== BUTTON - SOLID =============== */
-  --buttons-solid-default: var(--color-white-transparent-10);
+  --buttons-solid-default: var(--color-neutral-800);
   --buttons-solid-hover: var(--color-neutral-700);
-  --buttons-solid-pressed: var(--color-neutral-700);
-  --buttons-solid-disabled: var(--color-neutral-700);
-  --buttons-solid-selected: var(--color-neutral-700);
+  --buttons-solid-pressed: var(--color-neutral-800);
+  --buttons-solid-selected: unset;
+  --buttons-solid-disabled: unset;
   --buttons-solid-outline: var(--color-neutral-700);
+  --buttons-solid-outline-hover: var(--color-neutral-600);
+  --buttons-solid-outline-pressed: var(--color-neutral-700);
+
+  --buttons-solid-tint-default: var(--color-white-transparent-10);
+  --buttons-solid-tint-hover: var(--color-white-transparent-20);
+  --buttons-solid-tint-pressed: var(--color-white-transparent-10);
+  --buttons-solid-tint-selected: unset;
+  --buttons-solid-tint-disabled: unset;
+  --buttons-solid-tint-outline: var(--color-white-transparent-20);
+  --buttons-solid-tint-outline-hover: var(--color-white-transparent-30);
+  --buttons-solid-tint-outline-pressed: var(--color-white-transparent-20);
 
   /* =============== BUTTON - INVERSE =============== */
-  --buttons-inverse-default: var(--color-blue-light-mode-default);
-  --buttons-inverse-hover: var(--color-neutral-700);
-  --buttons-inverse-pressed: var(--color-neutral-700);
-  --buttons-inverse-disabled: var(--color-white-transparent-10);
-  --buttons-inverse-selected: var(--color-neutral-700);
-  --buttons-inverse-outline: var(--color-neutral-700);
+  --buttons-inverse-default: var(--color-base-white-default);
+  --buttons-inverse-hover: var(--color-neutral-200);
+  --buttons-inverse-pressed: var(--color-neutral-100);
+  --buttons-inverse-selected: unset;
+  --buttons-inverse-disabled: unset;
+  --buttons-inverse-outline: var(--color-base-white-default);
+  --buttons-inverse-outline-hover: var(--color-neutral-200);
+  --buttons-inverse-outline-pressed: var(--color-neutral-300);
+
+  /* =============== BUTTON - WARNING =============== */
+  --buttons-warning-tint-default: var(--color-orange-transparent-dark-20);
+  --buttons-warning-tint-hover: var(--color-orange-transparent-dark-30);
+  --buttons-warning-tint-pressed: var(--color-orange-transparent-dark-30);
+  --buttons-warning-tint-selected: unset;
+  --buttons-warning-tint-disabled: unset;
+  --buttons-warning-tint-outline: var(--color-orange-transparent-dark-20);
+  --buttons-warning-tint-outline-hover: var(--color-orange-transparent-dark-100);
+  --buttons-warning-tint-outline-pressed: var(--color-orange-transparent-dark-50);
 
   /* =============== BUTTON - ERROR =============== */
-  --buttons-red-tint-default: var(--color-neutral-700);
-  --buttons-red-tint-hover: var(--color-neutral-700);
-  --buttons-red-tint-pressed: var(--color-neutral-700);
-  --buttons-red-tint-disabled: var(--color-neutral-700);
-  --buttons-red-tint-selected: var(--color-neutral-700);
-  --buttons-red-tint-outline: var(--color-neutral-700);
+  --buttons-red-tint-default: var(--color-red-transparent-dark-20);
+  --buttons-red-tint-hover: var(--color-red-transparent-dark-30);
+  --buttons-red-tint-pressed: var(--color-red-transparent-dark-30);
+  --buttons-red-tint-selected: unset;
+  --buttons-red-tint-disabled: unset;
+  --buttons-red-tint-outline: var(--color-red-transparent-dark-20);
+  --buttons-red-tint-outline-hover: var(--color-red-transparent-dark-100);
+  --buttons-red-tint-outline-pressed: var(--color-red-transparent-dark-50);
 
   /* =============== GRADIENTS =============== */
   --gradient-bg-green-white-white: var(--background-secondary);
