@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Navbar } from './navbar/navbar';
+import { Sidebar } from "./sidebar/sidebar";
 
 @Component({
   selector: 'app-layout',
-  imports: [CommonModule, RouterOutlet, Navbar],
+  imports: [CommonModule, RouterOutlet, Navbar, Sidebar],
   templateUrl: './layout.html',
   styleUrl: './layout.scss'
 })
