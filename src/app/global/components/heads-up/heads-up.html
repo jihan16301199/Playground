@@ -1,0 +1,17 @@
+<!-- Toast Notification -->
+<div class="heads-up" *ngIf="showToast" [@slideDown]>
+    <div [ngClass]="toastClass"></div>
+    <div class="heads-up__message">
+        <span class="heads-up__message--text">
+            <!-- {{ toastMessage }} -->
+            Donate: If you use this site regularly and would like
+        </span>
+        <div class="heads-up__message--icon" (click)="closeToast()">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.12281 8L0 6.87719L2.88722 3.98997L0 1.12281L1.12281 0L4.01002 2.88722L6.87719 0L8 1.12281L5.11278 3.98997L8 6.87719L6.87719 8L4.01002 5.11278L1.12281 8Z"
+                    fill="none" />
+            </svg>
+        </div>
+    </div>
+</div>
