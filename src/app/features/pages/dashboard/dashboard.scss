@@ -5,6 +5,10 @@
 
 .container-fluid {}
 
+.container-xxl{
+    max-width: 1640px;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -148,6 +152,12 @@
             align-self: stretch;
         }
     }
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-gap-lg);
 }
 
 .swipe {

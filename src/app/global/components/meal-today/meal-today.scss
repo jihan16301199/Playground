@@ -3,9 +3,10 @@
 
 .meal-today {
     display: flex;
-    // width: 200px;
     width: 204px;
+    height: 100%;
     min-height: 204px;
+    max-height: 240px;
     padding: var(--padding-padding-lg) var(--padding-padding-md) var(--padding-padding-lg) var(--padding-padding-xl);
     flex-direction: column;
     justify-content: space-between;

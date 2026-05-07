@@ -4,7 +4,10 @@
 .calendar {
     display: flex;
     width: 204px;
+    height: 100%;
     min-height: 204px;
+    max-height: 240px;
+    padding: var(--padding-padding-lg) var(--padding-padding-md);
     flex-direction: column;
     justify-content: center;
     align-items: center;
