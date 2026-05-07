@@ -1,11 +1,10 @@
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { HeadsUp } from '../../../global/components/heads-up/heads-up';
 
 @Component({
   selector: 'app-template',
-  imports: [CommonModule, HeadsUp],
+  imports: [CommonModule],
   templateUrl: './template.html',
   styleUrl: './template.scss'
 })

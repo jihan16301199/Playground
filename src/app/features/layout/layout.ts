@@ -4,10 +4,11 @@ import { RouterOutlet } from '@angular/router';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Navbar } from './navbar/navbar';
 import { Sidebar } from "./sidebar/sidebar";
+import { HeadsUp } from '../../global/components/heads-up/heads-up';
 
 @Component({
   selector: 'app-layout',
-  imports: [CommonModule, RouterOutlet, Navbar, Sidebar],
+  imports: [CommonModule, RouterOutlet, Navbar, Sidebar, HeadsUp],
   templateUrl: './layout.html',
   styleUrl: './layout.scss'
 })

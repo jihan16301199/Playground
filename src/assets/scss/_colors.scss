@@ -359,6 +359,7 @@ $brown-dark: #66451c;
   --surface-accent-secondary-70: var(--color-blue-transparent-light-70);
   --surface-accent-secondary-50: var(--color-blue-transparent-light-50);
   --surface-accent-secondary-30: var(--color-blue-transparent-light-30);
+  --surface-accent-secondary-20: var(--color-blue-transparent-light-20);
   --surface-accent-secondary-10: var(--color-blue-transparent-light-10);
 
   /* =============== SURFACE - INVERSE =============== */
@@ -383,6 +384,7 @@ $brown-dark: #66451c;
   --surface-warning-dark: var(--color-orange-light-mode-600);
   --surface-warning-darker: var(--color-orange-light-mode-700);
   --surface-warning-darkest: var(--color-orange-light-mode-800);
+  --surface-warning-20: var(--color-orange-transparent-light-20);
   --surface-warning-10: var(--color-orange-transparent-light-10);
 
   /* =============== SURFACE - ERROR =============== */
@@ -393,6 +395,7 @@ $brown-dark: #66451c;
   --surface-error-dark: var(--color-red-light-mode-600);
   --surface-error-darker: var(--color-red-light-mode-700);
   --surface-error-darkest: var(--color-red-light-mode-800);
+  --surface-error-20: var(--color-red-transparent-light-20);
   --surface-error-10: var(--color-red-transparent-light-10);
 
   /* =============== TEXT - PRIMARY =============== */
@@ -765,6 +768,7 @@ $brown-dark: #66451c;
   --surface-accent-secondary-70: var(--color-blue-transparent-dark-70);
   --surface-accent-secondary-50: var(--color-blue-transparent-dark-50);
   --surface-accent-secondary-30: var(--color-blue-transparent-dark-30);
+  --surface-accent-secondary-20: var(--color-blue-transparent-dark-20);
   --surface-accent-secondary-10: var(--color-blue-transparent-dark-10);
 
   /* =============== SURFACE - INVERSE =============== */
@@ -789,6 +793,7 @@ $brown-dark: #66451c;
   --surface-warning-dark: var(--color-orange-dark-mode-400);
   --surface-warning-darker: var(--color-orange-dark-mode-200);
   --surface-warning-darkest: var(--color-orange-dark-mode-100);
+  --surface-warning-20: var(--color-orange-transparent-dark-20);
   --surface-warning-10: var(--color-orange-transparent-dark-10);
 
   /* =============== SURFACE - ERROR =============== */
@@ -799,6 +804,7 @@ $brown-dark: #66451c;
   --surface-error-dark: var(--color-red-dark-mode-400);
   --surface-error-darker: var(--color-red-dark-mode-200);
   --surface-error-darkest: var(--color-red-dark-mode-100);
+  --surface-error-20: var(--color-red-transparent-dark-20);
   --surface-error-10: var(--color-red-transparent-dark-10);
 
   /* =============== TEXT - PRIMARY =============== */

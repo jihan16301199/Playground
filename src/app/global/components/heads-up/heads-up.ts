@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-heads-up',
@@ -14,13 +14,13 @@ import { Component } from '@angular/core';
           transform: 'translate3D(0, 100%, 0)',
           opacity: 0
         }),
-        animate('300ms ease-out', style({
+        animate('150ms ease-out', style({
           transform: 'translate3D(0, 0, 0)',
           opacity: 1
         }))
       ]),
       transition(':leave', [
-        animate('300ms ease-in', style({
+        animate('150ms ease-in', style({
           transform: 'translate3D(0, 100%, 0)',
           opacity: 0
         }))
@@ -29,13 +29,18 @@ import { Component } from '@angular/core';
   ]
 })
 export class HeadsUp {
+  @HostBinding('style.position') position = 'fixed';
+  @HostBinding('style.zIndex') zIndex = '9999';
+  @HostBinding('style.overflow') overflow = 'hidden';
+  @HostBinding('style.pointerEvents') pointerEvents = 'none';
+  
   showToast: boolean = true;
-  toastMessage: string = '';
-  toastClass: string = ''; //popup--success popup--danger
+  toastMessage: string = 'Donate: If you use this site regularly and would like.';
+  type: string = 'primary'; //popup--success popup--danger
 
   closeToast() {
     this.showToast = false;
     this.toastMessage = '';
-    this.toastClass = '';
+    this.type = '';
   }
 }
