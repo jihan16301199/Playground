@@ -17,6 +17,18 @@ export class ThemeService {
     }
   }
 
+  isDarkMode(): boolean {
+    return document.body.classList.contains('dark-mode');
+  }
+
+  enableLightMode(): void {
+    this.setDarkMode(false);
+  }
+
+  enableDarkMode(): void {
+    this.setDarkMode(true);
+  }
+
   toggleTheme(): void {
     const body = document.body;
     const isDark = body.classList.contains('dark-mode');

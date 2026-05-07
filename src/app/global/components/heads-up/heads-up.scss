@@ -1,0 +1,139 @@
+@use "../../../../assets/scss/main" as *;
+@use "../../../../assets/scss/mixins" as *;
+
+.heads-up {
+    display: flex;
+    padding: var(--padding-padding-sm) var(--padding-padding-md);
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    border-radius: 8px;
+    background-color: var(--surface-inverse-dark);
+
+    @include elevation-4;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 9999;
+    pointer-events: auto;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: var(--gap-gap-md);
+
+        &--message {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: var(--gap-gap-md);
+
+            &--icon {
+                display: flex;
+                width: 28px;
+                height: 28px;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                aspect-ratio: 1/1;
+
+                cursor: pointer;
+                transition: opacity 0.15s ease;
+
+                border-radius: 50%;
+
+                &.default {
+                    background: var(--surface-primary-10);
+
+                    svg path {
+                        fill: var(--surface-primary-dark);
+                    }
+                }
+
+                &.primary {
+                    background: var(--surface-accent-secondary-20);
+
+                    svg path {
+                        fill: var(--surface-accent-secondary);
+                    }
+                }
+
+                &.success {
+                    background: var(--surface-accent-20);
+
+                    svg path {
+                        fill: var(--surface-accent-dark);
+                    }
+                }
+
+                &.warning {
+                    background: var(--surface-warning-20);
+
+                    svg path {
+                        fill: var(--surface-warning-dark);
+                    }
+                }
+
+                &.error {
+                    background: var(--surface-error-20);
+
+                    svg path {
+                        fill: var(--surface-error-dark);
+                    }
+                }
+            }
+
+            &--text {
+                color: var(--text-inverse);
+                text-align: center;
+                white-space: nowrap;
+                @include body-3-medium;
+            }
+        }
+
+        &--action {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: var(--gap-gap-md);
+
+            &--icon {
+                display: flex;
+                width: 16px;
+                height: 16px;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                aspect-ratio: 1/1;
+                opacity: 1;
+                cursor: pointer;
+                transition: opacity 0.15s ease;
+
+                svg path {
+                    fill: var(--text-inverse);
+                }
+
+                &:hover {
+                    opacity: 0.72;
+                }
+            }
+        }
+    }
+
+    &--success {
+        width: 3px;
+        height: 17px;
+        border-radius: 19px;
+        background-color: var(--surface-accent-100);
+    }
+
+    &--danger {
+        width: 3px;
+        height: 17px;
+        border-radius: 19px;
+        background-color: var(--surface-error-100);
+    }
+
+}

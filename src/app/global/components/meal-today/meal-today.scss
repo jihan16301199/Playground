@@ -1,0 +1,79 @@
+@use "../../../../assets/scss/main" as *;
+@use "../../../../assets/scss/mixins" as *;
+
+.meal-today {
+    display: flex;
+    // width: 200px;
+    width: 204px;
+    min-height: 204px;
+    padding: var(--padding-padding-lg) var(--padding-padding-md) var(--padding-padding-lg) var(--padding-padding-xl);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-radius: var(--border-radius-radius-xl);
+    background: var(--surface-primary-light);
+
+    &__date {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-gap-xs);
+
+        &--day {
+            color: var(--text-primary);
+            @include title-3-bold;
+        }
+
+        &--date {
+            color: var(--text-primary);
+            @include display-3-bold;
+        }
+    }
+
+    &__schedule {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-gap-md);
+
+        &--wrapper {
+            display: flex;
+            flex-direction: column;
+
+            .wrapper {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: var(--gap-gap-sm);
+
+                &__lunch {
+                    align-self: stretch;
+                    width: 4px;
+                    border-radius: 3px;
+                    background-color: var(--surface-accent);
+                }
+
+                &__dinner {
+                    align-self: stretch;
+                    width: 4px;
+                    border-radius: 3px;
+                    background-color: var(--surface-inverse);
+                }
+
+                &__title {
+                    display: flex;
+                    flex-direction: column;
+
+                    &--text {
+                        color: var(--text-primary);
+                        @include title-3-demibold;
+                    }
+
+                    &--subtext {
+                        color: var(--text-primary-lightest);
+                        @include label-2-demibold;
+                    }
+                }
+            }
+        }
+    }
+}
