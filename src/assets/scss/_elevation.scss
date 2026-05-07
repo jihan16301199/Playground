@@ -1,0 +1,45 @@
+:root {
+    /* Base Layers */
+    --z-base: 0;
+    --z-content: 1;
+
+    /* Layout */
+    --z-header: 100;
+    // --z-footer: 50;
+    --z-footer: 100;
+    --z-navbar: 100;
+    --z-sidebar: 200;
+    --z-sticky: 300;
+
+    /* Mobile Navigation */
+    --z-mobile-swiper: 150;
+    --z-mobile-actionbar: 250;
+
+    /* Floating UI */
+    --z-dropdown: 400;
+    --z-popover: 500;
+    --z-tooltip: 600;
+
+    /* Drawer */
+    --z-drawer-overlay: 800;
+    --z-drawer: 810;
+
+    /* Modal System */
+    --z-modal-overlay: 900;
+    --z-modal: 910;
+    // --z-modal-header: 820;
+    // --z-modal-dropdown: 830;
+    // --z-modal-tooltip: 840;
+    // --z-modal-nested: 850;
+
+    /* Heads Up */
+    --z-headsup: 1000;
+
+    /* System / Critical */
+    --z-loader-overlay: 1100;
+    --z-loader: 1110;
+    --z-fullscreen-loader: 1200;
+
+    /* Highest */
+    --z-debug: 9999;
+}

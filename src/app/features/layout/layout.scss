@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: var(--z-header);
 
     &__container {
         display: flex;
@@ -29,7 +29,7 @@
     position: fixed;
     top: var(--header-height);
     left: 0;
-    z-index: 100;
+    z-index: var(--z-sidebar);
 }
 
 .content {
@@ -67,7 +67,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: var(--z-footer);
 
     &__container {
         display: flex;

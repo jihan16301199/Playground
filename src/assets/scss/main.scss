@@ -1,11 +1,11 @@
 // Using @import with silence-deprecations to suppress Sass deprecation warnings
 // This is a pragmatic approach until full @use migration is complete
-@use "spacing" as *;
-@use "variables" as *;
 @use "colors" as *;
+@use "spacing" as *;
+@use "elevation" as *;
+@use "typography" as *;
 @use "mixins" as *;
 @use "breakpoints" as *;
-@use "typography" as *;
 @use "class" as *;
 @use "button" as *;
 @use "override" as *;

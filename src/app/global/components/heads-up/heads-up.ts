@@ -30,7 +30,7 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class HeadsUp {
   @HostBinding('style.position') position = 'fixed';
-  @HostBinding('style.zIndex') zIndex = '9999';
+  @HostBinding('style.zIndex') zIndex = '1000';
   @HostBinding('style.overflow') overflow = 'hidden';
   @HostBinding('style.pointerEvents') pointerEvents = 'none';
   

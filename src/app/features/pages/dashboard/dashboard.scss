@@ -156,7 +156,7 @@
     // bottom: 0;
     left: 0;
     right: 0;
-    z-index: 99;
+    z-index: var(--z-mobile-swiper);
     border: 1px solid green;
     border-radius: var(--border-radius-radius-lg) var(--border-radius-radius-lg) 0 0;
     background: var(--surface-primary-light);
@@ -204,7 +204,7 @@
     // bottom: 0;
     left: 0;
     right: 0;
-    z-index: 100;
+    z-index: var(--z-mobile-actionbar);
 
     @include media-up(md) {
         display: none;
