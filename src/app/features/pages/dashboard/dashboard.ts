@@ -1,15 +1,14 @@
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { MealCount } from "../../../global/components/meal-count/meal-count";
+import { DepositCard } from "../../../global/components/deposit-card/deposit-card";
+import { MealMetrics } from '../../../global/components/meal-metrics/meal-metrics';
 import { MealToday } from "../../../global/components/meal-today/meal-today";
 import { Calendar } from "../../../global/components/calendar/calendar";
-import { TimeDuration } from "../../../global/kit/time-duration/time-duration";
-import { DepositCard } from "../../../global/components/deposit-card/deposit-card";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule, DepositCard, MealCount, MealToday, Calendar],
+  imports: [CommonModule, DepositCard, MealMetrics, MealToday, Calendar],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss'
 })

@@ -1,0 +1,72 @@
+.class-name {
+  /* 1. Positioning */
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  /* 2. Display & Layout */
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  align-self: stretch;
+  gap: var(--gap-gap-4xl);
+
+  /* 3. Sizing */
+  width: 204px;
+  min-width: 180px;
+  max-width: 240px;
+
+  height: 100%;
+  min-height: 204px;
+  max-height: 240px;
+
+  /* 4. Spacing */
+  margin: 0;
+  padding: 0;
+  padding-bottom: var(--padding-padding-lg);
+
+  /* 5. Overflow */
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  /* 6. Borders */
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-radius-xl);
+
+  /* 7. Background */
+  background: var(--surface-primary-light);
+  background-color: var(--surface-primary-light);
+
+  /* 8. Effects */
+  box-shadow: none;
+  opacity: 1;
+  filter: blur(0);
+
+  /* 9. Typography */
+  color: var(--text-primary);
+  fill: currentColor;
+  stroke: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+
+  /* 10. Transforms & Animations */
+  transform: translateX(0);
+  transition: all 250ms ease;
+
+  /* 11. Interaction */
+  cursor: pointer;
+  pointer-events: auto;
+
+  /* 12. Misc */
+  user-select: none;
+}
