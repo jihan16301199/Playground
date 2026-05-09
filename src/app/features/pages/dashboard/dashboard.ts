@@ -4,10 +4,12 @@ import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, 
 import { MealCount } from "../../../global/components/meal-count/meal-count";
 import { MealToday } from "../../../global/components/meal-today/meal-today";
 import { Calendar } from "../../../global/components/calendar/calendar";
+import { TimeDuration } from "../../../global/kit/time-duration/time-duration";
+import { DepositCard } from "../../../global/components/deposit-card/deposit-card";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [CommonModule, MealCount, MealToday, Calendar],
+  imports: [CommonModule, DepositCard, MealCount, MealToday, Calendar],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.scss'
 })

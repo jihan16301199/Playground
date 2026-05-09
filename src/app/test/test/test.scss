@@ -1,0 +1,17 @@
+.test{
+    display: flex;
+    padding: var(--padding-padding-lg);
+    flex-direction: column;
+    gap: var(--gap-gap-lg);
+
+    &__row{
+        display: flex;
+        gap: var(--gap-gap-lg);
+    }
+
+    &__rows{
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-gap-lg);
+    }
+}

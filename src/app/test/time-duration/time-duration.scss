@@ -1,0 +1,25 @@
+.time-duration {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+
+        span {
+            width: 130px;
+            color: var(--text-primary);
+        }
+
+        .button {
+            &--icon {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+}

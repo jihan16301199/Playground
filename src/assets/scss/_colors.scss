@@ -163,7 +163,8 @@ $brown-dark: #66451c;
   --color-green-dark-mode-200: rgba(173, 227, 199, 1);
   --color-green-dark-mode-300: rgba(133, 212, 172, 1);
   --color-green-dark-mode-400: rgba(92, 198, 144, 1);
-  --color-green-dark-mode-default: rgba(51, 184, 116, 1);
+  // --color-green-dark-mode-default: rgba(51, 184, 116, 1);
+  --color-green-dark-mode-default: rgba(55, 168, 110, 1);
   --color-green-dark-mode-600: rgba(41, 147, 93, 1);
   --color-green-dark-mode-700: rgba(31, 110, 70, 1);
   --color-green-dark-mode-800: rgba(20, 74, 46, 1);
@@ -552,12 +553,12 @@ $brown-dark: #66451c;
   --stroke-primary-10: var(--color-white-transparent-10);
 
   /* =============== STROKE - ACCENT =============== */
-  --stroke-accent-light: var(--color-green-dark-mode-400);
+  --stroke-accent-light: var(--color-green-light-mode-400);
   --stroke-accent: var(--color-green-light-mode-default);
   --stroke-accent-dark: var(--color-green-light-mode-600);
 
   /* =============== STROKE - ACCENT-SECONDARY =============== */
-  --stroke-accent-secondary-light: var(--color-blue-light-mode-300);
+  --stroke-accent-secondary-light: var(--color-blue-light-mode-400);
   --stroke-accent-secondary: var(--color-blue-light-mode-default);
   --stroke-accent-secondary-dark: var(--color-blue-light-mode-600);
 
@@ -574,10 +575,15 @@ $brown-dark: #66451c;
   --stroke-inverse-30: var(--color-black-transparent-30);
   --stroke-inverse-10: var(--color-black-transparent-10);
 
+  /* =============== STROKE - WARNING =============== */
+  --stroke-warning-light: var(--color-orange-light-mode-400);
+  --stroke-warning: var(--color-orange-light-mode-default);
+  --stroke-warning-dark: var(--color-orange-light-mode-600);
+
   /* =============== STROKE - ERROR =============== */
-  --stroke-error-light: var(--color-red-light-mode-100);
+  --stroke-error-light: var(--color-red-light-mode-400);
   --stroke-error: var(--color-red-light-mode-default);
-  --stroke-error-dark: var(--color-red-light-mode-700);
+  --stroke-error-dark: var(--color-red-light-mode-600);
 
   /* =============== BUTTON - DEFAULT =============== */
   --buttons-default: var(--color-black-transparent-2);
@@ -718,7 +724,7 @@ $brown-dark: #66451c;
 /* Colors - Dark Mode - Semantic Variables */
 .dark-mode {
   /* =============== BACKGROUND - PRIMARY =============== */
-  --background-primary: var(--color-neutral-1000);
+  --background-primary: var(--color-neutral-800);
   --background-secondary: var(--color-neutral-900);
   --background-tertiary: var(--color-neutral-900);
 
@@ -757,13 +763,13 @@ $brown-dark: #66451c;
   --surface-accent-5: var(--color-green-transparent-dark-10);
 
   /* =============== SURFACE - ACCENT-SECONDARY =============== */
-  --surface-accent-secondary-lightest: var(--color-neutral-800);
-  --surface-accent-secondary-lighter: var(--color-neutral-700);
-  --surface-accent-secondary-light: var(--color-neutral-600);
+  --surface-accent-secondary-lightest: var(--color-blue-dark-mode-800);
+  --surface-accent-secondary-lighter: var(--color-blue-dark-mode-700);
+  --surface-accent-secondary-light: var(--color-blue-dark-mode-600);
   --surface-accent-secondary: var(--color-blue-dark-mode-default);
-  --surface-accent-secondary-dark: var(--color-neutral-400);
-  --surface-accent-secondary-darker: var(--color-neutral-200);
-  --surface-accent-secondary-darkest: var(--color-neutral-100);
+  --surface-accent-secondary-dark: var(--color-blue-dark-mode-400);
+  --surface-accent-secondary-darker: var(--color-blue-dark-mode-200);
+  --surface-accent-secondary-darkest: var(--color-blue-dark-mode-100);
   --surface-accent-secondary-100: var(--color-blue-transparent-dark-100);
   --surface-accent-secondary-70: var(--color-blue-transparent-dark-70);
   --surface-accent-secondary-50: var(--color-blue-transparent-dark-50);
@@ -961,14 +967,14 @@ $brown-dark: #66451c;
   --stroke-primary-10: var(--color-green-light-mode-default);
 
   /* =============== STROKE - ACCENT =============== */
-  --stroke-accent-light: var(--color-neutral-700);
-  --stroke-accent: var(--color-green-light-mode-default);
-  --stroke-accent-dark: var(--color-green-light-mode-default);
+  --stroke-accent-light: var(--color-green-dark-mode-600);
+  --stroke-accent: var(--color-green-dark-mode-default);
+  --stroke-accent-dark: var(--color-green-dark-mode-400);
 
   /* =============== STROKE - ACCENT-SECONDARY =============== */
-  --stroke-accent-secondary-light: var(--color-neutral-700);
-  --stroke-accent-secondary: var(--color-green-light-mode-default);
-  --stroke-accent-secondary-dark: var(--color-green-light-mode-default);
+  --stroke-accent-secondary-light: var(--color-blue-dark-mode-600);
+  --stroke-accent-secondary: var(--color-blue-dark-mode-default);
+  --stroke-accent-secondary-dark: var(--color-blue-dark-mode-400);
 
   /* =============== STROKE - INVERSE =============== */
   --stroke-inverse-lightest: var(--color-neutral-700);
@@ -983,10 +989,15 @@ $brown-dark: #66451c;
   --stroke-inverse-30: var(--color-white-transparent-30);
   --stroke-inverse-10: var(--color-white-transparent-10);
 
+  /* =============== STROKE - WARNING =============== */
+  --stroke-warning-light: var(--color-orange-dark-mode-600);
+  --stroke-warning: var(--color-orange-dark-mode-default);
+  --stroke-warning-dark: var(--color-orange-dark-mode-400);
+
   /* =============== STROKE - ERROR =============== */
-  --stroke-error-light: var(--color-neutral-700);
-  --stroke-error: var(--color-green-light-mode-default);
-  --stroke-error-dark: var(--color-green-light-mode-default);
+  --stroke-error-light: var(--color-red-dark-mode-600);
+  --stroke-error: var(--color-red-dark-mode-default);
+  --stroke-error-dark: var(--color-red-dark-mode-400);
 
   /* =============== BUTTON - DEFAULT =============== */
   --buttons-default: var(--color-white-transparent-10);

@@ -1,0 +1,66 @@
+<div class="deposit-card" [ngClass]="paid ? 'paid' : 'unpaid'" (click)="paid=!paid">
+    <div class="deposit-card__outer">
+        <ng-container *ngIf="!paid">
+            <span class="deposit-card__outer--text">Proceed to Pay</span>
+        </ng-container>
+        <ng-container *ngIf="paid">
+            <span class="deposit-card__outer--text">Payment Received</span>
+        </ng-container>
+        <div class="deposit-card__outer--icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+                <path
+                    d="M0.21967 7.29071C-0.0732233 7.58361 -0.0732233 8.05848 0.21967 8.35137C0.512563 8.64427 0.987437 8.64427 1.28033 8.35137L0.75 7.82104L0.21967 7.29071ZM8.57107 0.749977C8.57107 0.335764 8.23528 -2.26169e-05 7.82107 -2.24693e-05L1.07107 -2.28908e-05C0.656854 -2.28908e-05 0.321068 0.335763 0.321068 0.749977C0.321068 1.16419 0.656854 1.49998 1.07107 1.49998H7.07107V7.49998C7.07107 7.91419 7.40685 8.24998 7.82107 8.24998C8.23528 8.24998 8.57107 7.91419 8.57107 7.49998L8.57107 0.749977ZM0.75 7.82104L1.28033 8.35137L8.3514 1.28031L7.82107 0.749977L7.29074 0.219647L0.21967 7.29071L0.75 7.82104Z"
+                    fill="white" />
+            </svg>
+        </div>
+    </div>
+    <div class="deposit-card__inner">
+        <ng-container *ngIf="!paid">
+            <div class="deposit-card__inner--deposit">
+                <div class="deposit">
+                    <span class="deposit__text--highlight">$540.45</span>
+                </div>
+            </div>
+            <div class="deposit-card__inner--deposit">
+                <div class="deposit">
+                    <span class="deposit__text--lightest">Pending Deposit</span>
+                </div>
+                <div class="deposit">
+                    <span class="deposit__text--dark">15 May 2026</span>
+                    <div class="deposit__app">
+                        <app-time-duration [size]="'sm'" [type]="'primary'" [duration]="194700"
+                            [short]="true"></app-time-duration>
+                    </div>
+                </div>
+                <div class="deposit">
+                    <span class="deposit__text--bold">$300.00</span>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="paid">
+            <div class="deposit-card__inner--deposit">
+                <div class="deposit">
+                    <span class="deposit__text--lightest">Deposit</span>
+                </div>
+                <div class="deposit">
+                    <span class="deposit__text--highlight">$840.45</span>
+                </div>
+                <div class="deposit">
+                    <span class="deposit__text--dark">14 May 2026</span>
+                </div>
+            </div>
+            <div class="deposit-card__inner--deposit">
+                <div class="deposit">
+                    <span class="deposit__text--bold">Paid</span>
+                    <div class="deposit__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M10.32 17.52L18.78 9.06L17.1 7.38L10.32 14.16L6.9 10.74L5.22 12.42L10.32 17.52ZM12 24C10.34 24 8.78 23.685 7.32 23.055C5.86 22.425 4.59 21.57 3.51 20.49C2.43 19.41 1.575 18.14 0.945 16.68C0.315 15.22 0 13.66 0 12C0 10.34 0.315 8.78 0.945 7.32C1.575 5.86 2.43 4.59 3.51 3.51C4.59 2.43 5.86 1.575 7.32 0.945C8.78 0.315 10.34 0 12 0C13.66 0 15.22 0.315 16.68 0.945C18.14 1.575 19.41 2.43 20.49 3.51C21.57 4.59 22.425 5.86 23.055 7.32C23.685 8.78 24 10.34 24 12C24 13.66 23.685 15.22 23.055 16.68C22.425 18.14 21.57 19.41 20.49 20.49C19.41 21.57 18.14 22.425 16.68 23.055C15.22 23.685 13.66 24 12 24Z"
+                                fill="#37A86E" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

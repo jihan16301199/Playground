@@ -1,0 +1,148 @@
+@use "../../../../assets/scss/main" as *;
+@use "../../../../assets/scss/mixins" as *;
+
+.deposit-card {
+    display: flex;
+    width: 280px;
+    height: 100%;
+    min-height: 204px;
+    max-height: 240px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    border-radius: var(--border-radius-radius-xl);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+
+    &.unpaid {
+        background: linear-gradient(180deg, var(--surface-accent-secondary) 50%, var(--surface-primary-light) 70%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, var(--surface-accent-secondary-dark) 50%, var(--surface-primary-light) 70%);
+
+            transform: translateX(-100%);
+            transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: translateX(0);
+        }
+    }
+
+    &.paid {
+        background: linear-gradient(180deg, var(--surface-accent) 50%, var(--surface-primary-light) 70%);
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, var(--surface-accent-dark) 50%, var(--surface-primary-light) 70%);
+
+            transform: translateX(-100%);
+            transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+            z-index: -1;
+        }
+
+        &:hover::before {
+            transform: translateX(0);
+        }
+    }
+
+    &__outer {
+        display: flex;
+        padding: var(--padding-padding-sm) var(--padding-padding-xl);
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        background: transparent;
+
+        &--text {
+            color: var(--text-on-button-primary);
+            @include body-3-medium;
+        }
+
+        &--icon {
+            display: flex;
+            width: 10px;
+            height: 10px;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        padding: var(--padding-padding-xl);
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-self: stretch;
+        flex: 1 0 0;
+
+        border-radius: calc(var(--border-radius-radius-xl));
+        background: var(--surface-primary-light);
+
+        &--deposit {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--gap-gap-2xs);
+            // align-self: stretch;
+
+            .deposit {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: var(--gap-gap-sm);
+
+                &__text {
+                    &--lightest {
+                        color: var(--text-primary-30);
+                        // @include title-3-medium;//16
+                        @include body-3-medium; //14
+                    }
+
+                    &--dark {
+                        color: var(--text-primary-dark);
+                        @include headline-3-demibold;
+                    }
+
+                    &--highlight {
+                        color: var(--text-accent);
+                        @include title-2-demibold;
+
+                        &--bold {
+                            color: var(--text-accent);
+                            @include display-2-demibold;
+                        }
+                    }
+
+                    &--bold {
+                        color: var(--text-primary-dark);
+                        @include display-2-demibold;
+                    }
+                }
+
+                &__icon {
+                    display: flex;
+                    width: 28px;
+                    height: 28px;
+                    justify-content: center;
+                    align-items: center;
+                    aspect-ratio: 1/1;
+                }
+            }
+        }
+    }
+}
