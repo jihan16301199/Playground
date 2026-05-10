@@ -12,7 +12,9 @@ export class MealMetrics implements OnInit {
   mealCount: IMealCount = {
     totalMeal: 14,
     upcoming: 2,
-    delivered: 1,
+    delivered: 5,
+    deliveredLunch: 2,
+    deliveredDinner: 3,
     cancelled: 1
   };
 
@@ -27,9 +29,7 @@ export class MealMetrics implements OnInit {
     if (this.steps.length === 0) {
       this.steps = [
         { title: 'Step 1' },
-        { title: 'Step 2' },
-        { title: 'Step 3' },
-        { title: 'Step 4' }
+        { title: 'Step 2' }
       ];
     }
   }
@@ -90,7 +90,7 @@ export class MealMetrics implements OnInit {
   }
 
   getDotClass(index: number): string {
-    if (index === this.current) return 'meal-metrics__dots--dot__selected'
+    if (index === this.current) return 'stepper__dots--dot__selected'
     return '';
   }
 
@@ -102,9 +102,9 @@ export class MealMetrics implements OnInit {
   }
 
   getBackgroundClass(index: number): string {
-    if (index == 0) return 'meal-metrics__background--primary'
-    else if (index == 1) return 'meal-metrics__background--secondary'
-    else if (index == 2) return 'meal-metrics__background--image'
+    if (index == 0) return 'stepper__background--primary'
+    else if (index == 1) return 'stepper__background--secondary'
+    else if (index == 2) return 'stepper__background--image'
     return '';
   }
 

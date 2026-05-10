@@ -11,8 +11,8 @@ import { IMealCount } from '../../model/meal-model';
 export class MealCount {
   mealCount: IMealCount = {
     totalMeal: 0,
-    totalLunch: 1,
-    totalDinner: 2,
+    deliveredLunch: 1,
+    deliveredDinner: 2,
     delivered: 1,
     cancelled: 1
   };

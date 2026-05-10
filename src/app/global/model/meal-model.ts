@@ -1,8 +1,8 @@
 export interface IMealCount {
     totalMeal: number;
-    totalLunch?: number;
-    totalDinner?: number;
     upcoming?: number;
     delivered?: number;
+    deliveredLunch?: number;
+    deliveredDinner?: number;
     cancelled?: number;
 }

@@ -5,13 +5,13 @@
     </div>
     <div class="meal-count__breakdown">
         <div class="breakdowns">
-            <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.totalLunch)">
+            <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.deliveredLunch)">
                 <span class="breakdowns__breakdown--label">Lunch</span>
-                <span class="breakdowns__breakdown--text">{{ mealCount.totalLunch }}</span>
+                <span class="breakdowns__breakdown--text">{{ mealCount.deliveredLunch }}</span>
             </div>
-            <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.totalDinner)">
+            <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.deliveredDinner)">
                 <span class="breakdowns__breakdown--label">Dinner</span>
-                <span class="breakdowns__breakdown--text">{{ mealCount.totalDinner }}</span>
+                <span class="breakdowns__breakdown--text">{{ mealCount.deliveredDinner }}</span>
             </div>
             <div class="breakdowns__breakdown" *ngIf="validParam(mealCount.cancelled)">
                 <span class="breakdowns__breakdown--label">Cancelled</span>
