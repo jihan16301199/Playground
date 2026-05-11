@@ -1,6 +1,6 @@
 <div class="stepper" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)"
-    (keydown)="handleKeyboardEvent($event)" tabindex="0">
-    <div class="stepper__overlay">
+    (keydown)="handleKeyboardEvent($event)" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" tabindex="0">
+    <!-- <div class="stepper__overlay">
         <div class="stepper__overlay--button">
             <div class="stepper__overlay--button--icon" *ngIf="current > 0" (click)="goToPreviousStep()"
                 aria-label="Previous step">
@@ -20,6 +20,25 @@
                         fill="none" />
                 </svg>
             </div>
+        </div>
+    </div> -->
+    <div class="stepper__button stepper__button--previous" [ngClass]="{'stepper__button--visible' : hovered}">
+        <div class="stepper__button--icon" *ngIf="current > 0" (click)="goToPreviousStep()" aria-label="Previous step">
+            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.76877 9.77811C5.46046 10.074 4.96059 10.074 4.65228 9.77811L0.231231 5.53569C-0.0770783 5.23984 -0.0770783 4.76017 0.231231 4.46431L4.65228 0.22189C4.96059 -0.0739621 5.46046 -0.0739622 5.76877 0.22189C6.07708 0.517741 6.07708 0.997412 5.76877 1.29326L1.90596 5L5.76877 8.70674C6.07708 9.00259 6.07708 9.48226 5.76877 9.77811Z"
+                    fill="none" />
+            </svg>
+        </div>
+    </div>
+    <div class="stepper__button stepper__button--next" [ngClass]="{'stepper__button--visible' : hovered}">
+        <div class="stepper__button--icon" *ngIf="current < steps.length - 1" (click)="goToNextStep()"
+            aria-label="Next step">
+            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.231231 0.221889C0.53954 -0.073963 1.03941 -0.073963 1.34772 0.221889L5.76877 4.46431C6.07708 4.76016 6.07708 5.23984 5.76877 5.53569L1.34772 9.77811C1.03941 10.074 0.53954 10.074 0.231231 9.77811C-0.0770772 9.48226 -0.0770772 9.00259 0.231231 8.70674L4.09404 5L0.231231 1.29326C-0.0770772 0.997411 -0.0770772 0.517741 0.231231 0.221889Z"
+                    fill="none" />
+            </svg>
         </div>
     </div>
     <div class="stepper__steps">

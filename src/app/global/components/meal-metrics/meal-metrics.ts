@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IMealCount } from '../../model/meal-model';
 
@@ -18,11 +18,16 @@ export class MealMetrics implements OnInit {
     cancelled: 1
   };
 
-  @Input() steps: { title: string }[] = [];
+  steps: { title: string }[] = [];
   current: number = 0;
   private touchStartX: number = 0;
   private touchEndX: number = 0;
   private readonly SWIPE_THRESHOLD: number = 50;
+  private hoverTimeout: any;
+
+  hovered: boolean = false;
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
     // Initialize with default steps matching the HTML structure
@@ -113,6 +118,20 @@ export class MealMetrics implements OnInit {
     else if (index < this.current) return 'service__previous'
     else if (index > this.current) return 'service__next'
     return '';
+  }
+
+  onMouseEnter() {
+    if (this.hoverTimeout) {
+      clearTimeout(this.hoverTimeout);
+    }
+    this.hovered = true;
+  }
+
+  onMouseLeave() {
+    this.hoverTimeout = setTimeout(() => {
+      this.hovered = false;
+      this.cdr.detectChanges();
+    }, 2000);
   }
 
   validParam(value: any): boolean {

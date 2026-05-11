@@ -13,8 +13,6 @@
     min-height: 204px;
     max-height: 240px;
 
-    padding-bottom: var(--padding-padding-lg);
-
     overflow: hidden;
 
     border-radius: var(--border-radius-radius-xl);
@@ -36,58 +34,114 @@
         }
     }
 
-    &__overlay {
+    // &__overlay {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     z-index: 1;
+
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+
+    //     padding: var(--padding-padding-sm);
+
+    //     border-radius: var(--border-radius-radius-xl);
+
+    //     opacity: 0;
+    //     transition: opacity 0.3s ease;
+
+    //     &:hover {
+    //         opacity: 1;
+    //     }
+
+    //     &--button {
+    //         &--icon {
+    //             display: flex;
+    //             justify-content: center;
+    //             align-items: center;
+
+    //             width: 24px;
+    //             height: 24px;
+    //             aspect-ratio: 1/1;
+
+    //             border-radius: var(--border-radius-radius-full);
+    //             background: var(--chevron-default);
+
+    //             color: var(--chevron-color);
+
+    //             transition: background-color 0.2s ease, color 0.2s ease;
+
+    //             cursor: pointer;
+
+    //             &:hover {
+    //                 background-color: var(--chevron-hover);
+    //                 color: var(--chevron-color-hover);
+    //             }
+
+    //             svg {
+    //                 path {
+    //                     fill: currentColor;
+    //                 }
+    //             }
+    //         }
+    //     }
+
+    //     @include media-down(md) {
+    //         display: none;
+    //     }
+    // }
+
+    &__button {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        top: 50%;
         z-index: 1;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        padding: var(--padding-padding-sm);
-
-        border-radius: var(--border-radius-radius-xl);
-
-        opacity: 0;
+        transform: translateY(-50%);
         transition: opacity 0.3s ease;
 
-        &:hover {
+        opacity: 0;
+
+        &--visible {
             opacity: 1;
         }
 
-        &--button {
-            &--icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+        &--previous {
+            left: var(--gap-gap-sm);
+        }
 
-                width: 24px;
-                height: 24px;
-                aspect-ratio: 1/1;
+        &--next {
+            right: var(--gap-gap-sm);
+        }
 
-                border-radius: var(--border-radius-radius-full);
-                background: var(--chevron-default);
+        &--icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-                transition: background-color 0.2s ease, color 0.2s ease;
+            width: 24px;
+            height: 24px;
+            aspect-ratio: 1/1;
 
-                color: var(--chevron-color);
+            border-radius: var(--border-radius-radius-full);
+            background: var(--chevron-default);
 
-                cursor: pointer;
+            color: var(--chevron-color);
 
-                &:hover {
-                    background-color: var(--chevron-hover);
+            transition: background-color 0.2s ease, color 0.2s ease;
 
-                    color: var(--chevron-color-hover);
-                }
+            cursor: pointer;
 
-                svg {
-                    path {
-                        fill: currentColor;
-                    }
+            &:hover {
+                background-color: var(--chevron-hover);
+                color: var(--chevron-color-hover);
+            }
+
+            svg {
+                path {
+                    fill: currentColor;
                 }
             }
         }
@@ -101,15 +155,20 @@
         flex: 1 0 0;
 
         overflow: hidden;
-        // touch-action: none;
         touch-action: pan-y;
         overscroll-behavior: contain;
     }
 
     &__dots {
+        position: absolute;
+        left: 50%;
+        bottom: var(--gap-gap-md);
+
         display: flex;
         justify-content: center;
         gap: var(--gap-gap-xs);
+
+        transform: translateX(-50%);
 
         &--dot {
             height: 4px;
@@ -122,7 +181,6 @@
 
             &__selected {
                 width: 24px;
-
                 background-color: var(--surface-accent);
             }
         }
@@ -145,11 +203,8 @@
 
     &__current {
         height: 100%;
-
         overflow: visible;
-
         visibility: visible;
-
         transform: none;
     }
 
@@ -170,7 +225,7 @@
     align-items: flex-start;
     gap: var(--gap-gap-sm);
 
-    padding: var(--padding-padding-lg) var(--padding-padding-lg) var(--padding-padding-sm) var(--padding-padding-xl);
+    padding: var(--padding-padding-lg) var(--padding-padding-lg) var(--padding-padding-2xl) var(--padding-padding-xl);
 
     &__total {
         display: flex;
@@ -188,13 +243,10 @@
             justify-content: center;
             align-items: center;
 
-            // width: 64px;
-            // height: 42px;
             width: 34px;
             height: 34px;
 
             border-radius: var(--border-radius-radius-lg);
-            // background: var(--surface-accent-secondary-10);
 
             &--text {
                 color: var(--text-primary);
@@ -233,14 +285,10 @@
                     justify-content: center;
                     align-items: center;
 
-                    // width: 64px;
-                    // height: 32px;
                     width: 28px;
                     height: 28px;
 
-                    // border-radius: var(--border-radius-radius-md);
                     border-radius: var(--border-radius-radius-sm);
-                    // background: var(--surface-primary);
 
                     &--text {
                         @include title-2-demibold;
