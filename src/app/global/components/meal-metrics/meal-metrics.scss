@@ -20,6 +20,10 @@
     border-radius: var(--border-radius-radius-xl);
     background: var(--surface-primary-light);
 
+    // @include media-down(md) {
+    //     width: 100%;
+    // }
+
     &__background {
         &--primary {
             background-color: #5daa80;
@@ -66,18 +70,18 @@
                 aspect-ratio: 1/1;
 
                 border-radius: var(--border-radius-radius-full);
-                background: var(--buttons-default);
+                background: var(--chevron-default);
 
                 transition: background-color 0.2s ease, color 0.2s ease;
 
-                color: var(--text-primary);
+                color: var(--chevron-color);
 
                 cursor: pointer;
 
                 &:hover {
-                    background-color: var(--icon-accent-secondary-10);
+                    background-color: var(--chevron-hover);
 
-                    color: var(--text-accent-secondary);
+                    color: var(--chevron-color-hover);
                 }
 
                 svg {
@@ -176,24 +180,25 @@
 
         &--text {
             color: var(--text-primary-lightest);
-            @include title-1-demibold;
+            @include title-2-demibold;
         }
 
         &--count {
             display: flex;
+            justify-content: center;
+            align-items: center;
+
             // width: 64px;
             // height: 42px;
             width: 34px;
             height: 34px;
-            justify-content: center;
-            align-items: center;
 
             border-radius: var(--border-radius-radius-lg);
             // background: var(--surface-accent-secondary-10);
 
             &--text {
                 color: var(--text-primary);
-                @include headline-1-demibold;
+                @include headline-1-bold;
             }
         }
     }
@@ -205,8 +210,8 @@
         align-self: stretch;
 
         .overview {
-            flex: 1 0 0;
             display: flex;
+            flex: 1 0 0;
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
@@ -214,9 +219,9 @@
 
             &__breakdown {
                 display: flex;
-                align-self: stretch;
                 justify-content: space-between;
                 align-items: center;
+                align-self: stretch;
 
                 &--text {
                     color: var(--text-primary-light);
@@ -225,18 +230,20 @@
 
                 &--count {
                     display: flex;
+                    justify-content: center;
+                    align-items: center;
+
                     // width: 64px;
                     // height: 32px;
                     width: 28px;
                     height: 28px;
-                    justify-content: center;
-                    align-items: center;
+
                     // border-radius: var(--border-radius-radius-md);
                     border-radius: var(--border-radius-radius-sm);
                     // background: var(--surface-primary);
 
                     &--text {
-                        @include headline-3-demibold;
+                        @include title-2-demibold;
                     }
 
                     &.primary {

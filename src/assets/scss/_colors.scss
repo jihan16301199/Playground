@@ -132,6 +132,7 @@ $brown-dark: #66451c;
   --color-neutral-900: rgba(20, 20, 20, 1);
   --color-neutral-1000: rgba(13, 13, 13, 1);
   --color-base-black-default: rgba(13, 13, 13, 1);
+  --color-blue-light-mode-050: rgba(232, 240, 251, 1); // Ignore for palette.
   --color-blue-light-mode-100: rgba(211, 225, 248, 1);
   --color-blue-light-mode-200: rgba(166, 195, 241, 1);
   --color-blue-light-mode-300: rgba(122, 165, 233, 1);
@@ -149,6 +150,7 @@ $brown-dark: #66451c;
   --color-blue-dark-mode-600: rgba(30, 95, 199, 1);
   --color-blue-dark-mode-700: rgba(22, 71, 149, 1);
   --color-blue-dark-mode-800: rgba(15, 48, 100, 1);
+  --color-blue-dark-mode-850: rgba(15, 23, 36, 1); // Ignore for palette.
   --color-blue-dark-mode-900: rgba(7, 24, 50, 1);
   --color-green-light-mode-100: rgba(215, 238, 226, 1);
   --color-green-light-mode-200: rgba(175, 220, 197, 1);
@@ -717,6 +719,16 @@ $brown-dark: #66451c;
   --buttons-red-tint-outline-hover: var(--color-red-transparent-light-100);
   --buttons-red-tint-outline-pressed: var(--color-red-transparent-light-50);
 
+  /* =============== CHEVRON =============== */
+  --chevron-default: var(--color-neutral-050);
+  --chevron-hover: var(--color-blue-light-mode-050);
+  --chevron-color: var(--color-neutral-800);
+  --chevron-color-hover: var(--color-blue-light-mode-default);
+  --chevron-tint-default: var(--color-black-transparent-5);
+  --chevron-tint-hover: var(--color-blue-transparent-light-10);
+  --chevron-tint-color: var(--color-neutral-800);
+  --chevron-tint-color-hover: var(--color-blue-light-mode-default);
+
   /* =============== GRADIENTS =============== */
   --gradient-bg-green-white-white: var(--background-secondary);
   --gradient-bg-green-white-green: rgba(246, 255, 251, 1);
@@ -1131,6 +1143,16 @@ $brown-dark: #66451c;
   --buttons-red-tint-outline: var(--color-red-transparent-dark-20);
   --buttons-red-tint-outline-hover: var(--color-red-transparent-dark-100);
   --buttons-red-tint-outline-pressed: var(--color-red-transparent-dark-50);
+
+  /* =============== CHEVRON =============== */
+  --chevron-default: var(--color-neutral-1000);
+  --chevron-hover: var(--color-blue-dark-mode-850);
+  --chevron-color: var(--color-neutral-200);
+  --chevron-color-hover: var(--color-blue-dark-mode-default);
+  --chevron-tint-default: var(--color-white-transparent-5);
+  --chevron-tint-hover: var(--color-blue-transparent-dark-10);
+  --chevron-tint-color: var(--color-neutral-200);
+  --chevron-tint-color-hover: var(--color-blue-dark-mode-default);
 
   /* =============== GRADIENTS =============== */
   --gradient-bg-green-white-white: var(--background-secondary);
