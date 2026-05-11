@@ -3,34 +3,37 @@
 
 .meal-count {
     display: flex;
-    width: 204px;
-    height: 100%;
-    min-height: 204px;
-    max-height: 240px;
-    padding: var(--padding-padding-lg) var(--padding-padding-md) var(--padding-padding-lg) var(--padding-padding-xl);
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 
-    border-radius: var(--border-radius-radius-xl);
-    background: var(--surface-primary-light);
+    width: 204px;
+    height: 100%;
+    min-height: 204px;
+    max-height: 240px;
 
+    padding: var(--padding-padding-lg) var(--padding-padding-md) var(--padding-padding-lg) var(--padding-padding-xl);
+
+    border-radius: var(--border-radius-radius-xl);
+
+    background: var(--surface-primary-light);
     &__total {
         display: flex;
-        // width: 80px;
         flex-direction: column;
         align-items: flex-start;
-
+        // width: 80px;
         &--label {
-            color: var(--text-primary);
             @include title-3-medium;
             align-self: stretch;
+
+            color: var(--text-primary);
         }
 
         &--text {
-            color: var(--text-primary);
             @include display-2-demibold;
             align-self: stretch;
+
+            color: var(--text-primary);
         }
     }
 
@@ -38,31 +41,28 @@
         display: flex;
         align-items: flex-start;
         align-self: stretch;
-
         .breakdowns {
             display: flex;
-            // height: 65px;
+            flex: 1 0 0;
             flex-direction: column;
             align-items: flex-start;
             gap: var(--gap-gap-xs);
-            flex: 1 0 0;
-
+            // height: 65px;
             &__breakdown {
                 display: flex;
-                // min-width: 150px;
                 justify-content: space-between;
                 align-items: center;
                 align-self: stretch;
-
+                // min-width: 150px;
                 &--label {
-                    color: var(--text-primary-lightest);
                     @include title-3-medium;
+                    color: var(--text-primary-lightest);
                 }
 
                 &--text {
+                    @include title-3-medium;
                     color: var(--text-primary);
                     text-align: right;
-                    @include title-3-medium;
                 }
             }
         }
