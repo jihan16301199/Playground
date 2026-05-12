@@ -8,8 +8,8 @@
     <app-sidebar></app-sidebar>
 </div>
 
-<div class="content" [style.marginTop]="contentMarginTop" [style.marginBottom]="contentMarginBottom"
-    [ngClass]="isMobile ? 'footer-active' : 'sidebar-active'">
+<div class="content" [ngClass]="isMobile ? 'footer-active' : 'sidebar-active'">
+    <!--[style.marginTop]="contentMarginTop" [style.marginBottom]="contentMarginBottom"-->
     <div class="content__container">
         <div class="route">
             <router-outlet />

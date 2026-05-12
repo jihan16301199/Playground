@@ -4,7 +4,7 @@
 @use "../../../assets/scss/mixins" as *;
 
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
@@ -35,7 +35,7 @@
 
 .content {
     position: relative;
-    overflow-y: auto;
+    overflow-y: auto; //very important for sticky. must be disabled if want to use sticky in child element of content
     -webkit-overflow-scrolling: touch;
 
     &__container {
@@ -65,7 +65,7 @@
 }
 
 .footer {
-    position: fixed;
+    position: sticky;
     right: 0;
     bottom: 0;
     left: 0;
