@@ -4,10 +4,12 @@
 .deposit-card {
     position: relative;
     z-index: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+
     width: 280px;
     height: 100%;
     min-height: 204px;
@@ -24,7 +26,9 @@
             position: absolute;
             z-index: -1;
             inset: 0;
+
             background: linear-gradient(180deg, var(--surface-accent-secondary-dark) 50%, var(--surface-primary-light) 70%);
+
             transform: translateX(-100%);
             transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
@@ -42,7 +46,9 @@
             position: absolute;
             z-index: -1;
             inset: 0;
+
             background: linear-gradient(180deg, var(--surface-accent-dark) 50%, var(--surface-primary-light) 70%);
+
             transform: translateX(-100%);
             transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
@@ -57,7 +63,9 @@
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
+
         padding: var(--padding-padding-sm) var(--padding-padding-xl);
+
         background: transparent;
 
         &--text {
@@ -69,6 +77,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             width: 10px;
             height: 10px;
             aspect-ratio: 1/1;
@@ -82,7 +91,9 @@
         justify-content: space-between;
         align-items: flex-start;
         align-self: stretch;
+
         padding: var(--padding-padding-xl);
+
         border-radius: calc(var(--border-radius-radius-xl));
         background: var(--surface-primary-light);
 
@@ -131,6 +142,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     width: 28px;
                     height: 28px;
                     aspect-ratio: 1/1;

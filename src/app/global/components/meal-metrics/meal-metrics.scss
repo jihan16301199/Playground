@@ -3,9 +3,11 @@
 
 .stepper {
     position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     width: 204px;
     //     width: 100%;
     height: 100%;
@@ -36,33 +38,42 @@
     //     bottom: 0;
     //     left: 0;
     //     z-index: 1;
+
     //     display: flex;
     //     justify-content: space-between;
     //     align-items: center;
+
     //     padding: var(--padding-padding-sm);
+
     //     border-radius: var(--border-radius-radius-xl);
     //     opacity: 0;
     //     transition: opacity 0.3s ease;
+
     //     &:hover {
     //         opacity: 1;
     //     }
+
     //     &--button {
     //         &--icon {
     //             display: flex;
     //             justify-content: center;
     //             align-items: center;
+
     //             width: 24px;
     //             height: 24px;
     //             aspect-ratio: 1/1;
     //             color: var(--chevron-color);
     //             border-radius: var(--border-radius-radius-full);
     //             background: var(--chevron-default);
+
     //             transition: background-color 0.2s ease, color 0.2s ease;
     //             cursor: pointer;
+
     //             &:hover {
     //                 color: var(--chevron-color-hover);
     //                 background-color: var(--chevron-hover);
     //             }
+
     //             svg {
     //                 path {
     //                     fill: currentColor;
@@ -70,14 +81,17 @@
     //             }
     //         }
     //     }
+
     //     @include media-down(md) {
     //         display: none;
     //     }
     // }
+
     &__button {
         position: absolute;
         top: 50%;
         z-index: 1;
+
         opacity: 0;
         transform: translateY(-50%);
         transition: opacity 0.3s ease;
@@ -98,12 +112,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             width: 24px;
             height: 24px;
             aspect-ratio: 1/1;
             color: var(--chevron-color);
             border-radius: var(--border-radius-radius-full);
             background: var(--chevron-default);
+
             transition: background-color 0.2s ease, color 0.2s ease;
             cursor: pointer;
 
@@ -135,9 +151,11 @@
         position: absolute;
         bottom: var(--gap-gap-md);
         left: 50%;
+
         display: flex;
         justify-content: center;
         gap: var(--gap-gap-xs);
+
         transform: translateX(-50%);
 
         &--dot {
@@ -145,6 +163,7 @@
             height: 4px;
             border-radius: var(--border-radius-radius-xs);
             background-color: var(--surface-primary-dark);
+
             transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
 
             &__selected {
@@ -159,6 +178,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     height: 0;
     overflow: hidden;
     outline: 0;
@@ -188,6 +208,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: var(--gap-gap-sm);
+
     padding: var(--padding-padding-lg) var(--padding-padding-lg) var(--padding-padding-2xl) var(--padding-padding-xl);
 
     &__total {
@@ -205,6 +226,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             width: 34px;
             height: 34px;
             border-radius: var(--border-radius-radius-lg);
@@ -245,6 +267,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     width: 28px;
                     height: 28px;
                     border-radius: var(--border-radius-radius-sm);

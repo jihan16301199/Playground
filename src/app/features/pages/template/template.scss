@@ -9,12 +9,14 @@
     // bottom: 0;
     left: 0;
     z-index: var(--z-mobile-swiper);
+
     width: 100%;
     touch-action: none;
     overscroll-behavior: contain;
     border: 1px solid green;
     border-radius: var(--border-radius-radius-lg) var(--border-radius-radius-lg) 0 0;
     background: var(--surface-primary-light);
+
     box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.10);
 
     @include media-up(md) {
@@ -27,6 +29,7 @@
         justify-content: center;
         align-items: center;
         gap: var(--gap-gap-xs);
+
         height: 42px;
 
         &--bar {

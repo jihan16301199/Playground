@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: var(--gap-gap-sm);
+
     height: 100%;
     background-color: var(--surface-primary);
 
@@ -25,13 +26,16 @@
             flex-direction: column;
             justify-content: flex-start;
             gap: var(--gap-gap-sm);
+
             padding: 0 var(--padding-padding-lg);
 
             .menu {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
                 padding: 10px var(--padding-padding-md);
+
                 color: var(--text-primary);
                 border-radius: var(--border-radius-radius-md);
                 cursor: pointer;
@@ -56,6 +60,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+
                         width: 18px;
                         height: 18px;
                         aspect-ratio: 1/1;
@@ -71,6 +76,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     width: 18px;
                     height: 18px;
                     aspect-ratio: 1/1;
@@ -91,13 +97,16 @@
             flex-direction: column;
             justify-content: flex-start;
             gap: var(--gap-gap-sm);
+
             padding: 0 var(--padding-padding-lg);
 
             .menu {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+
                 padding: 10px var(--padding-padding-md);
+
                 color: var(--text-primary);
                 border-radius: var(--border-radius-radius-md);
                 cursor: pointer;
@@ -122,6 +131,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+
                         width: 18px;
                         height: 18px;
                         aspect-ratio: 1/1;
@@ -136,9 +146,11 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+
                         width: 20px;
                         height: 20px;
                         padding: 2px var(--padding-padding-sm);
+
                         border-radius: var(--border-radius-radius-sm);
                         background-color: var(--surface-accent-secondary-10);
 
@@ -153,6 +165,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     width: 18px;
                     height: 18px;
                     aspect-ratio: 1/1;
@@ -191,7 +204,9 @@
                         // flex: 1 0 0;
                         display: flex;
                         gap: var(--gap-gap-sm);
+
                         padding: var(--padding-padding-sm);
+
                         border-radius: var(--border-radius-radius-md);
                         background-color: var(--surface-primary-light);
 
@@ -200,10 +215,13 @@
                             justify-content: center;
                             align-items: center;
                             gap: var(--gap-gap-sm);
+
                             padding: var(--padding-padding-sm) var(--padding-padding-lg);
+
                             color: var(--text-primary);
                             border-radius: var(--border-radius-radius-md);
                             background-color: var(--surface-primary);
+
                             cursor: pointer;
 
                             &:hover {
@@ -219,6 +237,7 @@
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
+
                                 width: 16px;
                                 height: 16px;
                                 aspect-ratio: 1/1;
@@ -245,7 +264,9 @@
                 display: flex;
                 align-items: center;
                 gap: var(--gap-gap-md);
+
                 padding: var(--padding-padding-sm);
+
                 border-radius: var(--border-radius-radius-md);
                 cursor: pointer;
 
@@ -257,6 +278,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     width: 40px;
                     height: 40px;
                     aspect-ratio: 1/1;
@@ -292,9 +314,11 @@
 
                 &__button {
                     padding: var(--padding-padding-sm);
+
                     color: var(--text-primary);
                     border-radius: var(--border-radius-radius-md);
                     background-color: var(--surface-primary);
+
                     cursor: pointer;
 
                     &:hover {
@@ -306,6 +330,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+
                         width: 18px;
                         height: 18px;
                         aspect-ratio: 1/1;
@@ -319,6 +344,7 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             column-gap: var(--gap-gap-sm);
+
             padding: 0 var(--padding-padding-lg) var(--padding-padding-lg);
 
             .link {

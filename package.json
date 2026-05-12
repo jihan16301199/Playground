@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "beautify": "node scripts/beautify-scss.js"
+    "beautify": "node scripts/beautify-scss.js",
+    "beautify-all-app": "node scripts/beautify-all-app-scss.js"
   },
   "prettier": {
     "printWidth": 100,

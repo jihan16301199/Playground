@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     height: 100vh;
     // background-color: #dddce1;
     background-color: var(--surface-primary);
@@ -16,6 +17,7 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--gap-gap-2xl);
+
     height: 90%;
 
     @include media-between(2xl, 4xl) {
@@ -28,6 +30,7 @@
     // flex-direction: column;
     // justify-content: space-between;
     gap: var(--gap-gap-4xl);
+
     width: 100%;
     max-width: 712px;
 
@@ -51,6 +54,7 @@
             height: 8px;
             border-radius: var(--border-radius-radius-xs);
             background-color: var(--surface-primary-50);
+
             transition: all 0.75s cubic-bezier(0.35, 0, 0.25, 1);
 
             &__current {
@@ -75,6 +79,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: var(--gap-gap-4xl);
+
     height: 0;
     overflow: hidden;
     outline: 0;
@@ -124,9 +129,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             width: 36px;
             height: 36px;
             padding: var(--padding-padding-sm);
+
             border-radius: 8px;
             background-color: #2d2d2d;
 
@@ -164,6 +171,7 @@
         &--tag {
             display: flex;
             flex-wrap: wrap;
+
             @include display-1-demibold;
             font-size: 4.5rem;
             line-height: 1.1;
@@ -256,11 +264,14 @@
 
         &--primary {
             padding: var(--padding-padding-xl) var(--padding-padding-6xl);
+
             color: var(--text-inverse);
             border-style: none;
             border-radius: var(--border-radius-radius-md);
             background-color: #5daa80;
+
             @include title-2-bold;
+
             transition: all 0.15s ease-in-out;
             animation-name: button-shadow-throb;
             animation-duration: 1750ms;
@@ -275,11 +286,14 @@
 
         &--blank {
             padding: var(--padding-padding-xl) var(--padding-padding-6xl);
+
             color: var(--text-primary);
             border-style: none;
             border-radius: var(--border-radius-radius-md);
             background-color: transparent;
+
             @include title-2-bold;
+
             transition: all 0.15s ease-in-out;
 
             &:hover {
@@ -306,7 +320,9 @@
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
+
                 padding: var(--padding-padding-sm) var(--padding-padding-md);
+
                 border-radius: 68px;
                 background: var(--buttons-solid-hover);
 
@@ -314,6 +330,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     width: 20px;
                     height: 20px;
                     aspect-ratio: 1/1;
@@ -339,6 +356,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: var(--gap-gap-2xl);
+
         width: 100%;
 
         .phase {
@@ -346,6 +364,7 @@
             flex-direction: column;
             align-items: center;
             gap: var(--gap-gap-2xl);
+
             max-width: 220px;
 
             &__title {
@@ -363,12 +382,14 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+
                     width: 46px;
                     height: 46px;
                     aspect-ratio: 1/1;
                     color: #5daa80;
                     border-radius: var(--border-radius-radius-lg);
                     background: var(--surface-primary-light);
+
                     box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 1px 3px 0 #0000001A,
                         0 1px 2px -1px #0000001A;
                 }
@@ -423,10 +444,12 @@
     flex-direction: column;
     justify-content: space-between;
     gap: var(--gap-gap-4xl);
+
     width: 100%;
     max-width: 450px;
     height: 100%;
     padding: var(--padding-padding-3xl);
+
     border-radius: var(--border-radius-radius-lg);
 
     &__background {
@@ -464,6 +487,7 @@
             height: 4px;
             border-radius: var(--border-radius-radius-xs);
             background-color: var(--surface-primary-50);
+
             transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
 
             &__selected {
@@ -478,6 +502,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     height: 0;
     overflow: hidden;
     outline: 0;
@@ -557,23 +582,26 @@
                         justify-content: space-between;
 
                         &--label {
+                            padding-inline: var(--padding-padding-md);
                             color: var(--text-inverse-light);
                             @include title-2-medium;
-                            padding-inline: var(--padding-padding-md);
                         }
                     }
 
                     &--input {
                         height: 50px;
                         padding: var(--padding-padding-sm) var(--padding-padding-2xl);
+
                         color: var(--text-inverse-light);
                         border: 1px solid transparent;
                         border-radius: var(--border-radius-radius-md);
                         outline: none;
                         background-color: var(--surface-primary-10);
-                        @include title-3-medium;
-                        transition: all 0.15s ease-in;
                         backdrop-filter: blur(var(--backdrop-filter-blur-xs));
+
+                        @include title-3-medium;
+
+                        transition: all 0.15s ease-in;
 
                         &::placeholder {
                             color: var(--text-inverse-30);
@@ -604,6 +632,7 @@
                                         display: flex;
                                         justify-content: center;
                                         align-items: center;
+
                                         width: 16px;
                                         height: 16px;
                                         aspect-ratio: 1/1;
@@ -618,9 +647,11 @@
 
                         &--link {
                             padding-right: var(--padding-padding-md);
+
                             color: #5daa80;
                             // color: var(--text-inverse-80);
                             @include body-3-regular;
+
                             cursor: pointer;
 
                             &:hover {

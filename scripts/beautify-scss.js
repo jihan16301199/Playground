@@ -10,6 +10,8 @@ const path = require('path');
 const CSS_PROPERTY_ORDER = [
   // 1. Positioning
   'position', 'top', 'right', 'bottom', 'left', 'z-index', 'inset',
+  'inset-inline', 'inset-inline-start', 'inset-inline-end',
+  'inset-block', 'inset-block-start', 'inset-block-end',
   
   // 2. Display & Layout
   'flex', 'display', 'flex-direction', 'flex-wrap', 'flex-flow', 'flex-grow', 'flex-shrink', 'flex-basis',
@@ -23,7 +25,11 @@ const CSS_PROPERTY_ORDER = [
   
   // 4. Spacing
   'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left',
+  'margin-inline', 'margin-inline-start', 'margin-inline-end',
+  'margin-block', 'margin-block-start', 'margin-block-end',
   'padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left',
+  'padding-inline', 'padding-inline-start', 'padding-inline-end',
+  'padding-block', 'padding-block-start', 'padding-block-end',
   
   // 5. Overflow
   'overflow', 'overflow-x', 'overflow-y', 'overflow-wrap', 'overflow-anchor',
@@ -32,12 +38,14 @@ const CSS_PROPERTY_ORDER = [
   // 6. Borders
   'color', 'fill', 'stroke', 'border', 'border-width', 'border-style', 'border-color',
   'border-top', 'border-right', 'border-bottom', 'border-left',
+  'border-inline', 'border-inline-start', 'border-inline-end',
+  'border-block', 'border-block-start', 'border-block-end',
   'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-right-radius', 'border-bottom-left-radius',
   'border-spacing', 'border-collapse', 'outline', 'outline-width', 'outline-style', 'outline-color', 'outline-offset',
   
   // 7. Background
   'background', 'background-color', 'background-image', 'background-position', 'background-size', 'background-repeat', 'background-attachment', 'background-clip',
-  'background-origin', 'background-blend-mode',
+  'background-origin', 'background-blend-mode', 'backdrop-filter',
   
   // 8. Effects
   'box-shadow', 'text-shadow', 'opacity', 'filter', 'mix-blend-mode', 'clip-path', 'mask',
@@ -69,6 +77,8 @@ const CSS_PROPERTY_ORDER = [
 const PROPERTY_SECTIONS = {
   // 1. Positioning
   'position': 1, 'top': 1, 'right': 1, 'bottom': 1, 'left': 1, 'z-index': 1, 'inset': 1,
+  'inset-inline': 1, 'inset-inline-start': 1, 'inset-inline-end': 1,
+  'inset-block': 1, 'inset-block-start': 1, 'inset-block-end': 1,
   
   // 2. Display & Layout
   'flex': 2, 'display': 2, 'flex-direction': 2, 'flex-wrap': 2, 'flex-flow': 2, 'flex-grow': 2, 'flex-shrink': 2, 'flex-basis': 2,
@@ -80,7 +90,11 @@ const PROPERTY_SECTIONS = {
   
   // 4. Spacing
   'margin': 4, 'margin-top': 4, 'margin-right': 4, 'margin-bottom': 4, 'margin-left': 4,
+  'margin-inline': 4, 'margin-inline-start': 4, 'margin-inline-end': 4,
+  'margin-block': 4, 'margin-block-start': 4, 'margin-block-end': 4,
   'padding': 4, 'padding-top': 4, 'padding-right': 4, 'padding-bottom': 4, 'padding-left': 4,
+  'padding-inline': 4, 'padding-inline-start': 4, 'padding-inline-end': 4,
+  'padding-block': 4, 'padding-block-start': 4, 'padding-block-end': 4,
   
   // 5. Overflow
   'overflow': 5, 'overflow-x': 5, 'overflow-y': 5, 'overflow-wrap': 5, 'overflow-anchor': 5,
@@ -89,12 +103,14 @@ const PROPERTY_SECTIONS = {
   // 6. Borders
   'color': 6, 'fill': 6, 'stroke': 6, 'border': 6, 'border-width': 6, 'border-style': 6, 'border-color': 6,
   'border-top': 6, 'border-right': 6, 'border-bottom': 6, 'border-left': 6,
+  'border-inline': 6, 'border-inline-start': 6, 'border-inline-end': 6,
+  'border-block': 6, 'border-block-start': 6, 'border-block-end': 6,
   'border-radius': 6, 'border-top-left-radius': 6, 'border-top-right-radius': 6, 'border-bottom-right-radius': 6, 'border-bottom-left-radius': 6,
   'border-spacing': 6, 'border-collapse': 6, 'outline': 6, 'outline-width': 6, 'outline-style': 6, 'outline-color': 6, 'outline-offset': 6,
   
   // 7. Background
   'background': 7, 'background-color': 7, 'background-image': 7, 'background-position': 7, 'background-size': 7, 'background-repeat': 7, 'background-attachment': 7, 'background-clip': 7,
-  'background-origin': 7, 'background-blend-mode': 7,
+  'background-origin': 7, 'background-blend-mode': 7, 'backdrop-filter': 7,
   
   // 8. Effects
   'box-shadow': 8, 'text-shadow': 8, 'opacity': 8, 'filter': 8, 'mix-blend-mode': 8, 'clip-path': 8, 'mask': 8, 'visibility': 8,
@@ -457,10 +473,11 @@ function organizProperties(lines, indent) {
         j++;
       }
       
-      // Create comment block
+      // Create comment block - preserve section from comments
       finalItems.push({
         type: 'comment-block',
-        lines: commentLines.flatMap(c => c.lines)
+        lines: commentLines.flatMap(c => c.lines),
+        section: commentLines[0].section // Inherit section from first comment
       });
       
       i = j - 1; // Skip grouped items
@@ -469,13 +486,25 @@ function organizProperties(lines, indent) {
     }
   }
 
-  // Build result
+  // Build result with visual spacing after key sections
   const result = [];
+  let previousSection = null;
+  const sectionsForSpacing = [1, 2, 4, 7, 9]; // Positioning, Display & Layout, Spacing, Background, Typography
+
+  // Only apply spacing if the block has 6+ lines
+  const shouldApplySpacing = lines.length >= 6;
 
   for (const item of finalItems) {
+    // Add empty line if we've transitioned to a new section and previous was a spacing section
+    if (shouldApplySpacing && previousSection !== null && previousSection !== item.section && sectionsForSpacing.includes(previousSection)) {
+      result.push('');
+    }
+
     for (const line of item.lines) {
       result.push(line);
     }
+
+    previousSection = item.section;
   }
 
   return result;

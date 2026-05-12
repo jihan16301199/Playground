@@ -27,6 +27,7 @@
     top: var(--header-height);
     left: 0;
     z-index: var(--z-sidebar);
+
     width: var(--sidebar-width);
     height: calc(100dvh - var(--header-height));
     border: 1px solid blue;
@@ -51,6 +52,7 @@
     //     touch-action: none;
     //     overscroll-behavior: none;
     //     -webkit-overflow-scrolling: auto;
+
     // }
 }
 
@@ -79,6 +81,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
             width: 100%;
             height: var(--footer-height);
             background: rgba(255, 255, 255, 0.51);
