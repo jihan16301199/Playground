@@ -12,7 +12,7 @@ const CSS_PROPERTY_ORDER = [
   'position', 'top', 'right', 'bottom', 'left', 'z-index', 'inset',
   
   // 2. Display & Layout
-  'display', 'flex', 'flex-direction', 'flex-wrap', 'flex-flow', 'flex-grow', 'flex-shrink', 'flex-basis',
+  'flex', 'display', 'flex-direction', 'flex-wrap', 'flex-flow', 'flex-grow', 'flex-shrink', 'flex-basis',
   'justify-content', 'align-items', 'align-content', 'align-self', 'gap', 'row-gap', 'column-gap',
   'grid', 'grid-template', 'grid-auto-flow', 'grid-column', 'grid-row', 'place-items', 'place-content',
   'order',
@@ -30,7 +30,7 @@ const CSS_PROPERTY_ORDER = [
   'text-overflow', 'white-space', 'touch-action', 'overscroll-behavior', 'overscroll-behavior-x', 'overscroll-behavior-y',
   
   // 6. Borders
-  'border', 'border-width', 'border-style', 'border-color',
+  'color', 'fill', 'stroke', 'border', 'border-width', 'border-style', 'border-color',
   'border-top', 'border-right', 'border-bottom', 'border-left',
   'border-radius', 'border-top-left-radius', 'border-top-right-radius', 'border-bottom-right-radius', 'border-bottom-left-radius',
   'border-spacing', 'border-collapse', 'outline', 'outline-width', 'outline-style', 'outline-color', 'outline-offset',
@@ -44,7 +44,7 @@ const CSS_PROPERTY_ORDER = [
   'visibility',
   
   // 9. Typography
-  'color', 'fill', 'stroke', 'font', 'font-family', 'font-size', 'font-size-adjust', 'font-weight', 'font-style',
+  'font', 'font-family', 'font-size', 'font-size-adjust', 'font-weight', 'font-style',
   'font-variant', 'font-stretch', 'line-height', 'letter-spacing', 'word-spacing', 'text-align', 'text-align-last',
   'text-decoration', 'text-decoration-line', 'text-decoration-style', 'text-decoration-color', 'text-transform',
   'text-indent', 'text-shadow', 'text-rendering', 'text-orientation', 'font-smoothing',
@@ -71,7 +71,7 @@ const PROPERTY_SECTIONS = {
   'position': 1, 'top': 1, 'right': 1, 'bottom': 1, 'left': 1, 'z-index': 1, 'inset': 1,
   
   // 2. Display & Layout
-  'display': 2, 'flex': 2, 'flex-direction': 2, 'flex-wrap': 2, 'flex-flow': 2, 'flex-grow': 2, 'flex-shrink': 2, 'flex-basis': 2,
+  'flex': 2, 'display': 2, 'flex-direction': 2, 'flex-wrap': 2, 'flex-flow': 2, 'flex-grow': 2, 'flex-shrink': 2, 'flex-basis': 2,
   'justify-content': 2, 'align-items': 2, 'align-content': 2, 'align-self': 2, 'gap': 2, 'row-gap': 2, 'column-gap': 2,
   'grid': 2, 'grid-template': 2, 'grid-auto-flow': 2, 'grid-column': 2, 'grid-row': 2, 'place-items': 2, 'place-content': 2, 'order': 2,
   
@@ -87,7 +87,7 @@ const PROPERTY_SECTIONS = {
   'text-overflow': 5, 'white-space': 5, 'touch-action': 5, 'overscroll-behavior': 5, 'overscroll-behavior-x': 5, 'overscroll-behavior-y': 5,
   
   // 6. Borders
-  'border': 6, 'border-width': 6, 'border-style': 6, 'border-color': 6,
+  'color': 6, 'fill': 6, 'stroke': 6, 'border': 6, 'border-width': 6, 'border-style': 6, 'border-color': 6,
   'border-top': 6, 'border-right': 6, 'border-bottom': 6, 'border-left': 6,
   'border-radius': 6, 'border-top-left-radius': 6, 'border-top-right-radius': 6, 'border-bottom-right-radius': 6, 'border-bottom-left-radius': 6,
   'border-spacing': 6, 'border-collapse': 6, 'outline': 6, 'outline-width': 6, 'outline-style': 6, 'outline-color': 6, 'outline-offset': 6,
@@ -100,7 +100,7 @@ const PROPERTY_SECTIONS = {
   'box-shadow': 8, 'text-shadow': 8, 'opacity': 8, 'filter': 8, 'mix-blend-mode': 8, 'clip-path': 8, 'mask': 8, 'visibility': 8,
   
   // 9. Typography
-  'color': 9, 'fill': 9, 'stroke': 9, 'font': 9, 'font-family': 9, 'font-size': 9, 'font-size-adjust': 9, 'font-weight': 9, 'font-style': 9,
+  'font': 9, 'font-family': 9, 'font-size': 9, 'font-size-adjust': 9, 'font-weight': 9, 'font-style': 9,
   'font-variant': 9, 'font-stretch': 9, 'line-height': 9, 'letter-spacing': 9, 'word-spacing': 9, 'text-align': 9, 'text-align-last': 9,
   'text-decoration': 9, 'text-decoration-line': 9, 'text-decoration-style': 9, 'text-decoration-color': 9, 'text-transform': 9,
   'text-indent': 9, 'text-rendering': 9, 'text-orientation': 9, 'font-smoothing': 9,
@@ -120,11 +120,50 @@ const PROPERTY_SECTIONS = {
 };
 
 /**
- * Get property sort order
+ * Determine if an @include mixin is typography-related
  */
-function getPropertyOrder(prop) {
+function isTypographyMixin(mixinName) {
+  const typographyPatterns = [
+    'title', 'headline', 'body', 'label', 'caption', 'overline',
+    'font', 'text', 'regular', 'medium', 'semibold', 'bold', 'demibold'
+  ];
+  return typographyPatterns.some(pattern => mixinName.toLowerCase().includes(pattern));
+}
+
+/**
+ * Get section for @include mixins
+ */
+function getIncludeSection(line) {
+  const mixinMatch = line.match(/@include\s+([a-zA-Z0-9_-]+)/);
+  if (mixinMatch && isTypographyMixin(mixinMatch[1])) {
+    return 9; // Typography section
+  }
+  return 13; // Default/Misc
+}
+
+/**
+ * Get property sort order, with special handling for Typography section
+ */
+function getPropertyOrder(prop, section) {
+  // Within Typography section, prioritize color/fill/stroke first
+  if (section === 9) {
+    if (prop === 'color') return -1002;
+    if (prop === 'fill') return -1001;
+    if (prop === 'stroke') return -1000;
+  }
   const index = CSS_PROPERTY_ORDER.indexOf(prop);
   return index === -1 ? CSS_PROPERTY_ORDER.length : index;
+}
+
+/**
+ * Get include order within a section
+ */
+function getIncludeOrder(section) {
+  // In Typography section, includes come after color/fill/stroke but before other typography
+  if (section === 9) {
+    return -100;
+  }
+  return 0;
 }
 
 /**
@@ -144,23 +183,74 @@ function beautifySCSS(content) {
   let inSelector = false;
   let nestedLevel = 0;
   let currentIndent = '';
+  let selectorBuffer = []; // Buffer for multi-line selector parts
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     const trimmed = line.trim();
 
-    // Skip empty lines and comments at start
-    if (!trimmed || trimmed.startsWith('//')) {
-      if (inSelector && buffer.length === 0) {
-        result.push(line);
-      } else if (!inSelector) {
+    // Skip empty lines at start but add to buffer if in selector
+    if (!trimmed) {
+      if (inSelector && selectorBuffer.length === 0) {
+        buffer.push(line);
+      } else if (selectorBuffer.length > 0) {
+        selectorBuffer.push(line);
+      } else {
         result.push(line);
       }
       continue;
     }
 
-    // Detect selector start
-    if (trimmed.includes('{') && !trimmed.includes('}')) {
+    // Handle comments - add to buffer if in selector, otherwise to result
+    if (trimmed.startsWith('//')) {
+      if (inSelector && selectorBuffer.length === 0) {
+        buffer.push(line);
+      } else if (selectorBuffer.length > 0) {
+        selectorBuffer.push(line);
+      } else {
+        result.push(line);
+      }
+      continue;
+    }
+
+    // Detect multi-line selector parts (lines starting with & and ending with comma)
+    const isMultiLineSelectorPart = (trimmed.startsWith('&') || trimmed.startsWith('.') || trimmed.startsWith('#')) && 
+                                     trimmed.endsWith(',') && 
+                                     !trimmed.includes('{');
+
+    // If we're collecting selector parts, check if this line continues the pattern
+    if (selectorBuffer.length > 0) {
+      if (isMultiLineSelectorPart || trimmed.endsWith(',')) {
+        selectorBuffer.push(line);
+        continue;
+      } else if (trimmed.includes('{')) {
+        // Found the opening brace - output all selector parts with the brace
+        result.push(...selectorBuffer);
+        result.push(line);
+        selectorBuffer = [];
+        inSelector = true;
+        nestedLevel++;
+        currentIndent = line.match(/^\s*/)[0];
+        continue;
+      }
+    }
+
+    // Start collecting multi-line selector parts
+    if (inSelector && isMultiLineSelectorPart && selectorBuffer.length === 0) {
+      if (buffer.length > 0) {
+        result.push(...organizProperties(buffer, currentIndent));
+        buffer = [];
+      }
+      selectorBuffer.push(line);
+      continue;
+    }
+
+    // Detect selector start (including nested selectors with &)
+    const hasOpenBrace = trimmed.includes('{') && !trimmed.includes('}');
+    const isNestedSelector = trimmed.startsWith('&') && hasOpenBrace;
+    const isRegularSelector = !trimmed.startsWith('&') && hasOpenBrace;
+    
+    if (isNestedSelector || isRegularSelector) {
       if (buffer.length > 0) {
         result.push(...organizProperties(buffer, currentIndent));
         buffer = [];
@@ -173,7 +263,7 @@ function beautifySCSS(content) {
     }
 
     // Detect selector end
-    if (trimmed === '}' || trimmed.startsWith('}')) {
+    if (trimmed === '}' || (trimmed.startsWith('}') && !trimmed.includes('{'))) {
       if (buffer.length > 0) {
         result.push(...organizProperties(buffer, currentIndent));
         buffer = [];
@@ -186,8 +276,8 @@ function beautifySCSS(content) {
       continue;
     }
 
-    // Collect properties
-    if (inSelector && trimmed && !trimmed.startsWith('@include')) {
+    // Collect properties and includes for organization
+    if (inSelector && trimmed && !trimmed.startsWith('@media')) {
       buffer.push(line);
     } else if (inSelector) {
       result.push(line);
@@ -205,97 +295,186 @@ function beautifySCSS(content) {
 }
 
 /**
- * Organize properties by CSS order with section gaps
+ * Extract property name from a commented line
+ * e.g., "// flex-direction: column;" -> "flex-direction"
+ */
+function getPropertyFromComment(commentLine) {
+  const trimmed = commentLine.trim();
+  if (!trimmed.startsWith('//')) return null;
+  
+  const content = trimmed.substring(2).trim(); // Remove "//"
+  const colonIndex = content.indexOf(':');
+  
+  if (colonIndex > 0) {
+    return content.substring(0, colonIndex).trim();
+  }
+  
+  return null;
+}
+
+/**
+ * Get section for a comment based on what property it describes
+ */
+function getCommentSection(commentLine) {
+  const prop = getPropertyFromComment(commentLine);
+  if (!prop) return 13; // Default to "other"
+  return getPropertySection(prop);
+}
+
+/**
+ * Organize properties by CSS order while preserving comment grouping by section
  */
 function organizProperties(lines, indent) {
+  if (lines.length === 0) return [];
+
   const items = [];
+  let i = 0;
 
-  // Parse lines and associate comments with properties
-  let pendingComments = [];
-  
-  for (const line of lines) {
+  // First pass: Parse all items individually
+  while (i < lines.length) {
+    const line = lines[i];
     const trimmed = line.trim();
-    if (!trimmed) continue;
 
-    // Collect comments
+    if (!trimmed) {
+      i++;
+      continue;
+    }
+
+    // Handle comments
     if (trimmed.startsWith('//') || trimmed.startsWith('/*') || trimmed.startsWith('*')) {
-      pendingComments.push(line);
+      const propName = getPropertyFromComment(line);
+      const commentSection = getCommentSection(line);
+      const commentOrder = propName ? getPropertyOrder(propName, commentSection) : 999;
+      
+      items.push({
+        type: 'comment',
+        lines: [line],
+        section: commentSection,
+        order: commentOrder
+      });
+      i++;
       continue;
     }
 
     // Check if it's a CSS property
     if (trimmed.includes(':') && !trimmed.startsWith('&') && !trimmed.startsWith('@')) {
       const prop = trimmed.split(':')[0].trim();
+      let propertyLines = [line];
+      let j = i + 1;
+      let propertyEnded = line.trim().endsWith(';'); // Check if property ends on first line
+
+      // Collect multi-line property values
+      while (j < lines.length && !propertyEnded) {
+        const nextLine = lines[j];
+        const nextTrimmed = nextLine.trim();
+
+        if (!nextTrimmed) {
+          j++;
+          continue;
+        }
+
+        // Check if this line is a comment
+        const isCommentLine = nextTrimmed.startsWith('//') || 
+                             nextTrimmed.startsWith('/*') || 
+                             nextTrimmed.startsWith('*');
+
+        // Check if this line is a new property or selector
+        const isNewProperty = nextTrimmed.includes(':') && !nextTrimmed.startsWith('//');
+        const isNewSelector = nextTrimmed.startsWith('&') || nextTrimmed.startsWith('@') || nextTrimmed === '}';
+
+        // If it's a new property or selector, stop
+        if (isNewProperty || isNewSelector) {
+          break;
+        }
+
+        // If it's a comment line AND the previous line ended with semicolon, it's a standalone comment
+        if (isCommentLine && propertyLines[propertyLines.length - 1].trim().endsWith(';')) {
+          break;
+        }
+
+        // Otherwise, add the line (including comments within multi-line values)
+        propertyLines.push(nextLine);
+        
+        // Check if property ended with this line
+        if (nextTrimmed.endsWith(';') || nextTrimmed === '}') {
+          propertyEnded = true;
+        }
+        
+        j++;
+      }
+
       items.push({
         type: 'property',
         prop: prop,
-        comments: pendingComments,
-        line: line
+        lines: propertyLines,
+        section: getPropertySection(prop),
+        order: getPropertyOrder(prop, getPropertySection(prop))
       });
-      pendingComments = [];
-    } else {
-      // Other non-property lines
+
+      i = j;
+    } else if (trimmed.startsWith('@include')) {
       items.push({
-        type: 'other',
-        comments: pendingComments,
-        line: line
+        type: 'include',
+        prop: trimmed,
+        lines: [line],
+        section: getIncludeSection(line),
+        order: getIncludeOrder(getIncludeSection(line))
       });
-      pendingComments = [];
+
+      i++;
+    } else {
+      i++;
     }
   }
 
-  // Add any remaining comments
-  if (pendingComments.length > 0) {
-    items.push({
-      type: 'comment',
-      comments: pendingComments,
-      line: null
-    });
+  // Add order calculation for includes (which don't have order yet)
+  for (const item of items) {
+    if (item.type === 'include' && !item.order) {
+      item.order = 0; // Includes have no specific order within section
+    }
   }
 
-  // Sort items - properties by section/order, others stay at end
-  const properties = items.filter(item => item.type === 'property');
-  const others = items.filter(item => item.type !== 'property');
-
-  properties.sort((a, b) => {
-    const sectionDiff = getPropertySection(a.prop) - getPropertySection(b.prop);
-    if (sectionDiff !== 0) return sectionDiff;
-    return getPropertyOrder(a.prop) - getPropertyOrder(b.prop);
+  // Second pass: Sort by section, then by order (for both properties and comments)
+  items.sort((a, b) => {
+    if (a.section !== b.section) return a.section - b.section;
+    
+    // Within same section, sort by order
+    return (a.order || 0) - (b.order || 0);
   });
 
-  // Build result with proper gaps between sections
-  const result = [];
-  let currentSection = null;
-
-  for (const item of properties) {
-    const section = getPropertySection(item.prop);
+  // Third pass: Group consecutive comments
+  const finalItems = [];
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
     
-    // Add gap between sections
-    if (currentSection !== null && section !== currentSection && result.length > 0) {
-      result.push('');
+    if (item.type === 'comment') {
+      let commentLines = [item];
+      let j = i + 1;
+      
+      // Look ahead for consecutive comments
+      while (j < items.length && items[j].type === 'comment') {
+        commentLines.push(items[j]);
+        j++;
+      }
+      
+      // Create comment block
+      finalItems.push({
+        type: 'comment-block',
+        lines: commentLines.flatMap(c => c.lines)
+      });
+      
+      i = j - 1; // Skip grouped items
+    } else {
+      finalItems.push(item);
     }
-
-    // Add comments before property
-    for (const comment of item.comments) {
-      result.push(comment);
-    }
-
-    result.push(item.line);
-    currentSection = section;
   }
 
-  // Add other items at the end
-  if (others.length > 0) {
-    if (result.length > 0) {
-      result.push('');
-    }
-    for (const item of others) {
-      for (const comment of item.comments) {
-        result.push(comment);
-      }
-      if (item.line) {
-        result.push(item.line);
-      }
+  // Build result
+  const result = [];
+
+  for (const item of finalItems) {
+    for (const line of item.lines) {
+      result.push(line);
     }
   }
 

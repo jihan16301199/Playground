@@ -4,18 +4,18 @@
 @use "../../../../assets/scss/mixins" as *;
 
 .swipe {
-    width: 100%;
     position: fixed;
+    right: 0;
     // bottom: 0;
     left: 0;
-    right: 0;
     z-index: var(--z-mobile-swiper);
+    width: 100%;
+    touch-action: none;
+    overscroll-behavior: contain;
     border: 1px solid green;
     border-radius: var(--border-radius-radius-lg) var(--border-radius-radius-lg) 0 0;
     background: var(--surface-primary-light);
     box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.10);
-    touch-action: none;
-    overscroll-behavior: contain;
 
     @include media-up(md) {
         display: none;
@@ -23,25 +23,25 @@
 
     &__handle {
         display: flex;
-        height: 42px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: var(--gap-gap-xs);
+        height: 42px;
 
         &--bar {
-            height: 3px;
             width: 87px;
-            background: black;
-            border-radius: 3px;
+            height: 3px;
             // margin: var(--gap-gap-md) auto 0 auto;
+            border-radius: 3px;
+            background: black;
         }
 
         &--label {
-            color: var(--text-primary-70);
-            // text-align: center;
             // margin: 6px auto;
+            color: var(--text-primary-70);
             @include label-2-medium;
+            // text-align: center;
         }
     }
 
@@ -54,9 +54,9 @@
 
 .action {
     position: fixed;
+    right: 0;
     // bottom: 0;
     left: 0;
-    right: 0;
     z-index: var(--z-mobile-actionbar);
 
     @include media-up(md) {
@@ -65,7 +65,7 @@
 
     &__container {
         padding: var(--padding-padding-lg);
-        background: #fff;
         border: 1px solid blue;
+        background: #fff;
     }
 }

@@ -4,19 +4,19 @@
 .container-fluid {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: center;
     align-items: center;
+    height: 100vh;
     // background-color: #dddce1;
     background-color: var(--surface-primary);
 }
 
 .container-xxl {
     display: flex;
-    height: 90%;
     justify-content: space-between;
     align-items: center;
     gap: var(--gap-gap-2xl);
+    height: 90%;
 
     @include media-between(2xl, 4xl) {
         max-width: 1440px !important;
@@ -26,14 +26,14 @@
 .section {
     display: flex;
     // flex-direction: column;
+    // justify-content: space-between;
+    gap: var(--gap-gap-4xl);
     width: 100%;
     max-width: 712px;
+
     // height: 100%;
-    // justify-content: space-between;
     // padding: var(--padding-padding-3xl);
     // border-radius: var(--border-radius-radius-lg);
-    gap: var(--gap-gap-4xl);
-
     &__services {
         // flex: 1 0 0;
         overflow: hidden;
@@ -47,8 +47,8 @@
         gap: var(--gap-gap-md);
 
         &--dash {
-            height: 8px;
             width: 8px;
+            height: 8px;
             border-radius: var(--border-radius-radius-xs);
             background-color: var(--surface-primary-50);
             transition: all 0.75s cubic-bezier(0.35, 0, 0.25, 1);
@@ -75,19 +75,18 @@
     flex-direction: column;
     align-items: flex-start;
     gap: var(--gap-gap-4xl);
-
-    visibility: hidden;
+    height: 0;
     overflow: hidden;
     outline: 0;
-    height: 0;
+    visibility: hidden;
     transition: transform 0.75s cubic-bezier(0.35, 0, 0.25, 1), opacity 0.75s cubic-bezier(0.35, 0, 0.25, 1);
 
     &__current {
+        height: 100%;
         overflow: visible;
+        opacity: 1;
         visibility: visible;
         transform: none;
-        height: 100%;
-        opacity: 1;
     }
 
     &__previous {
@@ -123,14 +122,13 @@
 
         &--image {
             display: flex;
+            justify-content: center;
+            align-items: center;
             width: 36px;
             height: 36px;
             padding: var(--padding-padding-sm);
-            justify-content: center;
-            align-items: center;
-
-            background-color: #2d2d2d;
             border-radius: 8px;
+            background-color: #2d2d2d;
 
             img {
                 width: 100%;
@@ -151,22 +149,21 @@
 
         &--label {
             color: var(--text-primary-lightest);
-            text-transform: uppercase;
             @include label-2-bold;
             letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
 
         &--highlight {
             color: #5daa80;
-            text-transform: uppercase;
             @include label-2-bold;
             letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
 
         &--tag {
             display: flex;
             flex-wrap: wrap;
-
             @include display-1-demibold;
             font-size: 4.5rem;
             line-height: 1.1;
@@ -241,10 +238,10 @@
 
         &--subtext {
             color: var(--text-primary-lighter);
-            // @include title-2-medium;
             @include title-2-demibold;
-            // letter-spacing: -0.02em;
 
+            // letter-spacing: -0.02em;
+            // @include title-2-medium;
             &--lightest {
                 color: var(--text-primary-lightest);
             }
@@ -258,19 +255,18 @@
         gap: var(--gap-gap-lg);
 
         &--primary {
-            color: var(--text-inverse);
             padding: var(--padding-padding-xl) var(--padding-padding-6xl);
-            @include title-2-bold;
-            border-radius: var(--border-radius-radius-md);
+            color: var(--text-inverse);
             border-style: none;
+            border-radius: var(--border-radius-radius-md);
             background-color: #5daa80;
+            @include title-2-bold;
             transition: all 0.15s ease-in-out;
-
-            animation-duration: 1750ms;
-            animation-fill-mode: both;
-            animation-iteration-count: infinite;
             animation-name: button-shadow-throb;
+            animation-duration: 1750ms;
             animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
 
             &:hover {
                 background-color: #3d966d;
@@ -278,12 +274,12 @@
         }
 
         &--blank {
-            color: var(--text-primary);
             padding: var(--padding-padding-xl) var(--padding-padding-6xl);
-            @include title-2-bold;
-            border-radius: var(--border-radius-radius-md);
+            color: var(--text-primary);
             border-style: none;
+            border-radius: var(--border-radius-radius-md);
             background-color: transparent;
+            @include title-2-bold;
             transition: all 0.15s ease-in-out;
 
             &:hover {
@@ -302,25 +298,24 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: var(--gap-gap-md);
             align-self: stretch;
+            gap: var(--gap-gap-md);
 
             &__title {
                 display: flex;
-                padding: var(--padding-padding-sm) var(--padding-padding-md);
                 justify-content: center;
                 align-items: center;
                 gap: 10px;
-
+                padding: var(--padding-padding-sm) var(--padding-padding-md);
                 border-radius: 68px;
                 background: var(--buttons-solid-hover);
 
                 &--icon {
                     display: flex;
-                    width: 20px;
-                    height: 20px;
                     justify-content: center;
                     align-items: center;
+                    width: 20px;
+                    height: 20px;
                     aspect-ratio: 1/1;
                     color: #5daa80;
                 }
@@ -337,22 +332,21 @@
                 @include title-3-medium;
             }
         }
-
     }
 
     &__phases {
         display: flex;
-        width: 100%;
         flex-wrap: wrap;
         justify-content: center;
         gap: var(--gap-gap-2xl);
+        width: 100%;
 
         .phase {
             display: flex;
-            max-width: 220px;
             flex-direction: column;
             align-items: center;
             gap: var(--gap-gap-2xl);
+            max-width: 220px;
 
             &__title {
                 display: flex;
@@ -366,14 +360,13 @@
                 }
 
                 &--icon {
-                    color: #5daa80;
                     display: flex;
-                    width: 46px;
-                    height: 46px;
                     justify-content: center;
                     align-items: center;
+                    width: 46px;
+                    height: 46px;
                     aspect-ratio: 1/1;
-
+                    color: #5daa80;
                     border-radius: var(--border-radius-radius-lg);
                     background: var(--surface-primary-light);
                     box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 0 #0000, 0 1px 3px 0 #0000001A,
@@ -389,14 +382,14 @@
 
                 &--text {
                     color: var(--text-primary);
-                    text-align: center;
                     @include title-2-demibold;
+                    text-align: center;
                 }
 
                 &--subtext {
                     color: var(--text-primary-lightest);
-                    text-align: center;
                     @include body-3-medium;
+                    text-align: center;
                 }
             }
         }
@@ -411,10 +404,10 @@
 
         &--text {
             color: var(--text-primary-lightest);
-            text-transform: uppercase;
             font-size: 11px;
             font-weight: 800;
             letter-spacing: 0.1em;
+            text-transform: uppercase;
         }
 
         &--divider {
@@ -428,13 +421,13 @@
 .stepper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: var(--gap-gap-4xl);
     width: 100%;
     max-width: 450px;
     height: 100%;
-    justify-content: space-between;
     padding: var(--padding-padding-3xl);
     border-radius: var(--border-radius-radius-lg);
-    gap: var(--gap-gap-4xl);
 
     &__background {
         &--primary {
@@ -450,10 +443,9 @@
         &--image {
             background-color: gray;
             background-image: url(./../../../assets/image/login/background.png);
-            background-size: cover;
             background-position: center;
+            background-size: cover;
             background-repeat: no-repeat;
-
         }
     }
 
@@ -468,8 +460,8 @@
         gap: var(--gap-gap-sm);
 
         &--dot {
-            height: 4px;
             width: 12px;
+            height: 4px;
             border-radius: var(--border-radius-radius-xs);
             background-color: var(--surface-primary-50);
             transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);
@@ -486,11 +478,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    visibility: hidden;
+    height: 0;
     overflow: hidden;
     outline: 0;
-    height: 0;
+    visibility: hidden;
     transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);
 
     &.login {
@@ -549,9 +540,9 @@
             display: flex;
 
             .reactive-form {
+                flex: 1 0 0;
                 display: flex;
                 flex-direction: column;
-                flex: 1 0 0;
                 align-items: center;
                 gap: var(--gap-gap-lg);
 
@@ -567,23 +558,22 @@
 
                         &--label {
                             color: var(--text-inverse-light);
-                            padding-inline: var(--padding-padding-md);
                             @include title-2-medium;
+                            padding-inline: var(--padding-padding-md);
                         }
                     }
 
                     &--input {
-                        color: var(--text-inverse-light);
-                        @include title-3-medium;
                         height: 50px;
                         padding: var(--padding-padding-sm) var(--padding-padding-2xl);
-
-                        background-color: var(--surface-primary-10);
-                        border-radius: var(--border-radius-radius-md);
-                        backdrop-filter: blur(var(--backdrop-filter-blur-xs));
+                        color: var(--text-inverse-light);
                         border: 1px solid transparent;
+                        border-radius: var(--border-radius-radius-md);
                         outline: none;
+                        background-color: var(--surface-primary-10);
+                        @include title-3-medium;
                         transition: all 0.15s ease-in;
+                        backdrop-filter: blur(var(--backdrop-filter-blur-xs));
 
                         &::placeholder {
                             color: var(--text-inverse-30);
@@ -612,10 +602,10 @@
 
                                     &--icon {
                                         display: flex;
-                                        height: 16px;
-                                        width: 16px;
                                         justify-content: center;
                                         align-items: center;
+                                        width: 16px;
+                                        height: 16px;
                                         aspect-ratio: 1/1;
                                     }
 
@@ -627,9 +617,9 @@
                         }
 
                         &--link {
+                            padding-right: var(--padding-padding-md);
                             color: #5daa80;
                             // color: var(--text-inverse-80);
-                            padding-right: var(--padding-padding-md);
                             @include body-3-regular;
                             cursor: pointer;
 
@@ -651,10 +641,10 @@
     }
 
     &__current {
+        height: 100%;
         overflow: visible;
         visibility: visible;
         transform: none;
-        height: 100%;
     }
 
     &__previous {

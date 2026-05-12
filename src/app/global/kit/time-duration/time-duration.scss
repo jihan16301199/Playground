@@ -4,10 +4,10 @@
 .time-duration {
     &__default {
         display: flex;
-        height: 26px;
         justify-content: flex-start;
         align-items: center;
         gap: var(--gap-gap-xs);
+        height: 26px;
 
         &.time-duration {
 
@@ -26,10 +26,10 @@
 
         &--icon {
             display: flex;
-            width: 16px;
-            height: 16px;
             justify-content: center;
             align-items: center;
+            width: 16px;
+            height: 16px;
             aspect-ratio: 1/1;
         }
 
@@ -41,10 +41,10 @@
 
     &__sm {
         display: flex;
-        height: 20px;
         justify-content: flex-start;
         align-items: center;
         gap: var(--gap-gap-xs);
+        height: 20px;
 
         &.time-duration {
 
@@ -63,10 +63,10 @@
 
         &--icon {
             display: flex;
-            width: 14px;
-            height: 14px;
             justify-content: center;
             align-items: center;
+            width: 14px;
+            height: 14px;
             aspect-ratio: 1/1;
         }
 
@@ -78,10 +78,10 @@
 
     &__md {
         display: flex;
-        height: 26px;
         justify-content: flex-start;
         align-items: center;
         gap: var(--gap-gap-xs);
+        height: 26px;
 
         &.time-duration {
 
@@ -100,10 +100,10 @@
 
         &--icon {
             display: flex;
-            width: 16px;
-            height: 16px;
             justify-content: center;
             align-items: center;
+            width: 16px;
+            height: 16px;
             aspect-ratio: 1/1;
         }
 
@@ -115,71 +115,71 @@
 
     &--default {
         &-border {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--surface-inverse);
             background-color: transparent;
+            padding-inline: var(--padding-padding-sm);
         }
 
         &-solid {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--surface-inverse);
             background-color: var(--surface-inverse);
+            padding-inline: var(--padding-padding-sm);
         }
     }
 
     &--primary {
         &-border {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--stroke-accent-secondary);
             background-color: transparent;
+            padding-inline: var(--padding-padding-sm);
         }
 
         &-solid {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--stroke-accent-secondary);
             background-color: var(--surface-accent-secondary);
+            padding-inline: var(--padding-padding-sm);
         }
     }
 
     &--accent {
         &-border {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--stroke-accent);
             background-color: transparent;
+            padding-inline: var(--padding-padding-sm);
         }
 
         &-solid {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--stroke-accent);
             background-color: var(--surface-accent);
+            padding-inline: var(--padding-padding-sm);
         }
     }
 
     &--warning {
         &-border {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--stroke-warning);
             background-color: transparent;
+            padding-inline: var(--padding-padding-sm);
         }
 
         &-solid {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--stroke-warning);
             background-color: var(--surface-warning);
+            padding-inline: var(--padding-padding-sm);
         }
     }
 
     &--error {
         &-border {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--stroke-error);
             background-color: transparent;
+            padding-inline: var(--padding-padding-sm);
         }
 
         &-solid {
-            padding-inline: var(--padding-padding-sm);
             border: 1px solid var(--stroke-error);
             background-color: var(--surface-error);
+            padding-inline: var(--padding-padding-sm);
         }
     }
 

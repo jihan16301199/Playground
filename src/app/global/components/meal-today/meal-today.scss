@@ -3,15 +3,14 @@
 
 .meal-today {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     width: 204px;
     height: 100%;
     min-height: 204px;
     max-height: 240px;
     padding: var(--padding-padding-lg) var(--padding-padding-lg) var(--padding-padding-lg) var(--padding-padding-xl);
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-
     border-radius: var(--border-radius-radius-xl);
     background: var(--surface-primary-light);
 

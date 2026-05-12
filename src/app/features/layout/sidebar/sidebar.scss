@@ -2,12 +2,11 @@
 
 .sidebar {
     display: flex;
-    height: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     gap: var(--gap-gap-sm);
-
+    height: 100%;
     background-color: var(--surface-primary);
 
     &__divider {
@@ -23,17 +22,16 @@
 
         &--menu {
             display: flex;
-            padding: 0 var(--padding-padding-lg);
             flex-direction: column;
             justify-content: flex-start;
             gap: var(--gap-gap-sm);
+            padding: 0 var(--padding-padding-lg);
 
             .menu {
                 display: flex;
-                padding: 10px var(--padding-padding-md);
                 justify-content: space-between;
                 align-items: center;
-
+                padding: 10px var(--padding-padding-md);
                 color: var(--text-primary);
                 border-radius: var(--border-radius-radius-md);
                 cursor: pointer;
@@ -48,18 +46,18 @@
                 }
 
                 &__title {
+                    flex: 1 0 0;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     gap: var(--gap-gap-md);
-                    flex: 1 0 0;
 
                     &--icon {
                         display: flex;
-                        width: 18px;
-                        height: 18px;
                         justify-content: center;
                         align-items: center;
+                        width: 18px;
+                        height: 18px;
                         aspect-ratio: 1/1;
                     }
 
@@ -71,10 +69,10 @@
 
                 &__icon {
                     display: flex;
-                    width: 18px;
-                    height: 18px;
                     justify-content: center;
                     align-items: center;
+                    width: 18px;
+                    height: 18px;
                     aspect-ratio: 1/1;
                 }
             }
@@ -90,17 +88,16 @@
 
         &--menu {
             display: flex;
-            padding: 0 var(--padding-padding-lg);
             flex-direction: column;
             justify-content: flex-start;
             gap: var(--gap-gap-sm);
+            padding: 0 var(--padding-padding-lg);
 
             .menu {
                 display: flex;
-                padding: 10px var(--padding-padding-md);
                 justify-content: space-between;
                 align-items: center;
-
+                padding: 10px var(--padding-padding-md);
                 color: var(--text-primary);
                 border-radius: var(--border-radius-radius-md);
                 cursor: pointer;
@@ -115,18 +112,18 @@
                 }
 
                 &__title {
+                    flex: 1 0 0;
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
                     gap: var(--gap-gap-md);
-                    flex: 1 0 0;
 
                     &--icon {
                         display: flex;
-                        width: 18px;
-                        height: 18px;
                         justify-content: center;
                         align-items: center;
+                        width: 18px;
+                        height: 18px;
                         aspect-ratio: 1/1;
                     }
 
@@ -137,12 +134,11 @@
 
                     &--badge {
                         display: flex;
+                        justify-content: center;
+                        align-items: center;
                         width: 20px;
                         height: 20px;
                         padding: 2px var(--padding-padding-sm);
-                        justify-content: center;
-                        align-items: center;
-
                         border-radius: var(--border-radius-radius-sm);
                         background-color: var(--surface-accent-secondary-10);
 
@@ -155,10 +151,10 @@
 
                 &__icon {
                     display: flex;
-                    width: 18px;
-                    height: 18px;
                     justify-content: center;
                     align-items: center;
+                    width: 18px;
+                    height: 18px;
                     aspect-ratio: 1/1;
                 }
             }
@@ -166,9 +162,9 @@
 
         &--interactive {
             display: flex;
-            padding: 0 var(--padding-padding-lg);
             flex-direction: column;
             gap: var(--gap-gap-sm);
+            padding: 0 var(--padding-padding-lg);
         }
 
         &--theme {
@@ -189,27 +185,25 @@
                     display: flex;
                     justify-content: flex-start;
                     align-items: center;
-                    // gap: var(--gap-gap-sm);
 
+                    // gap: var(--gap-gap-sm);
                     &--options {
+                        // flex: 1 0 0;
                         display: flex;
                         gap: var(--gap-gap-sm);
                         padding: var(--padding-padding-sm);
                         border-radius: var(--border-radius-radius-md);
                         background-color: var(--surface-primary-light);
-                        // flex: 1 0 0;
 
                         .option {
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             gap: var(--gap-gap-sm);
-
                             padding: var(--padding-padding-sm) var(--padding-padding-lg);
+                            color: var(--text-primary);
                             border-radius: var(--border-radius-radius-md);
                             background-color: var(--surface-primary);
-
-                            color: var(--text-primary);
                             cursor: pointer;
 
                             &:hover {
@@ -223,10 +217,10 @@
 
                             &--icon {
                                 display: flex;
-                                width: 16px;
-                                height: 16px;
                                 justify-content: center;
                                 align-items: center;
+                                width: 16px;
+                                height: 16px;
                                 aspect-ratio: 1/1;
                             }
 
@@ -244,14 +238,14 @@
             justify-content: space-between;
             align-items: flex-end;
             gap: var(--gap-gap-sm);
-            // border-top: 1px solid var(--surface-inverse-10);
 
+            // border-top: 1px solid var(--surface-inverse-10);
             .profile {
-                display: flex;
                 flex: 1 0 0;
+                display: flex;
                 align-items: center;
-                padding: var(--padding-padding-sm);
                 gap: var(--gap-gap-md);
+                padding: var(--padding-padding-sm);
                 border-radius: var(--border-radius-radius-md);
                 cursor: pointer;
 
@@ -261,10 +255,10 @@
 
                 &__avatar {
                     display: flex;
-                    width: 40px;
-                    height: 40px;
                     justify-content: center;
                     align-items: center;
+                    width: 40px;
+                    height: 40px;
                     aspect-ratio: 1/1;
                     border-radius: 50%;
                     background-color: var(--surface-accent-secondary-10);
@@ -298,10 +292,9 @@
 
                 &__button {
                     padding: var(--padding-padding-sm);
+                    color: var(--text-primary);
                     border-radius: var(--border-radius-radius-md);
                     background-color: var(--surface-primary);
-
-                    color: var(--text-primary);
                     cursor: pointer;
 
                     &:hover {
@@ -311,10 +304,10 @@
 
                     &--icon {
                         display: flex;
-                        width: 18px;
-                        height: 18px;
                         justify-content: center;
                         align-items: center;
+                        width: 18px;
+                        height: 18px;
                         aspect-ratio: 1/1;
                     }
                 }
@@ -324,9 +317,9 @@
         &--link {
             display: flex;
             flex-wrap: wrap;
-            padding: 0 var(--padding-padding-lg) var(--padding-padding-lg);
             justify-content: flex-start;
             column-gap: var(--gap-gap-sm);
+            padding: 0 var(--padding-padding-lg) var(--padding-padding-lg);
 
             .link {
                 &__text {
