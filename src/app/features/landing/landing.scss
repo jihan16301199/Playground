@@ -1,0 +1,1309 @@
+@use "../../../assets/scss/main" as *;
+
+// ─── Design tokens ──────────────────────────────────────────────────────────────
+
+$accent: #45a87a;
+$accent-deep: #3d966d;
+$accent-glow: rgba(69, 168, 122, 0.35);
+
+// ─── Scroll-animation base states ───────────────────────────────────────────────
+
+[data-animate] {
+    opacity: 0;
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-animate="fade-up"] {
+    transform: translateY(52px);
+}
+
+[data-animate="fade-in"] {
+    transform: none;
+}
+
+[data-animate="scale-in"] {
+    transform: scale(0.88);
+}
+
+[data-animate="slide-left"] {
+    transform: translateX(-60px);
+}
+
+[data-animate="slide-right"] {
+    transform: translateX(60px);
+}
+
+[data-animate].is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+// ─── Global ──────────────────────────────────────────────────────────────────────
+
+:host {
+    display: block;
+    overflow-x: hidden;
+    color: #fff;
+    background: #000;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+}
+
+// ─── Buttons ─────────────────────────────────────────────────────────────────────
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 980px;
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: filter 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(1.12);
+        transform: scale(1.02);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &--primary {
+        color: #fff;
+        background: $accent;
+
+        &:hover {
+            background: $accent-deep;
+            filter: none;
+        }
+    }
+
+    &--ghost {
+        padding: 14px 0;
+
+        color: rgba(255, 255, 255, 0.75);
+        background: transparent;
+
+        font-size: 17px;
+        font-weight: 400;
+
+        &:hover {
+            color: #fff;
+            filter: none;
+        }
+    }
+
+    &--outline {
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
+        background: transparent;
+
+        &:hover {
+            border-color: rgba(255, 255, 255, 0.55);
+            filter: none;
+        }
+    }
+
+    &--lg {
+        padding: 18px 40px;
+        font-size: 17px;
+    }
+}
+
+// ─── Nav ─────────────────────────────────────────────────────────────────────────
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 52px;
+    padding: 0 48px;
+
+    background: transparent;
+
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
+
+    &--scrolled {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        background: rgba(0, 0, 0, 0.72);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+
+        &--logo {
+            color: $accent;
+            font-size: 22px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        gap: 32px;
+
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        a {
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 13px;
+            letter-spacing: 0.01em;
+            text-decoration: none;
+
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+    }
+
+    &__cta {
+        padding: 7px 18px;
+
+        color: #fff;
+        border: none;
+        border-radius: 980px;
+        background: $accent;
+
+        font-size: 13px;
+        font-weight: 600;
+
+        transition: background 0.2s;
+        cursor: pointer;
+    }
+}
+
+// ─── Hero ─────────────────────────────────────────────────────────────────────────
+
+.hero {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100svh;
+    padding: 120px 24px 80px;
+
+    overflow: hidden;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(69, 168, 122, 0.15) 0%, transparent 70%),
+        #000;
+
+    text-align: center;
+
+    &__eyebrow {
+        margin-bottom: 24px;
+
+        color: $accent;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    &__headline {
+        margin: 0 0 28px;
+
+        font-size: clamp(52px, 9vw, 110px);
+        font-weight: 700;
+        line-height: 1.02;
+        letter-spacing: -0.04em;
+
+        &--gradient {
+            background: linear-gradient(135deg, $accent 0%, #7eddb2 60%, #b8f5d7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__sub {
+        max-width: 520px;
+        margin: 0 0 40px;
+
+        color: rgba(255, 255, 255, 0.6);
+        font-size: clamp(16px, 2.5vw, 22px);
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        margin-bottom: 80px;
+    }
+
+    &__visual {
+        &--card {
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 40px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(24px);
+        }
+    }
+
+    &__visual--ring {
+        position: absolute;
+
+        border: 1px solid rgba(69, 168, 122, 0.2);
+        border-radius: 50%;
+        animation: pulse-ring 3s ease-out infinite;
+    }
+
+    &__visual--label {
+        position: relative;
+        z-index: 1;
+
+        margin-bottom: 8px;
+
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+
+    &__visual--value {
+        position: relative;
+        z-index: 1;
+
+        color: $accent;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.04em;
+
+        span {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 28px;
+        }
+    }
+
+    &__scroll-hint {
+        position: absolute;
+        bottom: 36px;
+        left: 50%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        transform: translateX(-50%);
+
+        span {
+            display: block;
+
+            width: 2px;
+            height: 8px;
+            border-radius: 2px;
+            background: rgba(255, 255, 255, 0.35);
+
+            animation: scroll-hint 1.4s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes pulse-ring {
+    0% {
+        opacity: 0.6;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.12);
+    }
+}
+
+@keyframes scroll-hint {
+
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+// ─── Strip ────────────────────────────────────────────────────────────────────────
+
+.strip {
+    padding: 32px 48px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: #0a0a0a;
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 0 40px;
+
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__divider {
+        flex-shrink: 0;
+        width: 1px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.12);
+    }
+}
+
+// ─── Feature sections ─────────────────────────────────────────────────────────────
+
+.feature {
+    display: grid;
+    align-items: center;
+    gap: 80px;
+
+    min-height: 80vh;
+    padding: 120px 80px;
+
+    grid-template-columns: 1fr 1fr;
+
+    &__label {
+        margin-bottom: 16px;
+
+        color: $accent;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    &__headline {
+        margin: 0 0 24px;
+        font-size: clamp(36px, 4.5vw, 58px);
+        font-weight: 700;
+        line-height: 1.07;
+        letter-spacing: -0.03em;
+    }
+
+    &__body {
+        max-width: 440px;
+        margin: 0 0 32px;
+
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.65;
+    }
+
+    &__link {
+        color: $accent;
+        font-size: 16px;
+        font-weight: 500;
+        text-decoration: none;
+
+        transition: letter-spacing 0.2s;
+        cursor: pointer;
+    }
+}
+
+// ─── Mock UI components ────────────────────────────────────────────────────────────
+
+.mock {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.55);
+
+    &--dark {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: #111;
+    }
+
+    &--light {
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: #141414;
+    }
+
+    &__bar {
+        display: flex;
+        gap: 6px;
+        padding: 14px 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+        span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.12);
+        }
+    }
+
+    &__rows {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 24px 28px;
+    }
+
+    &__row {
+        display: grid;
+        align-items: center;
+        gap: 16px;
+        grid-template-columns: 60px 1fr 40px;
+
+        &--label {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+        }
+
+        &--track {
+            height: 6px;
+            overflow: hidden;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        &--fill {
+            height: 100%;
+            border-radius: 6px;
+            background: linear-gradient(90deg, $accent, lighten($accent, 12%));
+
+            animation: bar-grow 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+
+        &--val {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 12px;
+            font-weight: 600;
+            text-align: right;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 24px;
+    }
+
+    &__meal-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        padding: 14px 18px;
+
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.04);
+
+        &--info {
+            flex: 1;
+        }
+
+        &--name {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        &--cal {
+            margin-top: 3px;
+            color: rgba(255, 255, 255, 0.45);
+            font-size: 11px;
+        }
+
+        &--badge {
+            padding: 4px 10px;
+
+            color: $accent;
+            border-radius: 20px;
+            background: rgba(69, 168, 122, 0.15);
+
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@keyframes bar-grow {
+    from {
+        width: 0 !important;
+    }
+}
+
+// ─── Metrics ──────────────────────────────────────────────────────────────────────
+
+.metrics {
+    padding: 120px 48px;
+    background: #000;
+    text-align: center;
+
+    &__header {
+        margin-bottom: 80px;
+    }
+
+    &__eyebrow {
+        margin: 0 0 16px;
+
+        color: $accent;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    &__headline {
+        margin: 0;
+        font-size: clamp(36px, 5vw, 62px);
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+    }
+
+    &__grid {
+        display: grid;
+        gap: 2px;
+        max-width: 1000px;
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+        padding: 48px 24px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.03);
+        transition: background 0.3s;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.055);
+        }
+
+        &--value {
+            display: inline;
+
+            color: #fff;
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        &--unit {
+            display: inline;
+            margin-left: 4px;
+            color: $accent;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        &--label {
+            margin-top: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+        }
+    }
+}
+
+// ─── Sticky Showcase ──────────────────────────────────────────────────────────────
+
+.showcase {
+    position: relative;
+
+    &__sticky {
+        position: sticky;
+        top: 0;
+
+        display: grid;
+        align-items: center;
+        gap: 80px;
+
+        height: 100svh;
+        padding: 0 80px;
+
+        overflow: hidden;
+        background: #06100b;
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__stage {
+        position: relative;
+    }
+
+    &__panel {
+        position: absolute;
+        top: 50%;
+
+        opacity: 0;
+        transform: translateY(-50%) translateY(24px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        pointer-events: none;
+
+        &--active {
+            opacity: 1;
+            transform: translateY(-50%);
+            pointer-events: auto;
+        }
+
+        h3 {
+            margin: 0 0 20px;
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+        }
+
+        p {
+            max-width: 400px;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.55);
+            font-size: 18px;
+            line-height: 1.65;
+        }
+    }
+
+    &__visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__dial {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 240px;
+        height: 240px;
+
+        svg {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+
+            circle:last-of-type {
+                transition: stroke-dashoffset 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+        }
+
+        &--inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &--pct {
+            color: #fff;
+            font-size: 42px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+
+        &--caption {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+    }
+
+    &__scroll-driver {
+        position: relative;
+    }
+
+    &__trigger {
+        height: 100svh;
+    }
+}
+
+// ─── Testimonial ──────────────────────────────────────────────────────────────────
+
+.testimonial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 120px 48px;
+
+    background: #030a06;
+
+    &__inner {
+        max-width: 760px;
+        text-align: center;
+    }
+
+    &__quote {
+        margin: 0 0 40px;
+
+        color: rgba(255, 255, 255, 0.9);
+        font-size: clamp(22px, 3.5vw, 34px);
+        font-weight: 500;
+        line-height: 1.4;
+        letter-spacing: -0.02em;
+
+        quotes: none;
+    }
+
+    &__author {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        &--avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 44px;
+            height: 44px;
+            color: $accent;
+            border: 1.5px solid $accent;
+            border-radius: 50%;
+            background: $accent-glow;
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        &--name {
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        &--role {
+            margin-top: 2px;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+        }
+    }
+}
+
+// ─── Pricing ──────────────────────────────────────────────────────────────────────
+
+.pricing {
+    padding: 120px 48px;
+
+    background: #000;
+
+    text-align: center;
+
+    &__eyebrow {
+        margin: 0 0 16px;
+
+        color: $accent;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    &__headline {
+        margin: 0;
+        font-size: clamp(36px, 5vw, 62px);
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        width: 320px;
+        padding: 40px;
+
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.03);
+
+        text-align: left;
+
+        transition: border-color 0.3s;
+
+        &--featured {
+            position: relative;
+            border-color: rgba(69, 168, 122, 0.4);
+            background: rgba(69, 168, 122, 0.07);
+        }
+
+        &--badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+
+            padding: 5px 14px;
+
+            color: #fff;
+            border-radius: 20px;
+            background: $accent;
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+
+            transform: translateX(-50%);
+        }
+
+        &--name {
+            margin-bottom: 8px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        &--price {
+            margin-bottom: 28px;
+
+            color: $accent;
+            font-size: 52px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+
+            span {
+                color: rgba(255, 255, 255, 0.45);
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+
+        &--features {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            width: 100%;
+            margin: 0 0 32px;
+            padding: 0;
+
+            list-style: none;
+
+            li {
+                color: rgba(255, 255, 255, 0.72);
+                font-size: 14px;
+            }
+        }
+
+        .btn {
+            width: 100%;
+        }
+    }
+}
+
+// ─── CTA ─────────────────────────────────────────────────────────────────────────
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 160px 48px;
+
+    background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(69, 168, 122, 0.2) 0%, transparent 70%),
+        #000;
+
+    text-align: center;
+
+    &__headline {
+        margin: 0 0 20px;
+
+        font-size: clamp(44px, 7vw, 88px);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+
+        &--gradient {
+            background: linear-gradient(135deg, $accent 0%, #7eddb2 60%, #b8f5d7 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__sub {
+        margin: 0 0 40px;
+        color: rgba(255, 255, 255, 0.45);
+        font-size: 17px;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+// ─── Footer ────────────────────────────────────────────────────────────────────────
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 28px 48px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    background: #000;
+
+    &__brand {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__links {
+        display: flex;
+        gap: 28px;
+
+        a {
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 13px;
+            text-decoration: none;
+
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+    }
+
+    &__copy {
+        color: rgba(255, 255, 255, 0.25);
+        font-size: 12px;
+    }
+}
+
+// ─── Food Card Slider ─────────────────────────────────────────────────────────────
+
+.food-slider {
+    padding: 120px 0;
+    background: #0a0a0a;
+
+    &__inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 64px;
+        overflow: hidden;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 52px;
+    }
+
+    &__eyebrow {
+        margin: 0 0 12px;
+
+        color: $accent;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    &__headline {
+        margin: 0;
+        font-size: clamp(32px, 4vw, 52px);
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+    }
+
+    &__nav {
+        display: flex;
+        flex-shrink: 0;
+        gap: 10px;
+        padding-bottom: 4px;
+    }
+
+    &__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 48px;
+        height: 48px;
+        padding: 0;
+
+        color: #fff;
+        border: 1.5px solid rgba(255, 255, 255, 0.18);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.04);
+
+        font-size: 24px;
+        line-height: 1;
+
+        transition: border-color 0.2s, background 0.2s;
+        cursor: pointer;
+
+        &:hover:not(:disabled) {
+            border-color: rgba(255, 255, 255, 0.55);
+            background: rgba(255, 255, 255, 0.09);
+        }
+
+        &:disabled {
+            opacity: 0.22;
+            cursor: default;
+        }
+    }
+
+    &__viewport {
+        overflow: visible;
+    }
+
+    &__track {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 24px;
+        transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+}
+
+// ─── Food Card ──────────────────────────────────────────────────────────────────
+
+.food-card {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 280px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 24px;
+    background: #111;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    &:hover {
+        box-shadow: 0 28px 64px rgba(0, 0, 0, 0.65);
+        transform: translateY(-8px);
+    }
+
+    &__img {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 180px;
+        font-size: 64px;
+
+        &::after {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.45) 100%);
+            content: '';
+        }
+    }
+
+    &__body {
+        padding: 20px 20px 60px;
+    }
+
+    &__name {
+        margin-bottom: 4px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    &__cal {
+        margin-bottom: 16px;
+        color: rgba(255, 255, 255, 0.38);
+        font-size: 12px;
+    }
+
+    &__macros {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    &__macro {
+        padding: 4px 10px;
+
+        border-radius: 20px;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+    }
+
+    &__add {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 38px;
+        height: 38px;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        background: $accent;
+
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 1;
+
+        transition: background 0.2s, transform 0.15s;
+        cursor: pointer;
+
+        &:hover {
+            background: $accent-deep;
+            transform: scale(1.1);
+        }
+    }
+}
+
+// ─── Parallax Blur Section ────────────────────────────────────────────────────────
+
+.parallax-section {
+    position: relative;
+    height: 380vh;
+    background: #000;
+
+    // Single sticky viewport — all layers live inside
+    &__sticky {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    // Background image — 150vh tall so there is 50vh of excess to translate down
+    &__bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+
+        height: 150vh;
+        // background-image: url('/assets/image/food/meal-1.jpg');
+        background-position: center top;
+        background-size: cover;
+
+        will-change: transform;
+    }
+
+    // Blur + dark scrim overlay — JS drives backdrop-filter and background
+    &__blur {
+        position: absolute;
+        z-index: 2;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    // Content — starts invisible+translated below, JS animates it in
+    &__content {
+        position: absolute;
+        z-index: 3;
+        inset: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        padding: 0 80px 120px;
+
+        opacity: 0;
+        text-align: center;
+
+        transform: translateY(80px);
+        will-change: opacity, transform;
+    }
+
+    &__eyebrow {
+        margin: 0 0 16px;
+
+        color: $accent;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+    }
+
+    &__headline {
+        margin: 0 0 28px;
+        font-size: clamp(44px, 6.5vw, 84px);
+        font-weight: 700;
+        line-height: 1.04;
+        letter-spacing: -0.04em;
+    }
+
+    &__body {
+        max-width: 500px;
+        margin: 0 0 44px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 18px;
+        line-height: 1.65;
+    }
+}
