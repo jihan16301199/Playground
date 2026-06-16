@@ -9,15 +9,16 @@ const path = require('path');
  */
 const CSS_PROPERTY_ORDER = [
   // 1. Positioning
-  'position', 'top', 'right', 'bottom', 'left', 'z-index', 'inset',
+  'content', 'position', 'top', 'right', 'bottom', 'left', 'z-index', 'inset',
   'inset-inline', 'inset-inline-start', 'inset-inline-end',
   'inset-block', 'inset-block-start', 'inset-block-end',
   
   // 2. Display & Layout
-  'flex', 'display', 'flex-direction', 'flex-wrap', 'flex-flow', 'flex-grow', 'flex-shrink', 'flex-basis',
-  'justify-content', 'align-items', 'align-content', 'align-self', 'gap', 'row-gap', 'column-gap',
-  'grid', 'grid-template', 'grid-auto-flow', 'grid-column', 'grid-row', 'place-items', 'place-content',
-  'order',
+  // 2.1 flex child
+  'flex', 'flex-grow', 'flex-shrink', 'flex-basis', 'align-self', 'order', 'grid-column', 'grid-row',
+  // 2.2 flex parent
+  'display', 'flex-direction', 'flex-wrap', 'flex-flow', 'justify-content', 'align-items', 'align-content',
+  'gap', 'row-gap', 'column-gap', 'grid', 'grid-template', 'grid-auto-flow', 'place-items', 'place-content',
   
   // 3. Sizing
   'width', 'min-width', 'max-width', 'height', 'min-height', 'max-height',
@@ -52,7 +53,7 @@ const CSS_PROPERTY_ORDER = [
   'visibility',
   
   // 9. Typography
-  'font', 'font-family', 'font-size', 'font-size-adjust', 'font-weight', 'font-style',
+  'font', 'font-family', 'font-size', 'font-size-adjust', 'font-style', 'font-weight',
   'font-variant', 'font-stretch', 'line-height', 'letter-spacing', 'word-spacing', 'text-align', 'text-align-last',
   'text-decoration', 'text-decoration-line', 'text-decoration-style', 'text-decoration-color', 'text-transform',
   'text-indent', 'text-shadow', 'text-rendering', 'text-orientation', 'font-smoothing',
@@ -66,7 +67,7 @@ const CSS_PROPERTY_ORDER = [
   'cursor', 'pointer-events', 'user-select', 'user-drag', 'user-modify', 'resize', 'scroll-behavior',
   
   // 12. Misc
-  'will-change', 'contain', 'content', 'counter-increment', 'counter-reset', 'tab-size',
+  'will-change', 'contain', 'counter-increment', 'counter-reset', 'tab-size',
   'hyphens', 'orphans', 'widows', 'page-break-before', 'page-break-after', 'page-break-inside',
   'box-sizing', 'box-decoration-break'
 ];
@@ -76,14 +77,14 @@ const CSS_PROPERTY_ORDER = [
  */
 const PROPERTY_SECTIONS = {
   // 1. Positioning
-  'position': 1, 'top': 1, 'right': 1, 'bottom': 1, 'left': 1, 'z-index': 1, 'inset': 1,
+  'content': 1, 'position': 1, 'top': 1, 'right': 1, 'bottom': 1, 'left': 1, 'z-index': 1, 'inset': 1,
   'inset-inline': 1, 'inset-inline-start': 1, 'inset-inline-end': 1,
   'inset-block': 1, 'inset-block-start': 1, 'inset-block-end': 1,
   
   // 2. Display & Layout
-  'flex': 2, 'display': 2, 'flex-direction': 2, 'flex-wrap': 2, 'flex-flow': 2, 'flex-grow': 2, 'flex-shrink': 2, 'flex-basis': 2,
-  'justify-content': 2, 'align-items': 2, 'align-content': 2, 'align-self': 2, 'gap': 2, 'row-gap': 2, 'column-gap': 2,
-  'grid': 2, 'grid-template': 2, 'grid-auto-flow': 2, 'grid-column': 2, 'grid-row': 2, 'place-items': 2, 'place-content': 2, 'order': 2,
+  'flex': 2, 'flex-grow': 2, 'flex-shrink': 2, 'flex-basis': 2, 'align-self': 2, 'order': 2, 'grid-column': 2, 'grid-row': 2,
+  'display': 2, 'flex-direction': 2, 'flex-wrap': 2, 'flex-flow': 2, 'justify-content': 2, 'align-items': 2, 'align-content': 2,
+  'gap': 2, 'row-gap': 2, 'column-gap': 2, 'grid': 2, 'grid-template': 2, 'grid-auto-flow': 2, 'place-items': 2, 'place-content': 2,
   
   // 3. Sizing
   'width': 3, 'min-width': 3, 'max-width': 3, 'height': 3, 'min-height': 3, 'max-height': 3, 'aspect-ratio': 3, 'size': 3,
@@ -130,7 +131,7 @@ const PROPERTY_SECTIONS = {
   'cursor': 11, 'pointer-events': 11, 'user-select': 11, 'user-drag': 11, 'user-modify': 11, 'resize': 11, 'scroll-behavior': 11,
   
   // 12. Misc
-  'will-change': 12, 'contain': 12, 'content': 12, 'counter-increment': 12, 'counter-reset': 12, 'tab-size': 12,
+  'will-change': 12, 'contain': 12, 'counter-increment': 12, 'counter-reset': 12, 'tab-size': 12,
   'hyphens': 12, 'orphans': 12, 'widows': 12, 'page-break-before': 12, 'page-break-after': 12, 'page-break-inside': 12,
   'box-sizing': 12, 'box-decoration-break': 12
 };
@@ -187,6 +188,22 @@ function getIncludeOrder(section) {
  */
 function getPropertySection(prop) {
   return PROPERTY_SECTIONS[prop] || 13;
+}
+
+/**
+ * Determine if a property belongs to flex child subsection (2.1)
+ */
+function isFlexChildProperty(prop) {
+  const flexChildProps = ['flex', 'flex-grow', 'flex-shrink', 'flex-basis', 'align-self', 'order', 'grid-column', 'grid-row'];
+  return flexChildProps.includes(prop);
+}
+
+/**
+ * Determine if a property belongs to flex parent subsection (2.2)
+ */
+function isFlexParentProperty(prop) {
+  const flexParentProps = ['display', 'flex-direction', 'flex-wrap', 'flex-flow', 'justify-content', 'align-items', 'align-content', 'gap', 'row-gap', 'column-gap', 'grid', 'grid-template', 'grid-auto-flow', 'place-items', 'place-content'];
+  return flexParentProps.includes(prop);
 }
 
 /**
@@ -345,6 +362,13 @@ function organizProperties(lines, indent) {
 
   const items = [];
   let i = 0;
+  let preservedCommentBuffer = []; // Buffer to store preserved comments before next property
+
+  // Helper to check if a comment should be preserved in place (not sorted)
+  function isPreservedComment(line) {
+    const trimmed = line.trim();
+    return trimmed.includes('// @') || trimmed.startsWith('/*') || trimmed.startsWith('*');
+  }
 
   // First pass: Parse all items individually
   while (i < lines.length) {
@@ -358,6 +382,13 @@ function organizProperties(lines, indent) {
 
     // Handle comments
     if (trimmed.startsWith('//') || trimmed.startsWith('/*') || trimmed.startsWith('*')) {
+      if (isPreservedComment(line)) {
+        // Add to preserved comment buffer instead of items
+        preservedCommentBuffer.push(line);
+        i++;
+        continue;
+      }
+
       const propName = getPropertyFromComment(line);
       const commentSection = getCommentSection(line);
       const commentOrder = propName ? getPropertyOrder(propName, commentSection) : 999;
@@ -419,13 +450,16 @@ function organizProperties(lines, indent) {
         j++;
       }
 
+      // Attach preserved comments to this property
       items.push({
         type: 'property',
         prop: prop,
         lines: propertyLines,
         section: getPropertySection(prop),
-        order: getPropertyOrder(prop, getPropertySection(prop))
+        order: getPropertyOrder(prop, getPropertySection(prop)),
+        preservedCommentsBefore: preservedCommentBuffer
       });
+      preservedCommentBuffer = [];
 
       i = j;
     } else if (trimmed.startsWith('@include')) {
@@ -436,6 +470,7 @@ function organizProperties(lines, indent) {
         section: getIncludeSection(line),
         order: getIncludeOrder(getIncludeSection(line))
       });
+      preservedCommentBuffer = [];
 
       i++;
     } else {
@@ -473,11 +508,13 @@ function organizProperties(lines, indent) {
         j++;
       }
       
+      const commentLineTexts = commentLines.flatMap(c => c.lines);
+      
       // Create comment block - preserve section from comments
       finalItems.push({
         type: 'comment-block',
-        lines: commentLines.flatMap(c => c.lines),
-        section: commentLines[0].section // Inherit section from first comment
+        lines: commentLineTexts,
+        section: commentLines[0].section
       });
       
       i = j - 1; // Skip grouped items
@@ -489,19 +526,41 @@ function organizProperties(lines, indent) {
   // Build result with visual spacing after key sections
   const result = [];
   let previousSection = null;
+  let previousWasFlexChild = false;
   const sectionsForSpacing = [1, 2, 4, 7, 9]; // Positioning, Display & Layout, Spacing, Background, Typography
 
   // Only apply spacing if the block has 6+ lines
   const shouldApplySpacing = lines.length >= 6;
 
   for (const item of finalItems) {
+    // Output preserved comments before this item
+    if (item.preservedCommentsBefore && item.preservedCommentsBefore.length > 0) {
+      for (const commentLine of item.preservedCommentsBefore) {
+        result.push(commentLine);
+      }
+    }
+
     // Add empty line if we've transitioned to a new section and previous was a spacing section
     if (shouldApplySpacing && previousSection !== null && previousSection !== item.section && sectionsForSpacing.includes(previousSection)) {
       result.push('');
     }
 
+    // Check if transitioning from flex child to flex parent (within section 2)
+    if (item.type === 'property' && item.section === 2) {
+      if (previousWasFlexChild && isFlexParentProperty(item.prop)) {
+        result.push('');
+      }
+    }
+
     for (const line of item.lines) {
       result.push(line);
+    }
+
+    // Track if this item is a flex child property
+    if (item.type === 'property' && isFlexChildProperty(item.prop)) {
+      previousWasFlexChild = true;
+    } else if (item.type === 'property' && item.section === 2) {
+      previousWasFlexChild = false;
     }
 
     previousSection = item.section;
